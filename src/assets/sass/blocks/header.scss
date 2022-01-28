@@ -1,0 +1,109 @@
+.header {
+    background: linear-gradient(106.74deg, rgba(0, 0, 0, 0.4) 4.1%, rgba(0, 0, 0, 0) 75.98%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.29);
+    padding-top: 26px;
+    padding-bottom: 22px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+
+    z-index: 1;
+}
+
+.header__form-link {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 110.52%;
+    color: #ffffff;
+    transition: 0.4s;
+    margin-right: 39px;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header-link {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 110.52%;
+    color: #ffffff;
+    position: relative;
+    padding-left: 25px;
+    transition: 0.5s;
+    margin-right: 30px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+    &::before {
+        content: url("../../assets/img/header-human.svg");
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.header-link.hidden {
+    display: none;
+}
+.header__box-container {
+    position: relative;
+    margin-right: 15px;
+}
+
+.header__input-search {
+    width: 110px;
+    border: none;
+    background: none;
+    outline: none;
+    padding-left: 35px;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 110.52%;
+    color: #ffffff;
+    transition: 0.5s;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    &::placeholder {
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 110.52%;
+        color: #ffffff;
+    }
+}
+
+.header__input-search:focus {
+    width: 320px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.header__search-btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    img {
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+    }
+}

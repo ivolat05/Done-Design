@@ -2,6 +2,12 @@
 @import "../sass/vendor/font.scss";
 @import "../sass/vendor/reset.scss";
 
+/* bootstrap */
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/containers";
+
 /* Default style */
 html {
     font-size: 16px;
@@ -24,10 +30,26 @@ ul {
     list-style: none;
 }
 
-/* bootstrap */
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
-@import "../../../node_modules/bootstrap/scss/containers";
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    background: #e5e5e5;
+}
+@media (min-width: 1400px) {
+    .header__container.container {
+        max-width: 1540px;
+        padding-right: 26px;
+    }
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 /* blocks */
+@import "../sass/blocks/select.scss";
+@import "../sass/blocks/burger.scss";
+@import "../sass/blocks/header.scss";
+@import "../sass/blocks/main.scss";

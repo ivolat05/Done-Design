@@ -1,0 +1,73 @@
+/* основные стили */
+.select {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.select.is-active .select__body {
+    display: block;
+}
+
+.select__header {
+    width: 100%;
+}
+
+.select__body {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    z-index: 1;
+}
+
+.select__item {
+    cursor: pointer;
+}
+
+/* lang */
+
+.select.lang {
+    width: 67px;
+    font-weight: 500;
+    margin-right: 27px;
+    font-size: 1rem;
+    line-height: 110.52%;
+    color: #fff;
+    text-transform: capitalize;
+    padding-left: 20px;
+    &::before {
+        content: url("../../assets/img/land-lang.svg");
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &::after {
+        content: url("../../assets/img/arrow-bottom.svg");
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .select__item {
+        padding: 5px 5px 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-bottom: 1px solid #f4f4f4;
+    }
+
+    .select__body {
+        top: 25px;
+        background: #ffffff;
+        box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.1), 0px 30px 40px rgba(20, 37, 63, 0.08);
+        border-radius: 8px;
+        font-weight: normal;
+        font-size: 0.875rem;
+        line-height: 16px;
+        color: #2e2d2d;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+}
