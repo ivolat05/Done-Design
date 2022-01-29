@@ -1,0 +1,32 @@
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 115%;
+    left: 0;
+    right: 0;
+    padding: 17px 14px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.1), 0px 30px 40px rgba(20, 37, 63, 0.08);
+}
+.autocomplete-items {
+    div {
+        cursor: pointer;
+        font-size: 0.875rem;
+        line-height: 16px;
+        color: #2e2d2d;
+        padding-bottom: 15px;
+        margin-bottom: 9px;
+        border-bottom: 1px solid #f4f4f4;
+    }
+    div:nth-last-child(1) {
+        border: none;
+    }
+}

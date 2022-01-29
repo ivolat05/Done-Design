@@ -1,6 +1,11 @@
 /* vendor */
 @import "../sass/vendor/font.scss";
 @import "../sass/vendor/reset.scss";
+@import "../sass/vendor/datepicker.scss";
+@import "../sass/vendor/jquery.mCustomScrollbar.scss";
+@import "../sass/vendor/jquery.timepicker.min.scss";
+@import "../sass/vendor/magnific-popup.scss";
+@import "../sass/vendor/slick.scss";
 
 /* bootstrap */
 @import "../../../node_modules/bootstrap/scss/functions";
@@ -38,6 +43,7 @@ ul {
     background: #e5e5e5;
     overflow: hidden;
 }
+
 .background-fon {
     width: 100%;
     height: 100%;
@@ -48,18 +54,38 @@ ul {
     top: 0;
     z-index: -3;
 }
+
 .background-fon.active {
     z-index: 3;
 }
+
 .stop {
     overflow: hidden;
 }
+
+.btn {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    background: #ebeff3;
+    &:hover {
+        background: #c2e631;
+    }
+}
+
 @media (min-width: 1400px) {
     .header__container.container {
         max-width: 1574px;
         padding-left: 31px;
     }
+    .container {
+        max-width: 1440px;
+    }
 }
+
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -70,3 +96,6 @@ ul {
 @import "../sass/blocks/header.scss";
 @import "../sass/blocks/main.scss";
 @import "../sass/blocks/menu.scss";
+@import "../sass/blocks/autocomplete.scss";
+@import "../sass/blocks/datapick.scss";
+@import "../sass/blocks/timepick.scss";

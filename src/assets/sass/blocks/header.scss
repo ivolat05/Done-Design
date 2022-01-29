@@ -1,7 +1,7 @@
 .header {
     background: linear-gradient(106.74deg, rgba(0, 0, 0, 0.4) 4.1%, rgba(0, 0, 0, 0) 75.98%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.29);
-    padding-top: 26px;
+    padding-top: 22px;
     padding-bottom: 22px;
     position: absolute;
     top: 0;
@@ -49,7 +49,7 @@
 }
 .header-link {
     font-weight: 500;
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 110.52%;
     color: #ffffff;
     position: relative;
@@ -59,15 +59,25 @@
     &:hover {
         text-decoration: underline;
     }
-    &::before {
-        content: url("../../assets/img/header-human.svg");
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+}
+.header-link.search {
+    margin-right: 15px;
+}
+.header-link.player::before {
+    content: url("../../assets/img/header-human.svg");
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
+.header-link.search::before {
+    content: url("../../assets/img/search-header.svg");
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .header__box-container {
     position: relative;
     &:hover {
@@ -91,6 +101,7 @@
     transition: 0.7s;
     padding-top: 5px;
     padding-bottom: 5px;
+    border-bottom: 2px solid red;
     cursor: pointer;
     &::placeholder {
         font-weight: 500;
