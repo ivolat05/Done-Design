@@ -1,0 +1,151 @@
+.menu {
+    width: 400px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 4;
+    background: #fdfdff;
+
+    transition: 0.8s all ease-out;
+    transform: translateX(300%);
+}
+.menu.active {
+    transform: translateX(0);
+}
+
+.menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 20px 28px 20px;
+    border-bottom: 1px solid rgba(160, 168, 177, 1);
+}
+.menu-close {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.menu__body {
+    padding: 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.menu-account {
+    transition: 0.4s all ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #f1f1f2;
+    padding: 4px;
+    border-radius: 47px;
+    width: 160px;
+    font-size: 0.875rem;
+    line-height: 16px;
+    color: #2e2d2d;
+    margin-bottom: 17px;
+    .menu-account-img {
+        width: 37px;
+        height: 37px;
+        flex-shrink: 1;
+        border-radius: 37px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f3f4f7;
+        margin-right: 17px;
+        transition: 0.4s all ease-in;
+    }
+
+    &:hover {
+        border: 1px solid #c2e631;
+        .menu-account-img {
+            background: #c2e631;
+        }
+    }
+}
+
+.menu__nav-list {
+    margin-bottom: 24px;
+}
+
+.menu__nav-link {
+    font-family: "Oswald";
+    font-weight: 500;
+    font-size: 1.635rem;
+    line-height: 180%;
+    text-transform: capitalize;
+    transition: 0.4s all ease-in;
+    color: #101010;
+    margin-bottom: 2px;
+    display: block;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.menu__mess {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.menu__mess-link {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 42px;
+    transition: 0.4s all ease-in;
+    background: #f3f4f7;
+    margin-right: 14px;
+    &:hover {
+        background: #c2e631;
+    }
+}
+.menu-tell {
+    font-family: "Oswald";
+    font-weight: 500;
+    line-height: 110.52%;
+    font-size: 1.125rem;
+    color: #2e2d2d;
+    margin-bottom: 98px;
+    transition: 0.7s all linear;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .menu-tell-img {
+        width: 38px;
+        height: 38px;
+        border-radius: 38px;
+        flex-shrink: 1;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f3f4f7;
+        transition: 0.4s all ease-in;
+    }
+    &:hover {
+        .menu-tell-img {
+            background: #c2e631;
+        }
+    }
+}

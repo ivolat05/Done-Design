@@ -28,3 +28,41 @@ let select = function () {
 
 }
 select();
+
+//menu active
+
+function menuActive() {
+    let menu = document.querySelector('.menu');
+    let backgroundFon = document.querySelector('.background-fon');
+    let body = document.querySelector('body');
+    let btnMenu = document.querySelectorAll('.btn-menu');
+    let menuClose = document.querySelector('.menu-close');
+    if (menu) {
+        btnMenu.forEach((item) => {
+            item.addEventListener('click', () => {
+                if (!menu.classList.contains('acitve')) {
+                    menu.classList.add('active');
+                } else {
+                    menu.classList.remove('active');
+                }
+                if (!backgroundFon.classList.contains('acitve')) {
+                    backgroundFon.classList.add('active');
+                } else {
+                    backgroundFon.classList.remove('active');
+                }
+                body.classList.add('stop');
+            });
+        });
+        backgroundFon.addEventListener('click', () => {
+            body.classList.remove('stop');
+            backgroundFon.classList.remove('active');
+            menu.classList.remove('active');
+        });
+        menuClose.addEventListener('click', () => {
+            body.classList.remove('stop');
+            backgroundFon.classList.remove('active');
+            menu.classList.remove('active');
+        })
+    }
+};
+menuActive();
