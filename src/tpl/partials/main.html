@@ -22,18 +22,24 @@
                     </h3>
                     <input class="main-form-input location" type="text" placeholder="Barcelona">
                 </div>
-                <div class="main__form-box --flex">
-                    <div class="main__box-inner">
+                <div class="main__form-box --flex ">
+                    <div class="main__box-inner calendar">
                         <h3 class="main__form-title">
                             Date
                         </h3>
-                        <input class="main-form-input input-date" type="text" placeholder="10/11/2021">
+                        <input class="main-form-input input-date " type="text" value="10/11/2022">
+                        {{>calendar}}
                     </div>
-                    <div class="main__box-inner date">
+                    <div class="main__box-inner time">
                         <h3 class="main__form-title">
                             Time
                         </h3>
-                        <input class="main-form-input input-time" type="text" placeholder="17:30">
+                        <input class="main-form-input input-time" type="text" value="17:30">
+                        <div class="time__container">
+                            <div class="time__container-wrapp">
+                                <div class="time__box"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -41,5 +47,6 @@
                 Search
             </a>
         </form>
+
     </div>
 </main>

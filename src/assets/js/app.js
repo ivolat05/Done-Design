@@ -1,11 +1,21 @@
 //= components/jquery.min.js
-//= components/datepicker.min.js
 //= components/jquery.magnific-popup.min.js
 //= components/jquery.mCustomScrollbar.js
-//= components/jquery.timepicker.min.js
 //= components/slick.min.js
 
+// calendar active day
 
+function calendarActiveDay() {
+    let calendarDay = document.querySelectorAll('.calendar__day');
+    if (calendarDay) {
+        calendarDay.forEach((item) => {
+            item.addEventListener('click', function () {
+                item.classList.toggle('active');
+            })
+        })
+    }
+};
+calendarActiveDay();
 // select
 let select = function () {
     let selectHeader = document.querySelectorAll('.select__header');
@@ -180,16 +190,62 @@ function autocomplete(classInputSearch, arr) {
 }
 
 
-// time
 
-$('.input-time').timepicker({
-    timeFormat: 'H:mm',
-    interval: 30,
-    minTime: '0',
-    maxTime: '23:59',
-    startTime: '00:00',
+
+
+// data kalendae
+
+
+// генерация списка времени
+// timeBoxName -имя контейнера для времени
+// minHour - начальное время
+// maxHour- конечное время
+// intervalМinutes - интервал между минутами
+
+function timeList(timeBoxName, minHour, maxHour, intervalМinutes) {
+    let timeBox = document.querySelector(`.${timeBoxName}`);
+    let listBox = '';
+    if (timeBox) {
+        for (let i = minHour; i < maxHour + 1; i++) {
+            for (let y = 0; y < 60; y += intervalМinutes) {
+                if (y >= 10) {
+                    listBox += ` <div class="time__box-btn">${i} : ${y}</div>`
+                } else {
+                    listBox += ` <div class="time__box-btn">${i} : 0${y}</div>`
+                }
+
+            }
+
+        }
+        timeBox.innerHTML = listBox;
+    }
+}
+
+timeList("time__box", 6, 21, 30);
+
+// добовления времени в input
+
+function addTime() {
+    let timeBoxBtn = document.querySelectorAll('.time__box-btn');
+    let inputTime = document.querySelector('.input-time');
+    if (timeBoxBtn) {
+
+        timeBoxBtn.forEach((item) => {
+            item.addEventListener('click', () => {
+                inputTime.value = item.textContent;
+            })
+        })
+    }
+}
+addTime();
+
+$(window).on("load", function () {
+    $(".time__box").mCustomScrollbar();
+
+
+
 });
 
-// data
 
-$('.input-date').datepicker();
+
+

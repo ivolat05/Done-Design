@@ -1,0 +1,122 @@
+.calendar__container {
+    position: absolute;
+    left: -144%;
+    top: 100%;
+    z-index: -3;
+    transition: all 0.3s ease-in-out;
+}
+
+.calendar:hover .calendar__container {
+    z-index: 3;
+}
+
+.calendar__container-wrapp {
+    margin-top: 10px;
+    background: #ffffff;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.1), 0px 30px 40px rgba(20, 37, 63, 0.08);
+    border-radius: 8px;
+    padding: 20px 29px 0 29px;
+}
+
+.calendar__box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 677px;
+    justify-content: space-between;
+}
+
+.calendar__box-coll {
+    width: 324px;
+    margin-bottom: 33px;
+}
+
+.calendar__head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 36px;
+}
+
+.calendar-btn {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    width: 14px;
+    height: 14px;
+    &::after {
+        content: url("../../assets/img/calendar-arrow-left.svg");
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+.calendar-btn.btn-next {
+    right: 10px;
+    left: auto;
+    &::after {
+        content: url("../../assets/img/calendar-arrow-right.svg");
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+.calendar__month {
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 150%;
+    color: #2e2d2d;
+}
+.calendar__box-week {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.calendar__box-day {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.calendar__week,
+.calendar__day {
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+    margin-right: 4px;
+    margin-bottom: 2px;
+}
+.calendar__week {
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 100%;
+    color: #a0a8b1;
+}
+.calendar__day {
+    height: 42px;
+    font-weight: 500;
+    border-radius: 42px;
+    font-size: 0.875rem;
+    line-height: 16px;
+    color: #2e2d2d;
+    border-radius: 42px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+        background: #dce0e4;
+    }
+}
+
+.calendar__day.active {
+    background: #2e2d2d;
+    color: #fff;
+}

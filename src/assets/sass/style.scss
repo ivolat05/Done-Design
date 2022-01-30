@@ -1,12 +1,9 @@
 /* vendor */
 @import "../sass/vendor/font.scss";
 @import "../sass/vendor/reset.scss";
-@import "../sass/vendor/datepicker.scss";
 @import "../sass/vendor/jquery.mCustomScrollbar.scss";
-@import "../sass/vendor/jquery.timepicker.min.scss";
 @import "../sass/vendor/magnific-popup.scss";
 @import "../sass/vendor/slick.scss";
-
 /* bootstrap */
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
@@ -97,5 +94,5 @@ ul {
 @import "../sass/blocks/main.scss";
 @import "../sass/blocks/menu.scss";
 @import "../sass/blocks/autocomplete.scss";
-@import "../sass/blocks/datapick.scss";
 @import "../sass/blocks/timepick.scss";
+@import "../sass/blocks/calendare.scss";
