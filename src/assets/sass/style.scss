@@ -94,6 +94,9 @@ ul {
     .peculiarities_contain.container {
         max-width: 1477px;
     }
+    .container.top__container {
+        max-width: 1468px;
+    }
     .container {
         max-width: 1440px;
     }
@@ -115,3 +118,4 @@ ul {
 @import "../sass/blocks/slaider__option.scss";
 @import "../sass/blocks/company.scss";
 @import "../sass/blocks/peculiarities.scss";
+@import "../sass/blocks/top.scss";

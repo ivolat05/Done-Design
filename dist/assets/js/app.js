@@ -2707,7 +2707,37 @@ $(window).on("load", function () {
 
 });
 
-// slick
+// slick slider
+
+$(".top__slaider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: true,
+    prevArrow: $(".top-slick-prev"),
+    nextArrow: $(".top-slick-next"),
+    responsive: [
+
+        {
+            breakpoint: 820,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+
+            }
+        },
+
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1
+
+            }
+        }
+    ]
+});
+
+
 $(".company__slick").slick({
     slidesToShow: 8,
     slidesToScroll: 1,
