@@ -67,16 +67,32 @@ ul {
     justify-content: center;
     transition: 0.3s all ease-in-out;
     cursor: pointer;
-    background: #ebeff3;
+    background: rgba(190, 207, 96, 0.19);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2e2d2d;
+
     &:hover {
         background: #c2e631;
     }
+}
+
+.title {
+    font-family: "Oswald";
+    font-weight: 500;
+    font-size: 3.625rem;
+    line-height: 117.52%;
+    color: #2e2d2d;
 }
 
 @media (min-width: 1400px) {
     .header__container.container {
         max-width: 1574px;
         padding-left: 31px;
+    }
+    .peculiarities_contain.container {
+        max-width: 1477px;
     }
     .container {
         max-width: 1440px;
@@ -96,3 +112,6 @@ ul {
 @import "../sass/blocks/autocomplete.scss";
 @import "../sass/blocks/timepick.scss";
 @import "../sass/blocks/calendare.scss";
+@import "../sass/blocks/slaider__option.scss";
+@import "../sass/blocks/company.scss";
+@import "../sass/blocks/peculiarities.scss";

@@ -2706,3 +2706,38 @@ $(window).on("load", function () {
 
 
 });
+
+// slick
+$(".company__slick").slick({
+    slidesToShow: 8,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: false,
+
+    responsive: [
+        {
+            breakpoint: 1600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+
+            }
+        },
+        {
+            breakpoint: 820,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+
+            }
+        },
+
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1
+
+            }
+        }
+    ]
+});
