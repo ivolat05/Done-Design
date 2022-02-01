@@ -1,0 +1,153 @@
+.what {
+    padding-bottom: 35px;
+}
+.what__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px 28px;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+        box-shadow: 0px 18px 40px rgba(109, 141, 172, 0.17);
+    }
+}
+
+.what__data {
+    width: 150px;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 121.02%;
+    color: #1e1e1e;
+    background: rgba(149, 159, 168, 0.21);
+    border-radius: 25px;
+    margin-bottom: 28px;
+}
+
+.what__body-title {
+    font-weight: 500;
+    font-size: 2.125rem;
+    line-height: 121.02%;
+    color: #2e2d2d;
+    margin-bottom: 21px;
+    display: block;
+}
+
+.what__body-text {
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 142.02%;
+    color: #2e2d2d;
+}
+.what__body-title,
+.what__body-text {
+    max-width: 370px;
+}
+
+.what__body-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.what__body-link {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 110.52%;
+    color: #3a3a3a;
+    display: block;
+    &::after {
+        content: url("../../assets/img/arrow-right.svg");
+        top: 2px;
+        position: relative;
+        padding-left: 15px;
+    }
+}
+
+.what__box.one {
+    background: url("../../assets/img/what-1.jpg") no-repeat center center/cover;
+    .what__data {
+        background: rgba(255, 255, 255, 0.46);
+    }
+    .what__body-title,
+    .what__body-text,
+    .what__body-link {
+        color: #fff;
+    }
+    .what__body-link::after {
+        content: url("../../assets/img/arrow-white.svg");
+    }
+}
+.what__box.two {
+    background: url("../../assets/img/what-2.jpg") no-repeat center center/cover;
+    .what__data {
+        background: rgba(255, 255, 255, 0.09);
+    }
+    .what__body-title,
+    .what__body-text,
+    .what__body-link {
+        color: #fff;
+    }
+    .what__body-link::after {
+        content: url("../../assets/img/arrow-white.svg");
+    }
+}
+
+.what__box.three {
+    background: #c2e631;
+    .what__data {
+        background: #ffffff;
+    }
+}
+
+.what__wrapp {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    grid-auto-rows: minmax(250px, auto);
+}
+.what__wrapp {
+    .what__box:nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .what__box:nth-child(4) {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    .what__box:nth-child(2),
+    .what__box:nth-child(3) {
+        padding-bottom: 23px;
+        .what__body-title {
+            font-size: 1.5rem;
+            line-height: 121.02%;
+        }
+        .what__body-text {
+            margin-bottom: 30px;
+        }
+        .what__body-container {
+            justify-content: flex-end;
+        }
+    }
+
+    .what__box.text_none:nth-child(3),
+    .what__box.text_none:nth-child(2) {
+        .what__body-title {
+            max-width: 200px;
+        }
+        .what__body-container {
+            justify-content: space-between;
+        }
+    }
+}
+
+.what__wrapp-title {
+    margin-bottom: 23px;
+}

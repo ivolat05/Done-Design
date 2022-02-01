@@ -1,0 +1,30 @@
+.statistics {
+    padding-bottom: 100px;
+}
+.statistics__wrapp {
+    padding-top: 77px;
+    padding-bottom: 68px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.statistics__box-title {
+    font-family: "Oswald";
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 121.02%;
+    color: #2e2d2d;
+}
+
+.statistics__box-subtitle {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 121.02%;
+    color: #6c757d;
+}

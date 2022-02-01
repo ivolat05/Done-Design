@@ -1,0 +1,270 @@
+.finder {
+    padding-top: 112px;
+    padding-bottom: 146px;
+}
+.finder__wrapp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.finder-title {
+    display: inline-block;
+    margin-bottom: 45px;
+    position: relative;
+    background: none;
+    z-index: 0;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        background: #c2e631;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-45%);
+        z-index: -1;
+    }
+}
+.finder-text {
+    margin-bottom: 58px;
+}
+.finder__coll-1 {
+    max-width: 500px;
+    margin-top: 23px;
+}
+
+.finder__coll-inner {
+    max-width: 420px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.finder-find-btn,
+.finder-account-btn {
+    display: block;
+    width: 202px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.finder-account-btn {
+    border: 1px solid #c2e631;
+    background: none;
+    border-radius: 4px;
+}
+
+.finder__player-title {
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 2.875rem;
+    line-height: 132%;
+    display: flex;
+    align-items: center;
+    color: #20120c;
+    padding-left: 7px;
+    .finder__player-span {
+        font-weight: normal;
+        font-size: 0.875rem;
+        line-height: 100%;
+        color: #77757f;
+        padding-left: 15px;
+        margin-top: 15px;
+    }
+}
+
+.finder__player-box {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 4px;
+}
+.finder__player-img {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 32px;
+    border: 2px solid #fff;
+}
+.finder__player-img:nth-child(2n + 1) {
+    margin-right: -7px;
+}
+
+.finder__player-img:nth-child(2n) {
+    margin-right: -7px;
+}
+
+.finder-mess {
+    width: 206px;
+    min-height: 65px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #ffffff;
+    box-shadow: 4px 5px 20px rgba(74, 105, 165, 0.16);
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 16px;
+    color: #2e2d2d;
+    padding-left: 18px;
+    &::before {
+        content: url("../../assets/img/mess.svg");
+        position: absolute;
+        left: 34px;
+        top: 50%;
+        transform: translateY(-42%);
+    }
+    &::after {
+        content: url("../../assets/img/mess-2.svg");
+        position: absolute;
+        left: -32px;
+        top: 65%;
+    }
+}
+
+.finder__review {
+    background: #ffffff;
+    border-radius: 13px;
+    padding: 25px 29px 22px 26px;
+    width: 395px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.finder__review-avatar {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 1;
+    margin-right: 24px;
+    img {
+        width: 58px;
+        height: 58px;
+        border-radius: 58px;
+        overflow: hidden;
+    }
+    position: relative;
+    &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border: 2px solid #fff;
+        border-radius: 15px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: #f2c94c;
+    }
+}
+
+.finder__review-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.finder__review-name {
+    font-family: "Oswald";
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #2e2d2d;
+    margin-bottom: 4px;
+}
+
+.finder__review-city {
+    font-weight: normal;
+    font-size: 0.625rem;
+    line-height: 24px;
+    color: #6c757d;
+    position: relative;
+    padding-left: 19px;
+    &::before {
+        content: url("../../assets/img/pin-1.svg");
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.finder__review-btn {
+    width: 110px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 0.625rem;
+    line-height: 150%;
+    color: #2e2d2d;
+    border: 1px solid #c2e631;
+    border-radius: 6px;
+    position: relative;
+    top: -5px;
+    padding-left: 18px;
+    &::before {
+        content: url("../../assets/img/mst-2.svg");
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.finder__review-text {
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 19px;
+    color: #a0a8b1;
+    margin-bottom: 20px;
+}
+.finder__review-two {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.finder__review-button {
+    font-weight: normal;
+    font-size: 0.5625rem;
+    line-height: 19px;
+    color: #a0a8b1;
+    background: rgba(160, 168, 177, 0.09);
+    border-radius: 25px;
+    padding: 3px 8px;
+    margin-right: 7px;
+    margin-left: 3px;
+}
+
+.finder__review.three {
+    box-shadow: 41px -3px 13px rgba(193, 207, 228, 0.01), 5px 38px 30px rgba(108, 117, 125, 0.17);
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-53%, 24%);
+    z-index: 1;
+}
+.finder-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.finder-row.two {
+    align-items: flex-end;
+    margin-top: 28px;
+    margin-left: 14px;
+    margin-right: 31px;
+}
+
+.finder__coll {
+    width: 54%;
+    padding-right: 15px;
+    position: relative;
+}

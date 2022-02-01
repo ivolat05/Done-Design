@@ -67,12 +67,13 @@ ul {
     justify-content: center;
     transition: 0.3s all ease-in-out;
     cursor: pointer;
-    background: rgba(190, 207, 96, 0.19);
+
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #2e2d2d;
 
+    background: #ebeff3;
     &:hover {
         background: #c2e631;
     }
@@ -86,19 +87,28 @@ ul {
     color: #2e2d2d;
 }
 
+.text {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 163.02%;
+    color: #6c757d;
+}
 @media (min-width: 1400px) {
     .header__container.container {
         max-width: 1574px;
         padding-left: 31px;
     }
+    .container.main__container {
+        max-width: 1438px;
+    }
     .peculiarities_contain.container {
         max-width: 1477px;
     }
-    .container.top__container {
-        max-width: 1468px;
+    .container.finder__container {
+        max-width: 1359px;
     }
     .container {
-        max-width: 1440px;
+        max-width: 1470px;
     }
 }
 
@@ -119,3 +129,8 @@ ul {
 @import "../sass/blocks/company.scss";
 @import "../sass/blocks/peculiarities.scss";
 @import "../sass/blocks/top.scss";
+@import "../sass/blocks/statistics.scss";
+@import "../sass/blocks/finder.scss";
+@import "../sass/blocks/who.scss";
+@import "../sass/blocks/what.scss";
+@import "../sass/blocks/artic.scss";
