@@ -152,6 +152,7 @@
 
 .header_white {
     background: rgba(241, 242, 243, 0.43);
+    position: relative;
     .header__form-link,
     .header-link,
     .select__current {
@@ -163,5 +164,8 @@
 
     .header-link.search::before {
         content: url("../../assets/img/search-header-dark.svg");
+    }
+    .header__list-inner.hidden + .header-btn {
+        margin-left: 90px;
     }
 }

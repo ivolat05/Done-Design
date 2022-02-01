@@ -1,0 +1,87 @@
+.checklabel {
+    position: relative;
+    cursor: pointer;
+}
+
+.check__input {
+    position: absolute;
+    left: 0;
+    z-index: -3;
+    opacity: 0;
+}
+
+.check__span {
+    padding-left: 27px;
+    white-space: nowrap;
+    position: relative;
+    transition: 0.3s all ease-in-out;
+    font-size: 0.875rem;
+    line-height: 150%;
+    cursor: pointer;
+    color: #6c757d;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #d6d9dc;
+        border: 1px solid #d6d9dc;
+        border-radius: 3px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.check__input:checked + .check__span {
+    color: #424551;
+    &::before {
+        content: url("../../assets/img/check.svg");
+        background: #c2e631;
+        border: 1px solid #c2e631;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.show-label {
+    position: relative;
+}
+.show__input {
+    position: absolute;
+    left: 0;
+    z-index: -3;
+    opacity: 0;
+}
+.show__span {
+    background: #cfd3d8;
+    border-radius: 60px;
+    width: 56px;
+    height: 28px;
+    display: block;
+    position: relative;
+    transition: 0.4s;
+    cursor: pointer;
+    &::before {
+        content: "";
+
+        transition: 0.4s;
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        border-radius: 22px;
+        background: #ffffff;
+        top: 50%;
+        left: 3px;
+        transform: translateY(-50%);
+    }
+}
+
+.show__input:checked + .show__span {
+    background: #c2e631;
+    &::before {
+        left: auto;
+        right: 3px;
+    }
+}

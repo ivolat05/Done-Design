@@ -9909,6 +9909,47 @@ let select = function () {
 }
 select();
 
+// checked filter deactive
+function deactiveChecked() {
+    let fillterBtn = document.querySelectorAll('.fillter-btn');
+    if (fillterBtn) {
+        fillterBtn.forEach((item) => {
+            item.addEventListener('click', () => {
+                let checkInput = document.querySelectorAll('.check__input');
+                for (let i = 0; i < checkInput.length; i++) {
+                    if (checkInput[i].checked) {
+                        checkInput[i].checked = false;
+                    }
+                }
+            })
+        })
+    }
+
+}
+deactiveChecked();
+
+// active map 
+
+function activeMap() {
+    let showInput = document.querySelectorAll('.show__input');
+    let mapContainer = document.querySelectorAll('.map__container')
+    if (mapContainer && showInput) {
+        showInput.forEach((item) => {
+            item.addEventListener('click', () => {
+                if (item.checked) {
+                    for (let i = 0; i < mapContainer.length; i++) {
+                        mapContainer[i].classList.add('active');
+                    }
+                } else {
+                    for (let i = 0; i < mapContainer.length; i++) {
+                        mapContainer[i].classList.remove('active');
+                    }
+                }
+            })
+        })
+    }
+}
+activeMap();
 //menu active
 
 function menuActive() {

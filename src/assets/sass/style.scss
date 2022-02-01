@@ -38,8 +38,12 @@ ul {
     flex-direction: column;
     min-height: 100vh;
     position: relative;
-    background: #e5e5e5;
+    background: #f3f4f7;
     overflow: hidden;
+}
+
+.page.f9f9fa {
+    background: #f9f9fa;
 }
 
 .background-fon {
@@ -73,10 +77,10 @@ ul {
     font-size: 16px;
     line-height: 19px;
     color: #2e2d2d;
+    background: #c2e631;
 
-    background: #ebeff3;
     &:hover {
-        background: #c2e631;
+        background: #ebeff3;
     }
 }
 
@@ -98,6 +102,16 @@ ul {
     .header__container.container {
         max-width: 1574px;
         padding-left: 31px;
+    }
+    .container.search__container {
+        max-width: 1600px;
+    }
+    .header_white .container {
+        padding-right: 50px;
+    }
+    .container.filter-container {
+        max-width: 1557px;
+        padding-right: 98px;
     }
     .container.main__container {
         max-width: 1438px;
@@ -136,3 +150,7 @@ ul {
 @import "../sass/blocks/what.scss";
 @import "../sass/blocks/artic.scss";
 @import "../sass/blocks/footer.scss";
+@import "../sass/blocks/search.scss";
+@import "../sass/blocks/filter.scss";
+@import "../sass/blocks/checkbox.scss";
+@import "../sass/blocks/result.scss";
