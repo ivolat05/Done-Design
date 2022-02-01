@@ -22,6 +22,7 @@ html {
     font-family: "Roboto";
     font-size: 1rem;
     font-weight: normal;
+    transition: 0.3s all ease-in-out;
 }
 
 a {
@@ -134,3 +135,4 @@ ul {
 @import "../sass/blocks/who.scss";
 @import "../sass/blocks/what.scss";
 @import "../sass/blocks/artic.scss";
+@import "../sass/blocks/footer.scss";
