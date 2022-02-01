@@ -27,7 +27,16 @@
 }
 
 /* lang */
-
+.header_two {
+    .select.lang {
+        &::before {
+            content: url("../../assets/img/land-lang-dark.svg");
+        }
+        &::after {
+            content: url("../../assets/img/arrow-bottom-dark.svg");
+        }
+    }
+}
 .select.lang {
     width: 67px;
     font-weight: 500;

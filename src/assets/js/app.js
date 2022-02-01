@@ -2,20 +2,56 @@
 //= components/jquery.magnific-popup.min.js
 //= components/jquery.mCustomScrollbar.js
 //= components/slick.min.js
+//= components/uderscore.min.js
+//= components/moment.js
+//= components/clndr.js
 
-// calendar active day
+// calendar 
 
-function calendarActiveDay() {
-    let calendarDay = document.querySelectorAll('.calendar__day');
-    if (calendarDay) {
-        calendarDay.forEach((item) => {
-            item.addEventListener('click', function () {
-                item.classList.toggle('active');
-            })
-        })
+
+function calendars() {
+    let calendars = {};
+    let thisMonth = moment().format('YYYY/MM/DD');
+    let inputDate = document.querySelector('.input-date');
+    if (inputDate) {
+        inputDate.value = thisMonth.split("/").reverse().join("/");
+        calendars.clndr3 = $('.calendar__container').clndr({
+            lengthOfTime: {
+                months: 2,
+                interval: 1
+            },
+            default_date: true,
+            startWithMonth: thisMonth,
+            daysOfTheWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+            trackSelectedDate: true,
+            selectedDate: "selected",
+            showAdjacentMonths: false,
+            adjacentDaysChangeMonth: true,
+            weekOffset: 1,
+            clickEvents: {
+                click: function (target) {
+                    let x = '';
+                    let y = target.date._i
+                    inputDate.value = target.date._i;
+                    for (let i = 0; i < y.length; i++) {
+                        if (y[i] == '-') {
+                            x += '/';
+                        } else {
+                            x += y[i];
+                        }
+                    }
+                    inputDate.value = x.split("/").reverse().join("/");
+                }
+            },
+            template: $('#calendar__teplate').html()
+        });
     }
-};
-calendarActiveDay();
+}
+
+calendars();
+
+
+
 // select
 let select = function () {
     let selectHeader = document.querySelectorAll('.select__header');

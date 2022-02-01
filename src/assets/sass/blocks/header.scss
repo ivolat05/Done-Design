@@ -12,6 +12,22 @@
     z-index: 1;
 }
 
+.header_two {
+    background: rgba(241, 242, 243, 0.43);
+    .header__form-link,
+    .header-link,
+    .select__current {
+        color: #3a3f43;
+    }
+    .header-link.player::before {
+        content: url("../../assets/img/header-human-dark.svg");
+    }
+
+    .header-link.search::before {
+        content: url("../../assets/img/search-header-dark.svg");
+    }
+}
+
 .header__form-link {
     font-weight: 500;
     font-size: 1rem;
