@@ -1,0 +1,88 @@
+<!---------------------------------yander map----------------------------->
+<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+</script>
+<script>
+
+    function mapActive() {
+        // Как только будет загружен API и готов DOM, выполняем инициализацию
+        ymaps.ready(init);
+
+        // Инициализация и уничтожение карты при нажатии на кнопку.
+        function init() {
+            var myMap;
+            var i;
+            var place;
+            var pointer = [[55.71, 37.60], [55.73, 37.4], [55.74, 37.63], [55.76, 37.54], [55.78, 37.74], [55., 37.69]]
+
+            $('.show__input').bind({
+                click: function () {
+                    if (!myMap) {
+                        myMap = new ymaps.Map('map', {
+                            center: [55.76, 37.64],
+                            zoom: 10,
+                            controls: []
+                        }, {
+                            searchControlProvider: 'yandex#search'
+                        });
+
+                        for (i = 0; i < pointer.length; ++i) {
+
+                            place = new ymaps.Placemark(pointer[i]);
+
+
+                            place = new ymaps.Placemark(pointer[i], { // Создаем метку с такими координатами и суем в переменную
+                                balloonContent: '<div class="map-balun">' +
+                                    '<div class="balun-head">' +
+                                    ' <img src="assets/img/filter-1.jpg" alt="" class="balun-img">' +
+                                    '<div class="balun-title">' +
+                                    'Padel Sant Marti' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '<div class="balun-body">' +
+                                    '<div class="balun-body-place">' +
+                                    'W. Gray St. Utica, Pennsylvania' +
+                                    '</div>' +
+                                    '<div class="balun-body-time">' +
+                                    '<div class="balun-time-box">' +
+                                    '12:30' +
+                                    '</div>' +
+                                    '<div class="balun-time-box">' +
+                                    '14:30' +
+                                    '</div>' +
+                                    '<div class="balun-time-box">' +
+                                    '15:30' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>'
+                                // сдесь содержимое балуна в формате html, все стили в css
+                            }, {
+                                iconImageHref: './assets/img/icon-map.svg', // картинка иконки
+                                iconImageSize: [64, 64], // размер иконки
+                                iconImageOffset: [-32, -64], // позиция иконки
+                                balloonContentSize: [270, 99], // размер нашего кастомного балуна в пикселях
+                                balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
+                                balloonImageHref: './assets/img/icon-map.svg', // Картинка заднего фона балуна
+                                balloonImageOffset: [-65, -89], // смещание балуна, надо подогнать под стрелочку
+                                balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
+                                balloonShadow: false
+                            });
+                            /* Добавляем метки на карту */
+                            myMap.geoObjects.add(place);
+
+                        }
+
+                    } else {
+                        myMap.destroy();
+                        myMap = null;
+                    }
+
+                }
+            });
+        }
+
+    }
+    mapActive()
+
+</script>
+<!----------------------------------------------------------------->

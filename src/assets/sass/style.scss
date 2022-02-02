@@ -116,6 +116,9 @@ ul {
     .container.main__container {
         max-width: 1438px;
     }
+    .container.result-container {
+        max-width: 1557px;
+    }
     .peculiarities_contain.container {
         max-width: 1477px;
     }
@@ -154,3 +157,5 @@ ul {
 @import "../sass/blocks/filter.scss";
 @import "../sass/blocks/checkbox.scss";
 @import "../sass/blocks/result.scss";
+@import "../sass/blocks/map__balun.scss";
+@import "../sass/blocks/map.scss";

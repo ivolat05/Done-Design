@@ -4,14 +4,11 @@
     padding-top: 21px;
     padding-bottom: 17px;
 }
-
 .filter__wrapp {
     display: flex;
-    align-items: center;
     justify-content: flex-start;
-    gap: 15px;
+    align-items: center;
 }
-
 .fillter-btn {
     outline: none;
     border: 1px solid #f8f8f9;
@@ -26,10 +23,10 @@
     align-items: center;
     justify-content: space-between;
     height: 42px;
-    width: 130px;
+    width: 135px;
     cursor: pointer;
     transition: 0.3s all ease-in-out;
-    padding: 8px;
+    padding: 8px 10px 8px 8px;
     span {
         display: block;
         position: relative;
@@ -43,11 +40,12 @@
 }
 
 .filter-select {
-    width: 115px;
+    min-width: 115px;
+    display: inline-block;
     background: url("../../assets/img/chevron_down.svg") no-repeat center right 15px, #f8f8f9;
     border-radius: 46px;
-    padding: 11px 21px;
-
+    padding: 11px 35px 11px 21px;
+    margin-right: 15px;
     font-weight: normal;
     font-size: 0.875rem;
     line-height: 17px;
