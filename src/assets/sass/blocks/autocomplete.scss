@@ -2,6 +2,9 @@
     position: relative;
     display: inline-block;
 }
+.autocomplete-box {
+    position: relative;
+}
 
 .autocomplete-items {
     position: absolute;
@@ -32,4 +35,10 @@
     div:nth-last-child(1) {
         border: none;
     }
+}
+.autocomplete-box.active,
+.autocomplete-box.active {
+    border: 1px solid #c2e631 !important;
+    box-shadow: 0px 18px 40px rgba(109, 141, 172, 0.17) !important;
+    border-radius: 16px !important;
 }

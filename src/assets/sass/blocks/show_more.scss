@@ -1,0 +1,43 @@
+.show {
+    margin-top: auto;
+}
+.show + .footer {
+    margin-top: 90px;
+}
+.show-btn {
+    width: 170px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    border: 1px solid #caced3;
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+    margin: 0 auto;
+    &:hover {
+        background: #c2e631;
+        border: 1px solid #c2e631;
+    }
+}
+
+.show-btn.active {
+    .show-btn-img {
+        width: 20px;
+        height: 20px;
+        animation-name: circle-rotate;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes circle-rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
