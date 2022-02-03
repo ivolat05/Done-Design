@@ -4,17 +4,16 @@
 <script>
 
     function mapActive() {
-        // Как только будет загружен API и готов DOM, выполняем инициализацию
-        ymaps.ready(init);
 
+        ymaps.ready(init);
         // Инициализация и уничтожение карты при нажатии на кнопку.
         function init() {
             var myMap;
             var i;
             var place;
-            // массив координат мест
+            // массив координат 
             var pointer = [[55.71, 37.60], [55.73, 37.4], [55.74, 37.63], [55.76, 37.54], [55.78, 37.74], [55.2, 30.69], [55.4, 35.69], [55.26, 33.69], [51.156, 37.45169], [55.454, 37.56369], [55.513213, 37.456139], [54.5133, 38.65469]]
-            var resultBox = document.querySelectorAll('.result__box');
+            var resultBox = document.querySelectorAll('.result__box');// карточки 
 
             $('.show__input').bind({
                 click: function () {
@@ -28,31 +27,24 @@
                         });
 
                         for (i = 0; i < pointer.length; ++i) {
-                            // координаты места
-                            place = new ymaps.Placemark(pointer[i]);
-                            // назначение атрибута на карточку указывающцй порядковый номер координаты
-                            resultBox[i].setAttribute('number', i)
+                            place = new ymaps.Placemark(pointer[i]); // координаты места
+                            resultBox[i].setAttribute('number', i) // назначение атрибута на карточку указывающцй порядковый номер координаты
 
-                            place = new ymaps.Placemark(pointer[i], { // Создаем метку с такими координатами и суем в переменную
-                                balloonContent: `<div class="map-box-img">${resultBox[i].innerHTML}</div>`
-                                // сдесь содержимое балуна в формате html, все стили в css
+                            place = new ymaps.Placemark(pointer[i], { // Создаем метку с  координатами
+                                balloonContent: `<div class="map-box-img">${resultBox[i].innerHTML}</div>`// сдесь содержимое балуна в формате html, все стили в css
                             }, {
-                                iconImageHref: './assets/img/icon-map.svg', // картинка иконки
-                                iconImageSize: [34, 34], // размер иконки
-                                iconImageOffset: [-32, -64], // позиция иконки
+                                iconImageHref: './assets/img/icon-map.svg',
+                                iconImageSize: [34, 34],
+                                iconImageOffset: [-32, -64],
                                 iconLayout: 'default#imageWithContent',
-                                balloonContentSize: [351, 397], // размер нашего кастомного балуна в пикселях
-                                balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
-                                balloonImageHref: './assets/img/icon-map.svg', // Картинка заднего фона балуна
-                                balloonImageOffset: [-165, -250], // смещание балуна, надо подогнать под стрелочку
-                                balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
-                                balloonShadow: false,
-                                name: i
+                                balloonContentSize: [351, 397],
+                                balloonLayout: "default#imageWithContent",
+                                balloonImageOffset: [-165, -250],
+                                balloonImageSize: [260, 89],
+                                balloonShadow: false
                             });
-                            /* Добавляем метки на карту */
                             myMap.geoObjects.add(place);
                             myMap.behaviors.disable('scrollZoom');
-
                         }
                         myMap.events.add('click', function (e) {
                             var coords = e.get('coords');
@@ -65,8 +57,6 @@
                                 myMap.geoObjects.get(1).balloon.open();
                                 myMap.setCenter([55.73, 37.4]);
                             }
-
-
                         });
 
                         // отоброжение на карте карточки места
