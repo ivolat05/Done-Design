@@ -384,6 +384,63 @@ $(function () {
     });
 
 
+    // развертование списка результата поиска
+    function resultActive() {
+        let checkboxActive = document.querySelector('.show-label');
+        let resultBox = document.querySelectorAll('.result__box');
+        let showInput = document.querySelector('.show__input');
+        let mapContainer = document.querySelector('.map__container');
+        let resultWrapperColl = document.querySelector('.result__wrapper-coll');
+        if (checkboxActive && resultBox) {
+            checkboxActive.addEventListener('click', () => {
+                if (showInput.checked) {
+                    for (let i = 0; i < resultBox.length; i++) {
+                        resultBox[i].classList.add('active');
+                    }
+                    mapContainer.classList.add('acitve');
+                    resultWrapperColl.classList.add('acitve');
+                } else {
+                    for (let i = 0; i < resultBox.length; i++) {
+                        resultBox[i].classList.remove('active');
+                    }
+                    mapContainer.classList.remove('acitve');
+                    resultWrapperColl.classList.remove('acitve');
+                }
+            })
 
+        }
+    }
+    resultActive();
 
+    function mapFixed() {
+        let mapId = document.getElementById('map');
+        let offsetHeader = document.querySelector('.header').offsetHeight;
+        let offsetSearchBox = document.querySelector('.search-box').offsetHeight;
+        let offsetFilter = document.querySelector('.filter').offsetHeight;
+        let summHead = offsetHeader + offsetSearchBox + offsetFilter;
+        window.addEventListener('scroll', () => {
+            let scrollDistanse = window.scrollY;
+            let pageHeight = document.querySelector('.page').offsetHeight;
+            let footerHeight = document.querySelector(".footer").offsetHeight;
+            let stopMap = pageHeight - 780 - footerHeight;
+            if (scrollDistanse >= summHead) {
+                mapId.style.position = 'fixed';
+            }
+            if (stopMap <= scrollDistanse) {
+                mapId.style.top = 'auto'
+                mapId.style.position = 'absolute';
+                mapId.style.bottom = '40px';
+            } else if (stopMap >= scrollDistanse) {
+                mapId.style.top = '0'
+                mapId.style.bottom = 'auto';
+                mapId.style.position = 'fixed';
+            }
+            if (scrollDistanse < summHead) {
+                mapId.style.position = 'absolute';
+            }
+        })
+    }
+
+    mapFixed();
 })
+

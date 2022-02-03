@@ -250,7 +250,7 @@
                 <div class="result__wrapper">
                     <div class="result__wrapper-coll">
         
-                        <div class="result__box">
+                        <a href='#' class="result__box">
                             <div class="result__box-head">
                                 <img class="result__head-img" src="./assets/img/result-1.jpg" alt="">
                             </div>
@@ -280,9 +280,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
         
-                        <div class="result__box">
+                        <a href='#' class="result__box">
                             <div class="result__box-head">
                                 <img class="result__head-img" src="./assets/img/result-2.jpg" alt="">
                             </div>
@@ -306,9 +306,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
         
-                        <div class="result__box">
+                        <a href='#' class="result__box">
                             <div class="result__box-head">
                                 <img class="result__head-img" src="./assets/img/result-3.jpg" alt="">
                             </div>
@@ -338,9 +338,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
         
-                        <div class="result__box">
+                        <a href='#' class="result__box">
                             <div class="result__box-head">
                                 <img class="result__head-img" src="./assets/img/result-4.jpg" alt="">
                             </div>
@@ -370,9 +370,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
         
-                        <div class="result__box">
+                        <a href='#' class="result__box">
                             <div class="result__box-head">
                                 <img class="result__head-img" src="./assets/img/result-5.jpg" alt="">
                             </div>
@@ -402,9 +402,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
         
-                        <div class="result__box">
+                        <a href='#' class="result__box">
                             <div class="result__box-head">
                                 <img class="result__head-img" src="./assets/img/result-6.jpg" alt="">
                             </div>
@@ -434,9 +434,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
         
-                        <div class="result__box">
+                        <a href='#' class="result__box">
                             <div class="result__box-head">
                                 <img class="result__head-img" src="./assets/img/result-7.jpg" alt="">
                             </div>
@@ -466,9 +466,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
         
-                        <div class="result__box">
+                        <a href='#' class="result__box">
                             <div class="result__box-head">
                                 <img class="result__head-img" src="./assets/img/result-8.jpg" alt="">
                             </div>
@@ -498,9 +498,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
         
-                        <div class="result__box">
+                        <a href='#' class="result__box">
                             <div class="result__box-head">
                                 <img class="result__head-img" src="./assets/img/result-9.jpg" alt="">
                             </div>
@@ -530,9 +530,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
         
-                        <div class="result__box">
+                        <a href='#' class="result__box">
                             <div class="result__box-head">
                                 <img class="result__head-img" src="./assets/img/result-1.jpg" alt="">
                             </div>
@@ -562,9 +562,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
         
-                        <div class="result__box active">
+                        <a href='#' class="result__box">
                             <div class="result__box-head">
                                 <img class="result__head-img" src="./assets/img/result-2.jpg" alt="">
                             </div>
@@ -594,9 +594,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
         
-                        <div class="result__box active">
+                        <a href='#' class="result__box">
                             <div class="result__box-head">
                                 <img class="result__head-img" src="./assets/img/result-3.jpg" alt="">
                             </div>
@@ -626,41 +626,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-        
-        
-        
-        
+                        </a>
                     </div>
-        
                     <div class="map__container">
-                        <div class="result__map-info">
-                            <div class="map-balun  ">
-                                <div class="balun-head">
-                                    <img src="./assets/img/filter-1.jpg" alt="" class="balun-img">
-                                    <div class="balun-title">
-                                        Padel Sant Marti
-                                    </div>
-                                </div>
-                                <div class="balun-body">
-                                    <div class="balun-body-place">
-                                        W. Gray St. Utica, Pennsylvania
-                                    </div>
-                                    <div class="balun-body-time">
-                                        <div class="balun-time-box">
-                                            12:30
-                                        </div>
-                                        <div class="balun-time-box">
-                                            14:30
-                                        </div>
-                                        <div class="balun-time-box">
-                                            15:30
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>                </div>
                         <div id="map"></div>
-        
                     </div>
                 </div>
         
@@ -890,7 +859,9 @@
                 var myMap;
                 var i;
                 var place;
-                var pointer = [[55.71, 37.60], [55.73, 37.4], [55.74, 37.63], [55.76, 37.54], [55.78, 37.74], [55., 37.69]]
+                // массив координат мест
+                var pointer = [[55.71, 37.60], [55.73, 37.4], [55.74, 37.63], [55.76, 37.54], [55.78, 37.74], [55.2, 30.69], [55.4, 35.69], [55.26, 33.69], [51.156, 37.45169], [55.454, 37.56369], [55.513213, 37.456139], [54.5133, 38.65469]]
+                var resultBox = document.querySelectorAll('.result__box');
     
                 $('.show__input').bind({
                     click: function () {
@@ -904,51 +875,61 @@
                             });
     
                             for (i = 0; i < pointer.length; ++i) {
-    
+                                // координаты места
                                 place = new ymaps.Placemark(pointer[i]);
-    
+                                // назначение атрибута на карточку указывающцй порядковый номер координаты
+                                resultBox[i].setAttribute('number', i)
     
                                 place = new ymaps.Placemark(pointer[i], { // Создаем метку с такими координатами и суем в переменную
-                                    balloonContent: '<div class="map-balun">' +
-                                        '<div class="balun-head">' +
-                                        ' <img src="assets/img/filter-1.jpg" alt="" class="balun-img">' +
-                                        '<div class="balun-title">' +
-                                        'Padel Sant Marti' +
-                                        '</div>' +
-                                        '</div>' +
-                                        '<div class="balun-body">' +
-                                        '<div class="balun-body-place">' +
-                                        'W. Gray St. Utica, Pennsylvania' +
-                                        '</div>' +
-                                        '<div class="balun-body-time">' +
-                                        '<div class="balun-time-box">' +
-                                        '12:30' +
-                                        '</div>' +
-                                        '<div class="balun-time-box">' +
-                                        '14:30' +
-                                        '</div>' +
-                                        '<div class="balun-time-box">' +
-                                        '15:30' +
-                                        '</div>' +
-                                        '</div>' +
-                                        '</div>' +
-                                        '</div>'
+                                    balloonContent: `<div class="map-box-img">${resultBox[i].innerHTML}</div>`
                                     // сдесь содержимое балуна в формате html, все стили в css
                                 }, {
                                     iconImageHref: './assets/img/icon-map.svg', // картинка иконки
-                                    iconImageSize: [64, 64], // размер иконки
+                                    iconImageSize: [34, 34], // размер иконки
                                     iconImageOffset: [-32, -64], // позиция иконки
-                                    balloonContentSize: [270, 99], // размер нашего кастомного балуна в пикселях
+                                    iconLayout: 'default#imageWithContent',
+                                    balloonContentSize: [351, 397], // размер нашего кастомного балуна в пикселях
                                     balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
                                     balloonImageHref: './assets/img/icon-map.svg', // Картинка заднего фона балуна
-                                    balloonImageOffset: [-65, -89], // смещание балуна, надо подогнать под стрелочку
+                                    balloonImageOffset: [-165, -250], // смещание балуна, надо подогнать под стрелочку
                                     balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
-                                    balloonShadow: false
+                                    balloonShadow: false,
+                                    name: i
                                 });
                                 /* Добавляем метки на карту */
                                 myMap.geoObjects.add(place);
+                                myMap.behaviors.disable('scrollZoom');
     
                             }
+                            myMap.events.add('click', function (e) {
+                                var coords = e.get('coords');
+    
+                                myMap.setCenter([coords[0].toPrecision(6), coords[1].toPrecision(6)]);
+                                if (myMap.balloon.isOpen()) {
+    
+                                    myMap.balloon.close();
+                                } else {
+                                    myMap.geoObjects.get(1).balloon.open();
+                                    myMap.setCenter([55.73, 37.4]);
+                                }
+    
+    
+                            });
+    
+                            // отоброжение на карте карточки места
+                            resultBox.forEach((item) => {
+                                item.addEventListener('mousemove', () => {
+                                    let atributeBox = item.getAttribute('number');
+                                    myMap.geoObjects.get(atributeBox).balloon.open();
+                                    myMap.setCenter(pointer[atributeBox]);
+    
+                                })
+                            })
+    
+                            // отброжение на карте места первой карточки 
+    
+                            myMap.geoObjects.get(0).balloon.open();
+                            myMap.setCenter(pointer[0]);
     
                         } else {
                             myMap.destroy();
@@ -961,6 +942,8 @@
     
         }
         mapActive()
+    
+    
     
     </script>
     <!----------------------------------------------------------------->

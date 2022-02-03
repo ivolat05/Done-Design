@@ -1,17 +1,80 @@
 #map {
     width: 49vw;
-    height: 80%;
+    height: 755px;
     position: absolute;
     right: 0;
     top: 0;
 }
+
 .map__container {
     width: 50%;
-    height: 900px;
-    margin-bottom: 20px;
+    height: 755px;
+
     display: none;
+}
+.map__container.active {
+    display: block;
 }
 #map canvas {
     filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
     -webkit-filter: grayscale(100%);
+}
+
+.map-box-img {
+    width: 352px;
+    background: #ffffff;
+    box-shadow: 0px 4px 18px rgba(160, 168, 177, 0.07);
+    border-radius: 16px;
+    padding: 9px 9px 20px 9px;
+    .result__box-head {
+        position: relative;
+        width: 333px;
+        height: 264px;
+        overflow: hidden;
+        border-radius: 16px;
+        margin-bottom: 0;
+        img {
+            border-radius: 16px;
+            max-width: 333px;
+            height: 264px;
+            object-fit: cover;
+            overflow: hidden;
+        }
+    }
+
+    .result__box-title {
+        font-weight: bold;
+        font-size: 1.375rem;
+        line-height: 26px;
+
+        color: #ffffff;
+        position: absolute;
+        left: 21px;
+        bottom: 24px;
+    }
+
+    .result-body-place {
+        padding-left: 41px;
+        position: relative;
+        font-size: 1.0625rem;
+        text-align: left;
+        line-height: 39px;
+        color: #a0a8b1;
+        margin-bottom: 11px;
+        &::before {
+            content: url("../../assets/img/pin-map.svg");
+            position: absolute;
+            left: 11px;
+            top: 50%;
+            transform: translateY(-38%);
+        }
+    }
+
+    .result__box-body {
+        padding-top: 12px;
+        padding-left: 0;
+    }
+    .result__row-box {
+        padding-left: 10px;
+    }
 }
