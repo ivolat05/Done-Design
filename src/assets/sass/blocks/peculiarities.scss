@@ -1,6 +1,6 @@
 .peculiarities {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 67px;
 }
 .peculiarities__wrapp {
     width: 80%;
@@ -23,10 +23,6 @@
         object-fit: cover;
         transition: 0.4s;
         overflow: hidden;
-        &:hover {
-            box-shadow: -27px 62px 45px rgba(54, 54, 54, 0.49), 15px 17px 33px rgba(0, 0, 0, 0.25);
-            z-index: 1;
-        }
     }
 }
 .peculiarities__box-img.one {
@@ -41,6 +37,8 @@
     img {
         width: 255px;
         height: 234px;
+        box-shadow: -27px 62px 45px rgba(54, 54, 54, 0.49), 15px 17px 33px rgba(0, 0, 0, 0.25);
+        z-index: 1;
     }
 }
 .peculiarities__box-img.three {
@@ -54,6 +52,7 @@
     width: 202px;
     height: 58px;
     margin-left: 30px;
+    margin-top: 10px;
 }
 
 .peculiarities__wrapp-title {
@@ -80,20 +79,12 @@
     display: block;
 
     border-radius: 8px;
-    margin-bottom: 10px;
-    padding: 21px 29px 30px 29px;
+
+    padding: 35px 29px 35px 29px;
     transition: 0.3s all ease-in-out;
     &:hover {
         background: #fff;
         box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.1), 0px 30px 40px rgba(20, 37, 63, 0.08);
-        .peculiarities__box-title {
-            img {
-                width: 24px;
-                height: 24px;
-                margin-bottom: 17px;
-                display: block;
-            }
-        }
     }
 }
 

@@ -55,6 +55,9 @@
     border: 1px solid #c2e631;
     background: none;
     border-radius: 4px;
+    &:hover {
+        background: #c2e631;
+    }
 }
 
 .finder__player-title {

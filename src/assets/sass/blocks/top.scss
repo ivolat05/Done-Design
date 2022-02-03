@@ -41,6 +41,7 @@
     }
     &:hover {
         border: 1px solid #c2e631;
+        background: #c2e631;
     }
 }
 
@@ -106,6 +107,6 @@
     border-radius: 4px;
     transition: 0.3s all ease-in-out;
     &:hover {
-        background: rgba(190, 207, 96, 0.19);
+        background: #c2e631;
     }
 }
