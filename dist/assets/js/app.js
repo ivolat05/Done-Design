@@ -10359,4 +10359,33 @@ $(function () {
 
     }
     morePlayerCard();
+
+    // filter blog
+    function filterBlog() {
+        let blogBox = document.querySelectorAll('.blog__box');
+        let blogBtn = document.querySelectorAll('.blog-btn');
+        let blogWrapp = document.querySelector('.blog__wrapp')
+        if (blogBox && blogBtn) {
+            blogBtn.forEach((item) => {
+                item.addEventListener('click', () => {
+                    let filterClass = item.dataset['filter'];
+
+                    for (let i = 0; i < blogBtn.length; i++) {
+                        if (blogBtn[i].classList.contains('active')) {
+                            blogBtn[i].classList.remove('active')
+                        }
+                    }
+                    item.classList.add('active');
+                    blogBox.forEach((item) => {
+                        item.classList.remove('hide');
+
+                        if (!item.classList.contains(filterClass) && filterClass != 'all') {
+                            item.classList.add('hide');
+                        }
+                    })
+                })
+            })
+        }
+    }
+    filterBlog();
 })

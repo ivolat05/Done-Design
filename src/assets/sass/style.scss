@@ -134,6 +134,9 @@ ul {
     .container.player_container {
         max-width: 1530px;
     }
+    .container.blog__head-contain {
+        max-width: 1540px;
+    }
 }
 
 .container {
@@ -168,6 +171,8 @@ ul {
 @import "../sass/blocks/player.scss";
 @import "../sass/blocks/show_more.scss";
 @import "../sass/blocks/chat.scss";
+@import "../sass/blocks/blog__header.scss";
+@import "../sass/blocks/blog.scss";
 
 @import "../sass/blocks/popup.scss";
 @import "../sass/blocks/popup-player.scss";

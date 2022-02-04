@@ -1,0 +1,40 @@
+.blog__head {
+    background: #ffffff;
+    box-shadow: 0px 8px 8px rgba(93, 110, 126, 0.04);
+    padding-top: 22px;
+    padding-bottom: 25px;
+}
+
+.blog-title {
+    font-family: "Oswald";
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 110.52%;
+    color: #3a3f43;
+    margin-bottom: 29px;
+}
+
+.blog-btn {
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 110.52%;
+    color: #a0a8b1;
+    border: 1px solid #a0a8b1;
+    border-radius: 48px;
+    cursor: pointer;
+    background: none;
+    padding: 12px 24px;
+    margin-right: 10px;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+        font-weight: 500;
+        color: #2e2d2d;
+        border: 1px solid #3a3f43;
+    }
+}
+
+.blog-btn.active {
+    font-weight: 500;
+    color: #2e2d2d;
+    border: 1px solid #3a3f43;
+}
