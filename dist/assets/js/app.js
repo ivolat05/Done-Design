@@ -10339,17 +10339,19 @@ $(function () {
                     }
                     if (!item.parentElement.parentElement.parentElement.classList.contains('active')) {
                         item.parentElement.parentElement.parentElement.classList.add('active');
+                        let playerBox = document.querySelectorAll('.player-box');
+                        let x = 0;
+                        for (let i = 0; i < playerBox.length; i++) {
+                            if (playerBox[i].classList.contains('active')) {
+                                x += 1
+                            }
+                        }
+                        item.parentElement.parentElement.parentElement.style.zIndex = `${x}`;
                     } else {
                         item.parentElement.parentElement.parentElement.classList.remove('active');
+                        item.parentElement.parentElement.parentElement.style.zIndex = `0`;
                     }
-                    let playerBox = document.querySelectorAll('.player-box');
-                    let x = 0;
-                    for (let i = 0; i < playerBox.length; i++) {
-                        if (playerBox[i].classList.contains('active')) {
-                            x += 1
-                        }
-                    }
-                    item.parentElement.parentElement.parentElement.style.zIndex = `${x}`;
+
 
                 })
             })
