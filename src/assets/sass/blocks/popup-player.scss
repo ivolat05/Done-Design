@@ -1,0 +1,77 @@
+.popup-player {
+    width: 680px;
+    margin: 100px auto;
+    background: #ffffff;
+    box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16), 0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+        0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+    border-radius: 8px;
+
+    .player-avatar {
+        width: 74px;
+        height: 74px;
+        img {
+            width: 74px;
+            height: 74px;
+        }
+    }
+    .player-name {
+        font-family: "Oswald";
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 30px;
+        color: #fff;
+    }
+    .player-status {
+        font-weight: normal;
+        font-size: 0.875rem;
+        line-height: 16px;
+
+        color: #a0a8b1;
+    }
+}
+
+.popup__player-row.two {
+    justify-content: flex-start;
+    margin-bottom: 0;
+}
+
+.popup-close {
+    background: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.popup-player-head {
+    background: #3c3c3c;
+    border-radius: 8px 8px 0px 0px;
+    padding: 20px 24px 20px 29px;
+}
+
+.popup__player-row {
+    font-family: "Oswald";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #a0a8b1;
+    margin-bottom: 20px;
+}
+
+.player-avatar.green {
+    &::before {
+        background: #60e531;
+    }
+}

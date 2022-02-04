@@ -9835,6 +9835,7 @@ and dependencies (minified).
 }));
 
 $(function () {
+
     // calendar 
     function calendars() {
         let calendars = {};
@@ -10304,4 +10305,56 @@ $(function () {
         }
     }
     playerResetBtn();
+
+    // popup 
+    $('.popup-content').magnificPopup({
+        type: 'inline',
+        mainClass: 'mfp-fade'
+    });
+    //popup close 
+    function closePopup() {
+        let popupClose = document.querySelectorAll('.popup-close');
+        if (popupClose) {
+            popupClose.forEach((item) => {
+                item.addEventListener('click', () => {
+                    $.magnificPopup.close();
+                })
+            })
+        }
+
+    }
+    closePopup();
+
+    // раскрытие карточки игрока
+
+    function morePlayerCard() {
+        let playerTextBtn = document.querySelectorAll('.player-text-btn');
+        if (playerTextBtn) {
+            playerTextBtn.forEach((item) => {
+                item.addEventListener('click', () => {
+                    if (!item.parentElement.classList.contains('active')) {
+                        item.parentElement.classList.add('active');
+                    } else {
+                        item.parentElement.classList.remove('active');
+                    }
+                    if (!item.parentElement.parentElement.parentElement.classList.contains('active')) {
+                        item.parentElement.parentElement.parentElement.classList.add('active');
+                    } else {
+                        item.parentElement.parentElement.parentElement.classList.remove('active');
+                    }
+                    let playerBox = document.querySelectorAll('.player-box');
+                    let x = 0;
+                    for (let i = 0; i < playerBox.length; i++) {
+                        if (playerBox[i].classList.contains('active')) {
+                            x += 1
+                        }
+                    }
+                    item.parentElement.parentElement.parentElement.style.zIndex = `${x}`;
+
+                })
+            })
+        }
+
+    }
+    morePlayerCard();
 })

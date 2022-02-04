@@ -131,6 +131,9 @@ ul {
     .container.player_filte-container {
         max-width: 1572px;
     }
+    .container.player_container {
+        max-width: 1530px;
+    }
 }
 
 .container {
@@ -164,3 +167,7 @@ ul {
 @import "../sass/blocks/player_filter.scss";
 @import "../sass/blocks/player.scss";
 @import "../sass/blocks/show_more.scss";
+@import "../sass/blocks/chat.scss";
+
+@import "../sass/blocks/popup.scss";
+@import "../sass/blocks/popup-player.scss";
