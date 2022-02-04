@@ -43,9 +43,10 @@
     border-radius: 25px;
     padding: 9px 13px;
 }
-.blog__box:nth-child(1),
-.blog__box:nth-child(2),
-.blog__box:nth-child(3) {
+
+.blog__wrapp .blog__box:nth-child(1),
+.blog__wrapp .blog__box:nth-child(2),
+.blog__wrapp .blog__box:nth-child(3) {
     max-width: 467px;
 
     .blog__box-head {

@@ -1,0 +1,120 @@
+.article {
+    padding-top: 7px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #f3f4f7;
+}
+.article__box-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 11px;
+}
+
+.article-btn {
+    transition: 0.3s all ease-in-out;
+    border: 1px solid #caced3;
+    border-radius: 4px;
+    padding: 14px 44px 14px 24px;
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 110.52%;
+    color: #2e2d2d;
+    position: relative;
+    &::before {
+        content: url("../../assets/img/article-arrow-next.svg");
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 19px;
+    }
+    &:hover {
+        background: #c2e631;
+    }
+}
+.article-btn.back {
+    padding: 14px 24px 14px 44px;
+    &::before {
+        content: url("../../assets/img/article-arrow-back.svg");
+        left: 14px;
+        right: auto;
+    }
+}
+
+.article-title {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 126.02%;
+    color: #2e2d2d;
+    margin-bottom: 11px;
+}
+
+.article_subtitle {
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 126.02%;
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+.article__mess {
+    margin-bottom: 33px;
+}
+.article__mess-link {
+    margin-right: 12px;
+}
+.article_subtitle-link {
+    text-decoration: underline;
+    color: #2e2d2d;
+}
+
+.article__block {
+    p {
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 161.52%;
+        color: #6c757d;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 161.52%;
+        color: #2e2d2d;
+        margin-bottom: 16px;
+        margin-top: 60px;
+    }
+}
+
+.article__block-img {
+    width: 100%;
+
+    border-radius: 16px;
+    margin-bottom: 32px;
+    margin-top: 8px;
+}
+.article__block-img.two {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+.article-watch {
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 140%;
+    color: #333333;
+
+    position: relative;
+    &::before {
+        content: url("../../assets/img/show.svg");
+        position: relative;
+        top: 1px;
+        padding-right: 8px;
+    }
+}
+
+.article__box {
+    margin: 0 auto;
+    max-width: 715px;
+}

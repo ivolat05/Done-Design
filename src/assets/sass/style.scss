@@ -46,6 +46,20 @@ ul {
     background: #f9f9fa;
 }
 
+.page.fdfdff {
+    background: #fdfdff;
+}
+p {
+    text-align: left;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 110%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
 .background-fon {
     width: 100%;
     height: 100%;
@@ -134,7 +148,15 @@ ul {
     .container.player_container {
         max-width: 1530px;
     }
-    .container.blog__head-contain {
+    .container.blog__head-contain,
+    .container.article-container,
+    .container.related-container {
+        max-width: 1540px;
+    }
+    .container.article-container {
+        padding-right: 85px;
+    }
+    .footer__two .container.footer-wrapp {
         max-width: 1540px;
     }
 }
@@ -173,6 +195,8 @@ ul {
 @import "../sass/blocks/chat.scss";
 @import "../sass/blocks/blog__header.scss";
 @import "../sass/blocks/blog.scss";
+@import "../sass/blocks/article.scss";
+@import "../sass/blocks/related.scss";
 
 @import "../sass/blocks/popup.scss";
 @import "../sass/blocks/popup-player.scss";
