@@ -541,7 +541,12 @@ $(function () {
             blogBtn.forEach((item) => {
                 item.addEventListener('click', () => {
                     let filterClass = item.dataset['filter'];
-
+                    if (filterClass == 'news' || filterClass == 'companies' || filterClass == 'about') {
+                        blogWrapp.classList.add('active')
+                    }
+                    else {
+                        blogWrapp.classList.remove('active')
+                    }
                     for (let i = 0; i < blogBtn.length; i++) {
                         if (blogBtn[i].classList.contains('active')) {
                             blogBtn[i].classList.remove('active')
