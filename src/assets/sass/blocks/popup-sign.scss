@@ -1,0 +1,232 @@
+.popup-signin {
+    width: 529px;
+    margin: 0 auto;
+    padding: 36px 52px 43px 52px;
+    background: #fff;
+    border: 1px solid #e5e8ed;
+    box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16), 0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+        0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+    border-radius: 4px;
+    position: relative;
+}
+
+.popup-input {
+    width: 100%;
+    height: 44px;
+    padding: 11px 16px;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 150%;
+    color: #3a3f43;
+    margin-bottom: 12px;
+    &::placeholder {
+        color: #a0a8b1;
+    }
+}
+
+.popup-close.popup-two {
+    position: absolute;
+    right: 23px;
+    top: 23px;
+    img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.popup-title-up {
+    display: none;
+}
+
+.popup-title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 150%;
+
+    color: #2e2d2d;
+}
+.popup-subtitle {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 150%;
+    color: #a0a8b1;
+    margin-bottom: 32px;
+}
+.popup-subtitle.--two {
+    margin-bottom: 27px;
+}
+.popup-wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.popup-input-btn {
+    display: inline-block;
+    padding: 17px 47px 20px 71px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    transition: 0.3s all ease-in-out;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.1875;
+    color: #2e2d2d;
+    position: relative;
+    &:hover {
+        border: 1px solid #4f4c4c;
+    }
+    &::before {
+        content: url("../../assets/img/Google-Logo.svg");
+        top: 50%;
+        transform: translateY(-50%);
+        left: 35px;
+        position: absolute;
+    }
+}
+
+.popup-input-btn.facebook {
+    padding: 18px 60px 19px 76px;
+    &:hover {
+        border: 1px solid #1877f2;
+    }
+    &::before {
+        content: url("../../assets/img/Facebook-Logo.svg");
+        top: 50%;
+        transform: translateY(-50%);
+        left: 45px;
+        position: absolute;
+    }
+}
+
+.popup-form-title {
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 150%;
+    color: #424551;
+    margin-bottom: 5px;
+}
+
+.label-popup-span {
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 150%;
+    color: #424551;
+}
+
+.popup-btn-link {
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 150%;
+    color: #a0a8b1;
+}
+
+.popup-link.btn {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 2.75rem;
+    color: #0d0808;
+    display: inline-block;
+    width: 100%;
+    border: none;
+    height: 54px;
+    margin-bottom: 15px;
+}
+
+.popup-row-2 {
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 150%;
+    color: #a0a8b1;
+}
+
+.popup-btn {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    font-size: 0.875rem;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    line-height: 150%;
+    text-decoration: underline;
+    color: #2e2d2d;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.popup-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 35px;
+}
+.popup-label {
+    position: relative;
+    cursor: pointer;
+}
+
+.label-popup-span {
+    padding-left: 25px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+        border: 1px solid #2e2d2d;
+    }
+}
+
+.popup-label-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    opacity: 0;
+}
+
+.popup-label-check:checked + .label-popup-span {
+    &::before {
+        content: url("../../assets/img/checked.svg");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #2e2d2d;
+    }
+}
+.popup-title-in,
+.popup-title-up,
+.popup-login {
+    display: none;
+}
+
+.popup-title-in.active,
+.popup-title-up.active,
+.popup-login.active {
+    display: block;
+}
+
+.popup-link.btn.--deactive {
+    background: #e1e1e1;
+    position: relative;
+    z-index: -1;
+}
+
+.password-box.--two {
+    margin-bottom: 15px;
+}
+
+.popup-login {
+    position: relative;
+    z-index: 1;
+    background: none;
+}

@@ -46,7 +46,7 @@
                         </div>
                     </li>
                     <li class='header__list-inner'>
-                        <a href="#signin" class="header__form-link">
+                        <a href="#signin" class="header__form-link popup-content">
                             Sign in
                         </a>
                     </li>
@@ -964,10 +964,122 @@
             </div>
         
         </div>    <div class="background-fon"></div>
-        <div id="signin" class="popup-signin">
-            <button class="popup-close">
-                <img src="./assets/img/cross.svg" alt="">
+        <div id="signin" class="popup-signin mfp-hide">
+            <button class="popup-close popup-two">
+                <img src="./assets/img/cross-3.svg" alt="">
             </button>
+            <div class="popup-title">
+        
+                <span class="popup-title-in  active">
+                    Sign in
+                </span>
+                <span class="popup-title-up">
+                    Sign up
+                </span>
+            </div>
+            <div class="popup-subtitle">
+                Continue with
+            </div>
+            <div class="popup-wrapp">
+                <a href="#" class="popup-input-btn">
+                    With Google
+                </a>
+                <a href="#" class="popup-input-btn facebook">
+                    Facebook
+                </a>
+            </div>
+            <div class="popup-subtitle --two">
+                or login in
+            </div>
+        
+            <div id="tab-1" class="popup-login active">
+                <div class="popup-form-title">
+                    Email
+                </div>
+                <div class="email-box">
+                    <input class="input-email" type="text" placeholder="Your working email">
+                    <div class="error-text">
+                        Error message goes here
+                    </div>
+                </div>
+                <div class="popup-form-title">
+                    Password
+                </div>
+                <div class="password-box">
+                    <input id="pwd-1" class="input-password" type="password">
+                    <button class="password-btn" data-password="#pwd-1">
+                        <img src="./assets/img/Eye.svg" alt="">
+                    </button>
+                </div>
+                <div class="popup-row">
+                    <label class="popup-label">
+                        <input class="popup-label-check" type="checkbox">
+                        <span class="label-popup-span">
+                            Keep me signed in
+                        </span>
+                    </label>
+                    <a href="#" class="popup-btn-link">
+                        Forgot password?
+                    </a>
+                </div>
+                <button class="popup-link btn" type="submit">
+                    Sign in
+                </button>
+                <div class="popup-row-2 ">
+                    Don't have an account?
+                    <button class="popup-btn login-in" data-popup="#tab-2">
+                        Sign up
+                    </button>
+                </div>
+            </div>
+        
+            <div id="tab-2" class="popup-login">
+                <div class="popup-form-title ">
+                    Your name
+                </div>
+                <input class="popup-input fill-name sample" type="text" placeholder="Enter your full name">
+                <div class="popup-form-title">
+                    Email
+                </div>
+                <div class="email-box">
+                    <input class="input-email --email sample" type="text" placeholder="Your working email">
+                    <div class="error-text">
+                        Error message goes here
+                    </div>
+                </div>
+                <div class="popup-form-title">
+                    Phone number
+                </div>
+                <input class="popup-input phone sample" type="text">
+                <div class="popup-form-title">
+                    Password
+                </div>
+                <div class="password-box --two">
+                    <input id="pwd-2" class="input-password sample" type="password">
+                    <button class="password-btn" data-password="#pwd-2">
+                        <img src="./assets/img/Eye.svg" alt="">
+                    </button>
+                </div>
+                <div class="popup-form-title">
+                    Confirm password
+                </div>
+                <div class="password-box --two">
+                    <input id="pwd-3" class="input-password sample" type="password">
+                    <button class="password-btn" data-password="#pwd-3">
+                        <img src="./assets/img/Eye.svg" alt="">
+                    </button>
+                </div>
+        
+                <button class="popup-link popup-link-two btn --deactive" type="submit">
+                    Create account
+                </button>
+                <div class="popup-row-2 ">
+                    Don't have an account?
+                    <button class="popup-btn sign-up" data-popup="#tab-1">
+                        Log in
+                    </button>
+                </div>
+            </div>
         </div></div>
 
     <script src="assets/js/app.min.js"></script>

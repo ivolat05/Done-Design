@@ -3,6 +3,7 @@
 //= components/jquery.mCustomScrollbar.js
 //= components/slick.min.js
 //= components/uderscore.min.js
+//= components/jquery.maskedinput.min.js
 //= components/moment.js
 //= components/clndr.js
 
@@ -50,7 +51,8 @@ $(function () {
 
     calendars();
 
-
+    // mask
+    $(".phone").mask("+7(999) 999-99-99");
 
     // select
     let select = function () {
@@ -600,5 +602,122 @@ $(function () {
         }
     }
     filterBlog();
+
+    // показывать скрывать пароль
+
+    function showPassword() {
+        let btn = document.querySelectorAll('.password-btn');
+        if (btn) {
+            btn.forEach((item) => {
+                item.addEventListener('click', function () {
+                    let passwordId = item.getAttribute('data-password');
+                    let showPassword = document.querySelector(passwordId);
+                    item.classList.toggle('--active')
+                    if (showPassword.getAttribute('type') === 'password') {
+                        showPassword.type = 'text';
+                    } else {
+                        showPassword.type = 'password';
+                    }
+                })
+            })
+        }
+    };
+    showPassword();
+
+    // валидация ввода email
+    // validation email
+    function validEmail() {
+        let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let inp = document.querySelectorAll('.input-email');
+        let body = document.querySelector('body');
+
+        if (inp) {
+            inp.forEach((item) => {
+                item.addEventListener('keyup', () => {
+                    if (!reg.test(item.value)) {
+                        item.classList.add('error')
+                    } else {
+                        item.classList.remove('error')
+                    }
+                })
+            })
+            body.addEventListener('click', () => {
+                inp.forEach((item) => {
+                    if (item.classList.contains('error')) {
+                        item.value = 'fill error'
+                    }
+                })
+            })
+        }
+
+    }
+    validEmail();
+
+    // tab popup
+    // tabs 
+    function tabs() {
+        const cabinetBtn = document.querySelectorAll('.popup-btn');
+        const cabinetTab = document.querySelectorAll('.popup-login');
+        if (cabinetTab) {
+            cabinetBtn.forEach((item) => {
+                item.addEventListener('click', function () {
+                    let tabId = item.getAttribute('data-popup');
+                    let currentTab = document.querySelector(tabId);
+                    let popupTitleIn = document.querySelector('.popup-title-in');
+                    let popupTitleUp = document.querySelector('.popup-title-up');
+                    if (item.classList.contains('login-in')) {
+                        popupTitleUp.classList.add('active');
+                        popupTitleIn.classList.remove('active');
+                    } else if (item.classList.contains('sign-up')) {
+                        popupTitleUp.classList.remove('active');
+                        popupTitleIn.classList.add('active');
+                    }
+
+
+                    cabinetBtn.forEach(function (item) {
+                        item.classList.remove('acive')
+                    })
+
+                    cabinetTab.forEach(function (item) {
+                        item.classList.remove('active')
+                    })
+                    item.classList.add('active');
+                    currentTab.classList.add('active');
+
+                });
+            });
+        }
+    }
+    tabs();
+    // активация кнопки регистарции  Create account
+    function activeBtnCreateAccount() {
+        let sample = document.querySelectorAll('.sample');
+        let fillName = document.querySelector('.fill-name');
+        let email = document.querySelector('.--email');
+        let phone = document.querySelector('.phone');
+        let pwd = document.getElementById('pwd-2');
+        let pwdTwo = document.getElementById('pwd-3');
+        let popupLinkTwo = document.querySelector('.popup-link-two');
+        let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (popupLinkTwo) {
+            sample.forEach((item) => {
+                item.addEventListener('keyup', () => {
+                    if (fillName.value != '' && phone.value != '' && pwd.value != '' && pwdTwo.value != '' && pwdTwo.value === pwd.value) {
+                        if (reg.test(email.value)) {
+                            popupLinkTwo.classList.remove('--deactive')
+                        }
+                    } else {
+                        email.addEventListener('keyup', () => {
+                            if (!reg.test(email.value)) {
+                                popupLinkTwo.classList.add('--deactive')
+                            }
+                        })
+
+                    }
+                })
+            })
+        }
+    }
+    activeBtnCreateAccount();
 })
 
