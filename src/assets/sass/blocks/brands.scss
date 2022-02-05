@@ -18,3 +18,20 @@
     padding-left: 53px;
     margin-bottom: 30px;
 }
+
+.brands__box {
+    img {
+        width: 120px;
+        height: 64px;
+        object-fit: cover;
+        transition: 0.3s all ease-in-out;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+    }
+    &:hover {
+        img {
+            -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+            filter: grayscale(0);
+        }
+    }
+}

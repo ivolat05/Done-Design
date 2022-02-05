@@ -395,6 +395,41 @@ $(function () {
         ]
     });
 
+    $(".related-wrapp").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+
+                }
+            },
+            {
+                breakpoint: 820,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+
+                }
+            },
+
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1
+
+                }
+            }
+        ]
+    });
+
 
     // развертование списка результата поиска
     function resultActive() {
