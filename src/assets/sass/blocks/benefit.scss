@@ -1,0 +1,134 @@
+.benefit {
+    padding-top: 58px;
+    padding-bottom: 116px;
+}
+.benefit-title {
+    font-family: "Oswald";
+    font-weight: normal;
+    font-size: 2.75rem;
+    line-height: 54px;
+    color: #121212;
+    margin-bottom: 46px;
+}
+
+.benefit-text {
+    max-width: 425px;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #6c757d;
+    opacity: 0.7;
+    p {
+        margin-bottom: 30px;
+    }
+}
+
+.benefit__wrapp {
+    max-width: 1240px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.benefit-box-img {
+    width: 680px;
+    flex-shrink: 1;
+    position: relative;
+}
+
+.benefit-coll {
+    max-width: 525px;
+}
+
+.benefit-img-1 {
+    width: 118px;
+    height: 118px;
+    object-fit: fill;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: -2px 6px 8px rgba(0, 0, 0, 0.2);
+}
+.benefit-img-wrapp-3 {
+    width: 157px;
+    height: 157px;
+    border-radius: 50%;
+    border: 0.5px solid #c2e631;
+
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-img-wrapp-2 {
+    border-radius: 50%;
+    border: 0.5px solid #c2e631;
+    display: inline-block;
+    margin: 14px;
+}
+
+.benefit-img-wrapp-1 {
+    border-radius: 50%;
+    border: 0.5px solid #c2e631;
+    display: inline-block;
+    position: absolute;
+    top: -30px;
+    right: 125px;
+}
+
+.benefit-img-2 {
+    width: 403px;
+    height: 565px;
+    object-fit: cover;
+
+    margin-left: 65px;
+    display: block;
+}
+
+.benefit-box-text {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.57;
+    display: inline-block;
+    background: #6c757d;
+    border-radius: 24px;
+    padding: 14px 43px 14px 29px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 220px;
+    left: 334px;
+}
+
+.benefit-box-text.--two {
+    width: 320px;
+    bottom: 158px;
+}
+
+.benefit-box-mess {
+    position: absolute;
+    bottom: 60px;
+    left: -35px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 0.81;
+    color: #2e2d2d;
+    background: #fff;
+    box-shadow: 0px 30px 80px rgba(47, 65, 88, 1);
+    border-radius: 2000px;
+    padding: 32px 50px 32px 90px;
+    &::before {
+        content: url("../../assets/img/about-mess.svg");
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 61px;
+        height: 61px;
+        border-radius: 50%;
+        background: #c2e631;
+        top: 50%;
+        left: 8px;
+        transform: translateY(-50%);
+    }
+}

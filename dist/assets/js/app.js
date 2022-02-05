@@ -10369,7 +10369,7 @@ $(function () {
             blogBtn.forEach((item) => {
                 item.addEventListener('click', () => {
                     let filterClass = item.dataset['filter'];
-                    if (filterClass == 'news' || filterClass == 'companies' || filterClass == 'about') {
+                    if (filterClass == '--news' || filterClass == '--companies' || filterClass == '--about') {
                         blogWrapp.classList.add('active')
                     }
                     else {

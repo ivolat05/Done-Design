@@ -1,0 +1,26 @@
+.best {
+    background: url("../../assets/img/best.jpg") no-repeat center center/cover;
+    padding-top: 220px;
+    padding-bottom: 253px;
+}
+
+.best__list {
+    padding-left: 40px;
+}
+
+.best__list-inner {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 1.0625;
+    color: #ffffff;
+    position: relative;
+    padding-left: 45px;
+    &::before {
+        content: url("../../assets/img/best-icon.svg");
+        position: absolute;
+        left: 0;
+        top: 50%;
+    }
+}
