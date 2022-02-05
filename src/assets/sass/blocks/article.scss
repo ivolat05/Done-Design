@@ -31,7 +31,7 @@
         right: 19px;
     }
     &:hover {
-        background: #c2e631;
+        background: #04330a;
     }
 }
 .article-btn.back {
@@ -62,11 +62,33 @@
     margin-bottom: 33px;
 }
 .article__mess-link {
+    transition: 0.3s all ease-in-out;
     margin-right: 12px;
+    .facebook,
+    .instogram,
+    .link {
+        transition: 0.3s all ease-in-out;
+    }
+    &:hover {
+        .facebook {
+            fill: rgb(17, 50, 156);
+        }
+        .instogram {
+            fill: rgb(175, 15, 122);
+        }
+        .link {
+            fill: #78848f;
+        }
+    }
 }
+
 .article_subtitle-link {
     text-decoration: underline;
     color: #2e2d2d;
+    &:hover {
+        transition: 0.3s all ease-in-out;
+        color: #c2e631;
+    }
 }
 
 .article__block {

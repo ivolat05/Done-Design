@@ -2,7 +2,8 @@
 .top__wrapp {
     position: relative;
 }
-.top-slick-next {
+.top-slick-next,
+.related-next {
     position: absolute;
     width: 56px;
     height: 56px;
@@ -27,4 +28,8 @@
             fill: #27272e;
         }
     }
+}
+.related-next {
+    right: 0;
+    transform: translateY(-100%);
 }

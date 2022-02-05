@@ -395,13 +395,13 @@ $(function () {
         ]
     });
 
-    $(".related-wrapp").slick({
+    $(".related-wrapp-slaider").slick({
         slidesToShow: 4,
         slidesToScroll: 1,
 
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        arrows: true,
+        prevArrow: $(".related-prev"),
+        nextArrow: $(".related-next"),
         responsive: [
             {
                 breakpoint: 1600,
