@@ -10488,8 +10488,7 @@ $(function () {
     validEmail();
 
     // tab popup
-    // tabs 
-    function tabs() {
+    function popupTabs() {
         const cabinetBtn = document.querySelectorAll('.popup-btn');
         const cabinetTab = document.querySelectorAll('.popup-login');
         if (cabinetTab) {
@@ -10509,7 +10508,7 @@ $(function () {
 
 
                     cabinetBtn.forEach(function (item) {
-                        item.classList.remove('acive')
+                        item.classList.remove('active')
                     })
 
                     cabinetTab.forEach(function (item) {
@@ -10522,7 +10521,35 @@ $(function () {
             });
         }
     }
-    tabs();
+    popupTabs();
+
+    // tabs
+    function tabs(btnOpenTab, bookBark, tabAttr) {
+        const tabBtn = document.querySelectorAll(`.${btnOpenTab}`);
+        const tabItem = document.querySelectorAll(`.${bookBark}`);
+        if (tabItem) {
+            tabBtn.forEach((item) => {
+                item.addEventListener('click', function () {
+                    let tabId = item.getAttribute(tabAttr);
+                    let currentTab = document.querySelector(tabId);
+
+                    tabBtn.forEach(function (item) {
+                        item.classList.remove('active')
+                    })
+
+                    tabItem.forEach(function (item) {
+                        item.classList.remove('active')
+                    })
+                    item.classList.add('active');
+                    currentTab.classList.add('active');
+
+                });
+            });
+        }
+    }
+    tabs("sidebar-btn", "sidebar-tab", "data-tab");
+
+
     // активация кнопки регистарции  Create account
     function activeBtnCreateAccount() {
         let sample = document.querySelectorAll('.sample');

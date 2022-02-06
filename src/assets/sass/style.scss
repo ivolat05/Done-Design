@@ -41,7 +41,9 @@ ul {
     background: #f3f4f7;
     overflow: hidden;
 }
-
+.page.f0f3f8 {
+    background: #f0f3f8;
+}
 .page.f9f9fa {
     background: #f9f9fa;
 }
@@ -287,3 +289,5 @@ input {
 @import "../sass/blocks/popup-player.scss";
 @import "../sass/blocks/popup-sign.scss";
 @import "../sass/blocks/profile.scss";
+@import "../sass/blocks/sidebar.scss";
+@import "../sass/blocks/sidebar__right-head.scss";

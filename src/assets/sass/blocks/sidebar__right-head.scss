@@ -1,0 +1,35 @@
+.sidebar__right {
+    width: 100%;
+}
+
+.sidebar__right-head {
+    background: url("../../assets/img/sidebar__right-head.svg") no-repeat left 10% bottom 10%,
+        url("../../assets/img/sidebar__right-head.svg") no-repeat right 30% bottom 10%, #5eaf8c;
+    border-radius: 20px;
+    padding: 33px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.sidebar-img-box {
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 220px;
+        height: 220px;
+        position: absolute;
+        border-radius: 220px;
+        bottom: -40px;
+        background: rgba(255, 255, 255, 0.5);
+        z-index: 0;
+    }
+    img {
+        width: 238px;
+        height: 199px;
+        object-fit: contain;
+        position: relative;
+        z-index: 1;
+    }
+}

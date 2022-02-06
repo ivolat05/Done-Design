@@ -1,0 +1,125 @@
+.sidebar-container {
+    width: 100%;
+    position: relative;
+}
+.sidebar-tab {
+    transition: 0.3s all ease-in-out;
+    display: none;
+}
+.sidebar-tab.active {
+    display: block;
+}
+
+.sidebar__left {
+    width: 346px;
+    flex-shrink: 0;
+    padding: 17px 16px;
+    background: #ffffff;
+    border-radius: 24px;
+}
+
+.sidebar__left-head {
+    background: rgba(242, 242, 242, 0.63);
+    border-radius: 23px;
+    padding: 18px 18px 30px 18px;
+}
+
+.sidebar-avatar {
+    width: 86px;
+    height: 86px;
+    margin: 0 auto 11px;
+    img {
+        width: 86px;
+        height: 86px;
+        border-radius: 86px;
+        overflow: hidden;
+        object-fit: cover;
+    }
+}
+.sidebar__head-name {
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 1.5;
+    line-height: 30px;
+    text-align: center;
+    color: #2e2d2d;
+    margin-bottom: 7px;
+}
+
+.sidebar__head-age {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.14;
+    color: rgba(160, 168, 177, 0.65);
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+.sidebar__head-place {
+    text-align: center;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: #3a3f43;
+    margin-right: 10px;
+    &::before {
+        content: url("../../assets/img/Location-Icon.svg");
+        top: 3px;
+        position: relative;
+        padding-right: 5px;
+    }
+}
+
+.sidebar-btn {
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    background: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 16px;
+    padding: 20px 20px 20px 15px;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.1875;
+    color: #2e2d2d;
+    text-align: left;
+    margin-bottom: 5px;
+    position: relative;
+    .sidebar-btn-svg {
+        transition: 0.3s all ease-in-out;
+        fill: #a0a8b1;
+    }
+    &:hover {
+        background: #ebeff3;
+    }
+}
+.sidebar-btn.active {
+    font-weight: 500;
+    background: rgba(194, 230, 49, 0.87);
+    .sidebar-btn-svg {
+        fill: #2e2d2d;
+    }
+}
+
+.sidebar-btn-box-svg {
+    position: relative;
+    top: 3px;
+    padding-right: 15px;
+}
+
+.sidebar-mess-sum {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 1.16;
+    color: #ff2121;
+    background: rgba(255, 125, 125, 0.15);
+    padding: 6px 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    right: 20px;
+}
