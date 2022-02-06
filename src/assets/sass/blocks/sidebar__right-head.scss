@@ -3,14 +3,15 @@
 }
 
 .sidebar__right-head {
-    background: url("../../assets/img/sidebar__right-head.svg") no-repeat left 10% bottom 10%,
-        url("../../assets/img/sidebar__right-head.svg") no-repeat right 30% bottom 10%, #5eaf8c;
+    background: url("../../assets/img/sidebar__right-head.svg") no-repeat left 10% top,
+        url("../../assets/img/sidebar__right-head.svg") no-repeat right 30% top, #5eaf8c;
     border-radius: 20px;
     padding: 16px 133px 0 80px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
 .sidebar-img-box {

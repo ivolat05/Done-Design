@@ -10525,9 +10525,10 @@ $(function () {
     popupTabs();
 
     // tabs
-    function tabs(btnOpenTab, bookBark, tabAttr) {
+    function tabs(btnOpenTab, bookBark, tabAttr, box = "") {
         const tabBtn = document.querySelectorAll(`.${btnOpenTab}`);
         const tabItem = document.querySelectorAll(`.${bookBark}`);
+
         if (tabItem) {
             tabBtn.forEach((item) => {
                 item.addEventListener('click', function () {
@@ -10543,12 +10544,22 @@ $(function () {
                     })
                     item.classList.add('active');
                     currentTab.classList.add('active');
+                    if (box) {
+                        let boxHide = document.querySelector(`.${box}`);
+                        if (!boxHide.classList.contains('no-active')) {
+                            boxHide.classList.add('no-active');
+                        }
 
+                    }
                 });
             });
+
         }
+
+
     }
     tabs("sidebar-btn", "sidebar-tab", "data-tab");
+    tabs("message__box-row", "mess-tab", "data-message", 'message-box');
 
 
     // активация кнопки регистарции  Create account
@@ -10622,4 +10633,28 @@ $(function () {
     }
     paymentCard();
 
+    // деактивация чата
+    function chatDeactive() {
+        let messBtn = document.querySelectorAll('.mess-btn');
+        let messTab = document.querySelectorAll('.mess-tab');
+        let messageBox = document.querySelectorAll('.message-box');
+        if (messTab) {
+            messBtn.forEach((item) => {
+                item.addEventListener('click', () => {
+                    messageBox.forEach((item) => {
+                        if (item.classList.contains("no-active")) {
+                            item.classList.remove("no-active");
+                        }
+                    })
+                    messTab.forEach((item) => {
+                        if (item.classList.contains("active")) {
+                            item.classList.remove("active");
+                        }
+                    })
+                })
+            })
+
+        }
+    }
+    chatDeactive();
 })
