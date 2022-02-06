@@ -9887,6 +9887,7 @@ $(function () {
 
     // mask
     $(".phone").mask("+7(999) 999-99-99");
+    $(".info-phone-input").mask("+7(999) 999-99-99");
 
     // select
     let select = function () {
@@ -10598,4 +10599,5 @@ $(function () {
         })
     }
     confPwd('pwd-conf-1', 'pwd-conf-2');
+    confPwd('pwd-conf-one', 'pwd-conf-two');
 })
