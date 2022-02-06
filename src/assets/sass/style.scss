@@ -133,6 +133,16 @@ input {
     border-radius: 4px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 .input-email.error,
 .input-password.error {
     border: 1px solid #ee505a;
@@ -294,3 +304,4 @@ input {
 @import "../sass/blocks/sidebar.scss";
 @import "../sass/blocks/sidebar__right-head.scss";
 @import "../sass/blocks/info.scss";
+@import "../sass/blocks/quest.scss";

@@ -1,0 +1,113 @@
+.quest {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 43px 61px 49px 50px;
+}
+
+.quest-title {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 130%;
+
+    color: #2e2d2d;
+    margin-bottom: 19px;
+}
+.quest-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
+    padding-left: 4px;
+    margin-bottom: 50px;
+}
+.quest-row:nth-child(5) {
+    margin-bottom: 37px;
+}
+.quest-row-coll {
+    width: 235px;
+    .quest-title {
+        margin-bottom: 6px;
+    }
+}
+.quest__label {
+    position: relative;
+}
+
+.quest__label-radio {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -3;
+}
+
+.quest__label-span {
+    cursor: pointer;
+    padding-left: 30px;
+    position: relative;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 160%;
+    color: #2e2d2d;
+
+    &::before {
+        transition: 0.3s all ease-in-out;
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 16px;
+        border: 3px solid #b3b7bc;
+    }
+}
+.quest__label-radio:checked + .quest__label-span {
+    &::before {
+        border: 3px solid #c2e631;
+    }
+    &::after {
+        content: "";
+        transition: 0.3s all ease-in-out;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 4px;
+        background: #c2e631;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+    }
+}
+
+.quest-title.-textarea-title {
+    margin-bottom: 9px;
+}
+
+.quest-textarea {
+    resize: none;
+    width: 494px;
+    height: 162px;
+    background: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    padding: 11px 16px;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 150%;
+    color: #2e2d2d;
+    margin-bottom: 17px;
+}
+
+.quest-btn {
+    min-width: 197px;
+    min-height: 52px;
+    margin-left: auto;
+    margin-right: 0;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.2;
+    color: #0d0808;
+}
