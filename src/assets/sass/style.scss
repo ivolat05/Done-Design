@@ -105,9 +105,9 @@ input:active {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 50%;
+    top: 21px;
     transform: translateY(-50%);
-    right: 15px;
+    right: 10px;
     background: none;
 }
 
@@ -131,7 +131,8 @@ input {
     border-radius: 4px;
 }
 
-.input-email.error {
+.input-email.error,
+.input-password.error {
     border: 1px solid #ee505a;
 }
 .error-text {
@@ -141,7 +142,8 @@ input {
     opacity: 0;
 }
 
-.input-email.error + .error-text {
+.input-email.error + .error-text,
+.input-password.error + .error-text {
     opacity: 1;
 }
 
@@ -284,3 +286,4 @@ input {
 @import "../sass/blocks/popup.scss";
 @import "../sass/blocks/popup-player.scss";
 @import "../sass/blocks/popup-sign.scss";
+@import "../sass/blocks/profile.scss";

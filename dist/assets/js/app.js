@@ -10529,8 +10529,8 @@ $(function () {
         let fillName = document.querySelector('.fill-name');
         let email = document.querySelector('.--email');
         let phone = document.querySelector('.phone');
-        let pwd = document.getElementById('pwd-2');
-        let pwdTwo = document.getElementById('pwd-3');
+        let pwd = document.querySelector('.pwd-conf-1');
+        let pwdTwo = document.querySelector('.pwd-conf-2');
         let popupLinkTwo = document.querySelector('.popup-link-two');
         let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (popupLinkTwo) {
@@ -10553,4 +10553,22 @@ $(function () {
         }
     }
     activeBtnCreateAccount();
+    // проверка ввода одинаковых паролей
+    function confPwd(inpPwd, inpPwdTwo) {
+        let pwd = document.querySelector(`.${inpPwd}`);
+        let pwdTwo = document.querySelector(`.${inpPwdTwo}`);
+        let inputPassword = document.querySelectorAll('.input-password');
+        inputPassword.forEach((item) => {
+            item.addEventListener("keyup", () => {
+                if (pwd.value != pwdTwo.value) {
+                    pwdTwo.classList.add("error")
+                    pwd.classList.add("error")
+                } else if (pwd.value == pwdTwo.value) {
+                    pwdTwo.classList.remove("error")
+                    pwd.classList.remove("error")
+                }
+            })
+        })
+    }
+    confPwd('pwd-conf-1', 'pwd-conf-2');
 })
