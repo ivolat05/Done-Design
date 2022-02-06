@@ -33,3 +33,50 @@
         z-index: 1;
     }
 }
+
+.sidebar__right-title {
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 110.52%;
+    color: #ffffff;
+}
+
+.sidebar__right-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.sidebar__right-row-title {
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 132%;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.sidebar__right-row-span {
+    font-size: 0.875rem;
+    line-height: 116%;
+    padding-left: 11px;
+    padding-right: 18px;
+}
+
+.sidebar__right-link {
+    padding: 15px 33px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.14;
+    color: #ffffff;
+    display: inline-block;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+        background: #c2e631;
+        border: 1px solid #c2e631;
+    }
+}
