@@ -22,10 +22,11 @@
     background: rgba(242, 242, 242, 0.63);
     border-radius: 23px;
     padding: 18px 18px 30px 18px;
+    margin-bottom: 54px;
 }
 
 .sidebar-avatar {
-    width: 86px;
+    width: 111px;
     height: 86px;
     margin: 0 auto 11px;
     img {
@@ -39,11 +40,13 @@
 .sidebar__head-name {
     font-family: "Oswald";
     font-weight: bold;
-    font-size: 1.5;
-    line-height: 30px;
+    font-size: 1.25rem;
+    line-height: 1.5;
     text-align: center;
     color: #2e2d2d;
     margin-bottom: 7px;
+    position: relative;
+    left: -9px;
 }
 
 .sidebar__head-age {
@@ -54,6 +57,8 @@
     color: rgba(160, 168, 177, 0.65);
     margin-bottom: 7px;
     text-align: center;
+    position: relative;
+    left: -5px;
 }
 
 .sidebar__head-place {
@@ -62,7 +67,9 @@
     font-size: 0.875rem;
     line-height: 1.7;
     color: #3a3f43;
-    margin-right: 10px;
+    position: relative;
+    left: -17px;
+
     &::before {
         content: url("../../assets/img/Location-Icon.svg");
         top: 3px;
@@ -79,7 +86,7 @@
     border: none;
     outline: none;
     border-radius: 16px;
-    padding: 20px 20px 20px 15px;
+    padding: 12px 20px 20px 15px;
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.1875;
@@ -121,5 +128,5 @@
     position: absolute;
     top: 50%;
     transform: translateY(-30%);
-    right: 20px;
+    right: 7px;
 }

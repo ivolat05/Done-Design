@@ -233,10 +233,12 @@ input {
     }
     .container.blog__head-contain,
     .container.article-container,
-    .container.related-container {
+    .container.related-container,
+    .container.profile-container {
         max-width: 1540px;
     }
-    .container.article-container {
+    .container.article-container,
+    .container.profile-container {
         padding-right: 85px;
     }
     .footer__two .container.footer-wrapp {
