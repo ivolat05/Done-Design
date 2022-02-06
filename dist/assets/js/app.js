@@ -10600,4 +10600,26 @@ $(function () {
     }
     confPwd('pwd-conf-1', 'pwd-conf-2');
     confPwd('pwd-conf-one', 'pwd-conf-two');
+
+    // активация форм ввода данных карт
+    function paymentCard() {
+        let paymentLabelRadio = document.querySelectorAll('.payment__label-radio');
+
+        if (paymentLabelRadio) {
+            paymentLabelRadio.forEach((item) => {
+                item.addEventListener('click', () => {
+                    let paymentBoxHead = document.querySelectorAll('.payment-box-head');
+                    paymentBoxHead.forEach((item) => {
+                        item.classList.remove('--active');
+                    })
+
+                    item.parentElement.parentElement.classList.add('--active')
+
+                })
+            })
+
+        }
+    }
+    paymentCard();
+
 })
