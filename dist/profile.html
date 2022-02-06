@@ -209,7 +209,7 @@
                                         Profile
                                     </div>
                                     <div class="info-row">
-                                        <div class="info-row-col">
+                                        <div class="info-row-col --one">
                                             <div class="info_row-user">
                                                 <div class="info__user-foto">
                                                     <img src="./assets/img/profile-user.png" alt="">
@@ -220,24 +220,25 @@
                                             </div>
                                             <label class="btn-add-file">
                                                 <input type="file" class="btn-add-file-input">
-                                                <span class="btn-add-file-span">add photo</span>
+                                                <span class="btn-add-file-span btn">Add photo</span>
                                             </label>
                                         </div>
-                                        <div class="info-row-col">
+                                        <div class="info-row-col  --one">
                                             <div class="info__status-title">
                                                 Current status
                                             </div>
                                             <div class="info__sratus-row">
+                                
                                                 <label class="info__status-label">
-                                                    <input type="text" class="info__status-check">
-                                                    <span class="info__status-span">
-                                                        active
+                                                    <input class="info__status-radio" type="radio" name="status" value="active">
+                                                    <span class="info__status-span --active">
+                                                        Active
                                                     </span>
                                                 </label>
                                                 <label class="info__status-label">
-                                                    <input type="text" class="info__status-check">
-                                                    <span class="info__status-span">
-                                                        dont active
+                                                    <input class="info__status-radio" type="radio" name="status" value="dont active">
+                                                    <span class="info__status-span  dont__active">
+                                                        Dont active
                                                     </span>
                                                 </label>
                                             </div>
@@ -273,7 +274,7 @@
                                             <div class="info__row-title">
                                                 Phome number
                                             </div>
-                                            <input type="text" class="info-phone-input popup-input">
+                                            <input type="text" class="info-phone-input popup-input" placeholder="">
                                         </div>
                                     </div>
                                     <div class="info-row">

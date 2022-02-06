@@ -9886,8 +9886,8 @@ $(function () {
     calendars();
 
     // mask
-    $(".phone").mask("+7(999) 999-99-99");
-    $(".info-phone-input").mask("+7(999) 999-99-99");
+    $(".phone").mask("+7 999 999 99 99");
+    $(".info-phone-input").mask("+7 999 999 99 99");
 
     // select
     let select = function () {
