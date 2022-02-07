@@ -10197,6 +10197,16 @@ $(function () {
         ]
     });
 
+    $(".booking__slaider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true,
+        prevArrow: $(".booking-prev"),
+        nextArrow: $(".booking-next")
+    });
+
+
 
     $(".company__slick").slick({
         slidesToShow: 8,
@@ -10297,8 +10307,8 @@ $(function () {
     resultActive();
 
     function mapFixed() {
-        let mapId = document.getElementById('map');
-        if (mapId) {
+        let mapPosition = document.querySelector('.map__position');
+        if (mapPosition) {
             let offsetHeader = document.querySelector('.header').offsetHeight;
             let offsetSearchBox = document.querySelector('.search-box').offsetHeight;
             let offsetFilter = document.querySelector('.filter').offsetHeight;
@@ -10310,19 +10320,19 @@ $(function () {
                 let footerHeight = document.querySelector(".footer").offsetHeight;
                 let stopMap = pageHeight - 780 - footerHeight;
                 if (scrollDistanse >= summHead) {
-                    mapId.style.position = 'fixed';
+                    mapPosition.style.position = 'fixed';
                 }
                 if (stopMap <= scrollDistanse) {
-                    mapId.style.top = 'auto'
-                    mapId.style.position = 'absolute';
-                    mapId.style.bottom = '40px';
+                    mapPosition.style.top = 'auto'
+                    mapPosition.style.position = 'absolute';
+                    mapPosition.style.bottom = '40px';
                 } else if (stopMap >= scrollDistanse) {
-                    mapId.style.top = '0'
-                    mapId.style.bottom = 'auto';
-                    mapId.style.position = 'fixed';
+                    mapPosition.style.top = '0'
+                    mapPosition.style.bottom = 'auto';
+                    mapPosition.style.position = 'fixed';
                 }
                 if (scrollDistanse < summHead) {
-                    mapId.style.position = 'absolute';
+                    mapPosition.style.position = 'absolute';
                 }
             })
         }
