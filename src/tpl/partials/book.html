@@ -1,0 +1,46 @@
+<div class="book">
+    <div class="container booking-container ">
+        <div class="book-title">
+            Book time
+        </div>
+        <div class="book-head"></div>
+        <div class="book__line">
+            <button class="book-btn" data-book="#book__tab-1">
+                Court 1
+            </button>
+            <button class="book-btn" data-book="#book__tab-2">
+                Court 2
+            </button>
+            <button class="book-btn active" data-book="#book__tab-3">
+                Padel Sant Marti
+            </button>
+            <button class="book-btn" data-book="#book__tab-4">
+                Premium court
+            </button>
+            <button class="book-btn" data-book="#book__tab-5">
+                Premium court 3
+            </button>
+            <button class="book-option">
+                <img src="./assets/img/option.svg" alt="">
+            </button>
+        </div>
+
+        <div id="book__tab-1" class="book-tab">
+            {{>book-body}}
+        </div>
+        <div id="book__tab-2" class="book-tab">
+            {{>book-body}}
+        </div>
+        <div id="book__tab-3" class="book-tab active">
+            {{>book-body}}
+        </div>
+        <div id="book__tab-4" class="book-tab">
+            {{>book-body}}
+        </div>
+        <div id="book__tab-5" class="book-tab">
+            {{>book-body}}
+        </div>
+
+
+    </div>
+</div>

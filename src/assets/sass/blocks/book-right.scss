@@ -1,0 +1,41 @@
+.book-right {
+    width: 346px;
+    background: #ffffff;
+    border: 1px solid #eaf0f8;
+    border-radius: 16px;
+    padding: 6px 6px 32px 6px;
+    flex-shrink: 0;
+}
+
+.book-right-box-img {
+    margin-bottom: 20px;
+    img {
+        width: 333px;
+        height: 187px;
+        border-radius: 16px;
+        overflow: hidden;
+        object-fit: cover;
+    }
+}
+
+.book-right-title {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.1875;
+    color: #242323;
+    margin-bottom: 16px;
+}
+.book-right-inner {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 170%;
+    color: #3a3f43;
+    background: #f8f8f9;
+    border-radius: 46px;
+    margin-right: 7px;
+    padding: 8px 23px;
+}
+.book-right-wrapp {
+    padding-left: 14px;
+}

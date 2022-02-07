@@ -10571,7 +10571,7 @@ $(function () {
     tabs("sidebar-btn", "sidebar-tab", "data-tab");
     tabs("message__box-row", "mess-tab", "data-message", 'message-box');
 
-
+    tabs("book-btn", "book-tab", "data-book");
     // активация кнопки регистарции  Create account
     function activeBtnCreateAccount() {
         let sample = document.querySelectorAll('.sample');

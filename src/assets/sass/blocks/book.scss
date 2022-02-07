@@ -1,0 +1,58 @@
+.book {
+    padding-top: 42px;
+}
+.book-title {
+    font-weight: bold;
+    font-size: 1.75rem;
+    line-height: 1.18;
+    color: #2e2d2d;
+}
+
+.book-body {
+    display: flex;
+}
+
+.book-option {
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.book-btn {
+    border: none;
+    outline: none;
+    background: #f7f9fb;
+    border-radius: 10px;
+    transition: 0.3s all ease-in-out;
+    padding: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.14;
+    color: #3a3f43;
+    &:hover {
+        background: #3a3f43;
+        color: #ffffff;
+    }
+}
+
+.book-btn.active {
+    background: #3a3f43;
+    color: #ffffff;
+}
+
+.book__line {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 11px;
+}
+
+.book-tab {
+    display: none;
+}
+.book-tab.active {
+    display: block;
+}
