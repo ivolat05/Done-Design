@@ -1,8 +1,12 @@
+.booking {
+    padding-top: 13px;
+}
 .booking-title {
     font-weight: bold;
     font-size: 1.75rem;
     line-height: 1.18;
     color: #2e2d2d;
+    margin-bottom: 7px;
 }
 
 .booking-subtitle {
@@ -12,6 +16,7 @@
     color: #a0a8b1;
     position: relative;
     padding-left: 30px;
+    margin-bottom: 12px;
     &::before {
         content: url("../../assets/img/pin-map.svg");
 

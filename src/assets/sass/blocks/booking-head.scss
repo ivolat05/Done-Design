@@ -52,13 +52,50 @@
 .booking__opening-head {
     width: 339px;
     height: 203px;
+    margin-bottom: 15px;
     #map {
-        width: 339px;
-        height: 203px;
+        width: 100%;
+        height: 100%;
         position: relative;
     }
     #map canvas {
         filter: none;
         -webkit-filter: grayscale(0);
     }
+}
+
+.booking__opening-title {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.1875;
+    color: #2e2d2d;
+    padding-bottom: 15px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #f3f3f3;
+}
+.booking__opening-day {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.booking__day-name {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.1875;
+    color: #a0a8b1;
+    text-transform: capitalize;
+}
+.booking__day-time {
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.14;
+    color: #3a3f43;
+}
+
+.booking__opening-body {
+    padding: 17px 27px 21 px 25px;
+    background: #ffffff;
+    border: 1px solid #f7f7f7;
+    box-shadow: 0px 18px 40px rgba(109, 141, 172, 0.1);
 }
