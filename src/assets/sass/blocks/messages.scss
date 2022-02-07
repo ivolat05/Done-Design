@@ -1,7 +1,7 @@
 .message {
     background: #ffffff;
     border-radius: 24px;
-    padding: 58px 50px 50px 50px;
+    padding: 58px 50px 1px 50px;
 }
 .message-title {
     font-weight: bold;
@@ -92,6 +92,9 @@
             height: 48px;
         }
     }
+    .chat__input {
+        width: 93%;
+    }
 }
 
 .mess-tab {
@@ -100,4 +103,5 @@
 
 .mess-tab.active {
     display: block;
+    margin-top: -14px;
 }

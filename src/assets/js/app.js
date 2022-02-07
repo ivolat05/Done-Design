@@ -801,7 +801,7 @@ $(function () {
 
     // деактивация чата
     function chatDeactive() {
-        let messBtn = document.querySelectorAll('.mess-btn');
+        let messBtn = document.querySelectorAll('.mess-chat-head');
         let messTab = document.querySelectorAll('.mess-tab');
         let messageBox = document.querySelectorAll('.message-box');
         if (messTab) {

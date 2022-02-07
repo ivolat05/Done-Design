@@ -1,0 +1,61 @@
+.mess-tab-box {
+    max-width: 722px;
+}
+
+.mess-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+}
+.mess-chat-head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.mess__chat-name {
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.16;
+    color: #2e2d2d;
+}
+
+.mess-chat-body {
+    .window__chat {
+        justify-content: flex-start;
+        margin-top: 15px;
+    }
+    .chat-avatar {
+        width: 32px;
+        height: 32px;
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    .chat-row-foto .chat__row {
+        margin-top: 0;
+    }
+    .window__chat {
+        padding-left: 11px;
+    }
+    .chat__wrapper {
+        height: 574px;
+    }
+}
+
+.mess-box-incoming {
+    margin-bottom: 33px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.mess-box-response {
+    margin-bottom: 25px;
+}
