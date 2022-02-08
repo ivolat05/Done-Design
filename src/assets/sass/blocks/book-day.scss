@@ -1,0 +1,76 @@
+.book-day-name {
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.33;
+    text-transform: uppercase;
+    color: #3a3f43;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    text-align: center;
+    border-bottom: 1px solid #eaf0f8;
+}
+.book__day-box {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+
+.book__day-time {
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.33;
+    text-align: center;
+
+    color: #3a3f43;
+    padding-top: 7px;
+    border-right: 1px solid #eaf0f8;
+}
+.book__day-line {
+    position: relative;
+}
+
+.book__line-container {
+    height: 29px;
+    display: block;
+    border-bottom: 1px solid #eaf0f8;
+}
+
+.book__line-box {
+    height: 90%;
+    width: 99%;
+    cursor: pointer;
+    background: #e4fbdc;
+    border: 1px solid rgba(96, 229, 49, 0.16);
+    border-radius: 3px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 1.33;
+    text-align: right;
+    color: #a0a8b1;
+    z-index: 0;
+}
+
+.book__line-box.active {
+    position: absolute;
+    z-index: 1;
+}
+
+.background-F0F3F5 {
+    background: #f0f3f5;
+    border: 1px solid #eaf0f8;
+}
+
+.background-A1D98F {
+    background: #a1d98f;
+    border: 1px solid rgba(96, 229, 49, 0.16);
+}
+
+.background-F0F3F5 {
+    background: #f0f3f5;
+}

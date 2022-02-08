@@ -1,0 +1,105 @@
+.booking-popup {
+    width: 291px;
+    background: #ffffff;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.1), 0px 30px 40px rgba(20, 37, 63, 0.08);
+    border-radius: 8px;
+    padding: 25px 21px 19px 23px;
+    margin: 0 auto;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-10%);
+    z-index: -3;
+    opacity: 0;
+    transition: 0.3s all ease-in-out;
+}
+.booking-popup.active {
+    z-index: 3;
+    opacity: 1;
+}
+
+.booking-popup-title {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.1875;
+    color: #3a3f43;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.booking-popup-time {
+    background: #f8f8f9;
+    border-radius: 14px;
+    padding: 6px 13px 6px 30px;
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.33;
+
+    color: #3a3f43;
+
+    &::before {
+        content: url("../../assets/img/clock.svg");
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        left: 11px;
+    }
+}
+
+.booking-popup-label {
+    position: relative;
+}
+.booking-popup-radio {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -4;
+}
+
+.booking-popup-span {
+    background: #e7f1e3;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    margin-bottom: 5px;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.14;
+
+    color: #3a3f43;
+
+    &:hover {
+        background: #a1d98f;
+    }
+}
+
+.booking-popup-money {
+    font-weight: 500;
+}
+.booking-popup-radio:checked + .booking-popup-span {
+    background: #a1d98f;
+}
+.booking-popup-btn {
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 16px;
+    min-height: 42px;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.14;
+
+    color: #000000;
+}

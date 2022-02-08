@@ -10443,6 +10443,8 @@ $(function () {
         type: 'inline',
         mainClass: 'mfp-fade'
     });
+
+
     //popup close 
     function closePopup() {
         let popupClose = document.querySelectorAll('.popup-close');
@@ -10745,4 +10747,47 @@ $(function () {
         }
     }
     chatDeactive();
+
+    // active booking-popup
+    function bookingPopup() {
+        let bookingPopup = document.querySelector('.booking-popup');
+
+        if (bookingPopup) {
+            let bookingPopupClose = document.querySelector('.booking-popup-btn');
+            let bookingPopupTime = document.querySelector('.booking-popup-time');
+            let bookLineContainer = document.querySelectorAll('.book__line-container');
+            bookLineContainer.forEach((item) => {
+                item.addEventListener('click', () => {
+                    let attrPopup = item.getAttribute('data-time');
+                    if (!bookingPopup.classList.contains('active')) {
+                        bookingPopup.classList.add('active');
+                    }
+                    bookingPopupTime.textContent = attrPopup;
+                })
+            })
+            bookingPopupClose.addEventListener('click', () => {
+                bookingPopup.classList.remove('active');
+            })
+
+        }
+    }
+    bookingPopup();
+    // добавление в кнопку цены
+    function bookingPopupBtnText() {
+        let bookingPopupLabel = document.querySelectorAll('.booking-popup-label');
+        if (bookingPopupLabel) {
+            let bookingPopupSumm = document.querySelector('.booking-popup-summ');
+            bookingPopupLabel.forEach((item) => {
+                item.addEventListener('click', () => {
+                    let bookingPopupRadio = document.querySelectorAll('.booking-popup-radio');
+                    bookingPopupRadio.forEach((item) => {
+                        if (item.checked) {
+                            bookingPopupSumm.textContent = item.value;
+                        }
+                    })
+                })
+            })
+        }
+    }
+    bookingPopupBtnText();
 })
