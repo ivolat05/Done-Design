@@ -16,10 +16,13 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet"></head>
 
 <body>
-    <div class="page f9f9fa">
+    <div class="page fff">
         <header class="header header_white">
             <div class="header__container container">
                 <a class="logo" href="#">
@@ -283,7 +286,7 @@
                                     </label>
                                     <label class="book-fillter-label  check__label">
                                         <input class="check__input book-fillter-radio book-fillter-type" type="checkbox"
-                                            name="filter-book-type" value="Outdoor" checked>
+                                            name="filter-book-type" value="Outdoor">
                                         <span class="check__span book-fillter-span">
                                             Outdoor
                                         </span>
@@ -311,7 +314,7 @@
                                     </label>
                                     <label class="book-fillter-label  check__label">
                                         <input class="book-fillter-radio book-fillter-features check__input" type="checkbox"
-                                            name="filter-book-features" value="Indoor" checked>
+                                            name="filter-book-features" value="Indoor">
                                         <span class="check__span book-fillter-span">
                                             Crystal
                                         </span>
@@ -339,7 +342,7 @@
                                     </label>
                                     <label class="book-fillter-label  check__label">
                                         <input class="book-fillter-radio book-fillter-size check__input" type="checkbox"
-                                            name="filter-book-size" value="Indoor" checked>
+                                            name="filter-book-size" value="Indoor">
                                         <span class="check__span book-fillter-span">
                                             Double
                                         </span>
@@ -351,34 +354,1566 @@
                 </div>
         
                 <div class="book-body">
-                    <div class="book-left">
-                        <div class="book-control">
-                            <div class="">
-                                <button></button><button></button>
-                                <div class="">
-                    
-                                    <div class="">
-                    
-                                    </div>
-                    
-                                    <div class="">
-                    
+                    <div class="book-left-wrapper">
+                        <div class="book-left">
+                            <div class="book-control">
+                                <div class="book-control-coll">
+                                    <button class="book-control-btn">
+                                        <span>
+                                            <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.84199 8.825L3.02533 5L6.84199 1.175L5.66699 0L0.666992 5L5.66699 10L6.84199 8.825Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <button class="book-control-btn book-control-btn-next">
+                                        <span>
+                                            <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0.158203 8.825L3.97487 5L0.158203 1.175L1.3332 0L6.3332 5L1.3332 10L0.158203 8.825Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="book-calen-box">
+                                        <div class="book-calen-box-title">
+                                            TODAY
+                                        </div>
+                                        <div class="book__box-calendar">
+                                            <div class="book-calendar">
+                                                <script class="book-call-num" type="text/template" id="book-calendar-1">
+                                                    <div class="book__container-wrapp">
+                                                        <div class="book__calendar-row">
+                                                            <div class="clndr-today-button book-calendar-btn">Today</div>
+                                                        <div class="clndr-next-button book-calendar-btn book-control-btn-next">Tomorrow</div>
+                                                        </div>            
+                                                        <div class="calendar__box">
+                                                            <% _.each(months, function(cal) { %>
+                                                                <div class="calendar__box-coll">
+                                                                    <div class="calendar__head">
+                                                                        <button class="clndr-previous-button calendar-btn btn-prev"></button>
+                                                                            <div class=" calendar__month">
+                                                                                <%= cal.month.format('MMMM YYYY') %>
+                                                                            </div>
+                                                                        <button class="clndr-next-button calendar-btn btn-next"></button>
+                                                                    </div>
+                                                                    <div class="calendar__body">
+                                                                        <div class="calendar__box-week">
+                                                                            <% _.each(daysOfTheWeek, function(day) { %>
+                                                                                <div class="calendar__week"><%= day %></div>
+                                                                            <% }); %>
+                                                                        </div>
+                                                                        <div class="calendar__box-day">
+                                                                            <% _.each(cal.days, function(day) { %>
+                                                                                <div class="calendar__day <%= day.classes %>"><%= day.day %></div>
+                                                                            <% }); %>
+                                                                        </div>                       
+                                                                    </div>
+                                                                </div>
+                                                            <% }); %>                
+                                                        </div>            
+                                                    </div>          
+                                                </script>
+                                            </div>
+                                            <div class="test-2"></div>                    </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="">
-                                11/21/2021 - 11/27/2021
-                            </div>
-                            <div class="">
-                                <button>DAY</button>
-                                <button>
-                                    Week
-                                </button>
-                            </div>
-                        </div>
-                        <div class="book-head"></div>
-                        <div class="book-body">
+                                <div class="book-control-date">
                     
+                                    <span class="book-conrtol-date-week active">
+                                        11/21/2021 - 11/27/2021
+                                    </span>
+                                    <span class="book-conrtol-date-day">
+                                        11/09/2021
+                                    </span>
+                                </div>
+                                <div class="book-control-coll">
+                                    <button class="book-btn-day bk-btn" data-bookday="#book-day">DAY</button>
+                                    <button class="book-btn-week bk-btn" data-bookday="#book-week">
+                                        WEEK
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="book-box-body">
+                                <div id="book-week" class="book-left-body active">
+                                    <div class="book-week">
+                                        <div class="book-week-head">
+                                            <div class="book__week-head-coll"></div>
+                                            <div class="book__week-head-coll">
+                                                Sun
+                                            </div>
+                                            <div class="book__week-head-coll">
+                                                Mon
+                                            </div>
+                                            <div class="book__week-head-coll">
+                                                Tue
+                                            </div>
+                                            <div class="book__week-head-coll">
+                                                Wed
+                                            </div>
+                                            <div class="book__week-head-coll">
+                                                Thu
+                                            </div>
+                                            <div class="book__week-head-coll">
+                                                Fri
+                                            </div>
+                                            <div class="book__week-head-coll">
+                                                Sat
+                                            </div>
+                                        </div>
+                                        <div class="book-week-body">
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    7.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box  --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    8.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    9.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    10.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box  --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    11.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    12.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    13.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    14.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    15.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    16.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    17.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    18.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    19.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    20.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    21.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="book-week-row">
+                                                <div class="book-week-hours">
+                                                    22.00
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box ">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box --green">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="book-week-day">
+                                                    <div class="book-week-inner --one ">
+                                                        <div class="book-week-box active">
+                                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="book-week-inner --two">
+                                                        <div class="book-week-box">
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="book-day" class="book-left-body">
+                                    111111111111
+                                </div>
+                            </div>
+                            <button class="book-btn-hidden btn">
+                                more
+                            </button>
                         </div>
                     </div>    <div>
                         <a href="#" class="book-right">

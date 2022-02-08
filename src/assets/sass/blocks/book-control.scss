@@ -1,0 +1,108 @@
+.book-control-btn {
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #aebac7;
+    border-radius: 4px 0px 0px 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+        background: #3a3f43;
+    }
+}
+.book-control-coll {
+    display: flex;
+    align-items: center;
+}
+.book-control-btn-next {
+    border-radius: 0px 4px 4px 0px;
+}
+
+.book-calen-box-title {
+    font-family: "Source Sans Pro", sans-serif;
+    margin-left: 21px;
+    font-size: 0.75rem;
+    line-height: 1.33;
+    padding: 8px 36px 8px 8px;
+    background: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+
+    color: #4f4f50;
+    position: relative;
+    &::before {
+        content: url("../../assets/img/chevron_down.svg");
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+    }
+}
+
+.book-btn-day,
+.book-btn-week {
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 1.33;
+    color: #3a3f43;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 36px;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    border-radius: 4px 0px 0px 4px;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+        background: #3a3f43;
+        color: #fff;
+    }
+}
+
+.book-btn-week {
+    background: #aebac7;
+    border-radius: 0px 4px 4px 0px;
+    color: #fff;
+}
+
+.book-btn-day.active,
+.book-btn-week.active {
+    background: #3a3f43;
+    color: #fff;
+}
+.book-control-date {
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1.43;
+    text-align: center;
+    span {
+        font-weight: inherit;
+        display: none;
+    }
+    span.active {
+        display: block;
+    }
+}
+
+.book-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book-left-body {
+    display: none;
+}
+
+.book-left-body.active {
+    display: block;
+}

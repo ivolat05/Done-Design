@@ -51,6 +51,9 @@ ul {
 .page.fdfdff {
     background: #fdfdff;
 }
+.page.fff {
+    background: #fff;
+}
 p {
     text-align: left;
     font-family: "Roboto";
@@ -317,3 +320,6 @@ input[type="number"] {
 @import "../sass/blocks/book.scss";
 @import "../sass/blocks/book-right.scss";
 @import "../sass/blocks/book-left.scss";
+@import "../sass/blocks/book-control.scss";
+@import "../sass/blocks/bookk-calendar.scss";
+@import "../sass/blocks/book-week.scss";

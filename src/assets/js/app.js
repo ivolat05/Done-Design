@@ -66,7 +66,13 @@ $(function () {
                 showAdjacentMonths: false,
                 adjacentDaysChangeMonth: true,
                 weekOffset: 1,
+                clickEvents: {
+                    click: function (target) {
 
+
+
+                    }
+                },
                 template: $('#book-calendar-1').html()
             });
 
@@ -75,18 +81,53 @@ $(function () {
 
     calendars();
 
+    // раскрытие booking
+    function bookBtnHidden() {
+        let bookBtnHidden = document.querySelector('.book-btn-hidden');
+        let bookBoxBody = document.querySelector('.book-box-body');
+        if (bookBoxBody) {
+            bookBtnHidden.addEventListener('click', () => {
+                bookBoxBody.style.height = '100%';
+                bookBtnHidden.style.display = 'none';
+            })
+        }
+    };
+    bookBtnHidden();
+    // book-control-date visible
+    function bookControlDateVisible() {
+        let bookConrtolDateWeek = document.querySelector('.book-conrtol-date-week');
+        let bookConrtolDateDay = document.querySelector('.book-conrtol-date-day');
+        let bkBtn = document.querySelectorAll('.bk-btn');
+        if (bookConrtolDateWeek && bookConrtolDateDay) {
+            bkBtn.forEach((item) => {
+                item.addEventListener('click', () => {
+                    if (item.classList.contains('book-btn-day')) {
+                        bookConrtolDateWeek.classList.remove('active');
+                        bookConrtolDateDay.classList.add('active');
+                    } else if (item.classList.contains('book-btn-week')) {
+                        bookConrtolDateWeek.classList.add('active');
+                        bookConrtolDateDay.classList.remove('active');
+                    }
+                })
+            })
+        }
+    }
+    bookControlDateVisible();
+
     // показ book-fillter
-    function bookFillterVisible() {
-        let bookFilterBtn = document.querySelector('.book-filter-btn');
-        let bookFillterPage = document.querySelector('.book-fillter-page');
+    function bookFillterVisible(nameBtn, nameBox) {
+        let bookFilterBtn = document.querySelector(`.${nameBtn}`);
+        let bookFillterPage = document.querySelector(`.${nameBox}`);
         if (bookFillterPage) {
             bookFilterBtn.addEventListener('click', () => {
                 bookFillterPage.classList.toggle('active');
             })
         }
     }
-    bookFillterVisible();
 
+    bookFillterVisible('book-filter-btn', 'book-fillter-page');
+
+    bookFillterVisible('book-calen-box-title', 'book__box-calendar');
 
     // mask
     $(".phone").mask("+7 999 999 99 99");
@@ -773,7 +814,7 @@ $(function () {
     }
     tabs("sidebar-btn", "sidebar-tab", "data-tab");
     tabs("message__box-row", "mess-tab", "data-message", 'message-box');
-
+    tabs("bk-btn", "book-left-body", "data-bookday");
 
     // активация кнопки регистарции  Create account
     function activeBtnCreateAccount() {

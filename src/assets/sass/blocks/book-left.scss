@@ -1,12 +1,57 @@
 .book-left {
-    width: 62%;
     border: 1px solid #eaf0f8;
     border-radius: 16px;
     background: #ffffff;
+    padding-bottom: 13px;
+}
+.book-left-wrapper {
+    width: 62%;
 }
 
 .book-control {
     background: #f7f9fb;
     border-radius: 16px 16px 0px 0px;
     padding: 11px 18px 11px 23px;
+}
+.book-calen-box {
+    position: relative;
+}
+.book__box-calendar {
+    position: absolute;
+    left: 20px;
+    top: 120%;
+    background: #ffffff;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.1), 0px 30px 40px rgba(20, 37, 63, 0.08);
+    border-radius: 8px;
+    padding: 7px 33px 0 33px;
+    opacity: 0;
+    z-index: -3;
+}
+
+.book__box-calendar.active {
+    opacity: 1;
+    z-index: 3;
+}
+
+.book-btn-hidden {
+    margin: 20px auto 17px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 150%;
+    text-transform: capitalize;
+    color: #1b1919;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    min-width: 143px;
+    min-height: 39px;
+    border: 1px solid #c2e631;
+    border-radius: 4px;
+    background: none;
+}
+
+.book-box-body {
+    height: 483px;
+    overflow: hidden;
 }

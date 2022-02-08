@@ -1,0 +1,67 @@
+.book-week-head {
+    display: grid;
+    grid-template-columns: repeat(8, 12.5fr);
+    border-bottom: 1px solid #eaf0f8;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.book-week-row {
+    display: grid;
+    grid-template-columns: repeat(8, 12.5fr);
+}
+.book__week-head-coll {
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.33;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #3a3f43;
+}
+
+.book-week-day {
+    border-left: 1px solid #eaf0f8;
+    position: relative;
+}
+
+.book-week-inner {
+    border-bottom: 1px solid #eaf0f8;
+    height: 28px;
+}
+
+.book-week-box {
+    height: 20px;
+    background: #f0f3f5;
+    width: 95%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #eaf0f8;
+    overflow: hidden;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.book-week-box.--green {
+    background: #e4fbdc;
+    border: 1px solid rgba(96, 229, 49, 0.16);
+}
+
+.book-week-inner.--two .active,
+.book-week-inner.--one .active {
+    position: absolute;
+    height: 88%;
+    z-index: 1;
+}
+
+.book-week-hours {
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.33;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #3a3f43;
+    margin-top: 7px;
+    margin-right: 18px;
+}

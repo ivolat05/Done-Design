@@ -1,8 +1,10 @@
 <div class="book-calendar">
     <script class="book-call-num" type="text/template" id="book-calendar-1">
         <div class="book__container-wrapp">
-            <div class="clndr-today-button book-calendar-btn">Today</div>
-            <div class="clndr-next-button book-calendar-btn">Tomorrow</div>
+            <div class="book__calendar-row">
+                <div class="clndr-today-button book-calendar-btn">Today</div>
+            <div class="clndr-next-button book-calendar-btn book-control-btn-next">Tomorrow</div>
+            </div>            
             <div class="calendar__box">
                 <% _.each(months, function(cal) { %>
                     <div class="calendar__box-coll">
