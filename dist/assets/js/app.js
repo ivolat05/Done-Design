@@ -9841,6 +9841,9 @@ and dependencies (minified).
   };
 }));
 
+
+
+
 $(function () {
 
     // calendar 
@@ -9848,6 +9851,7 @@ $(function () {
         let calendars = {};
         let thisMonth = moment().format('YYYY/MM/DD');
         let inputDate = document.querySelector('.input-date');
+        let bookCalendar = document.querySelector('.book-calendar');
         if (inputDate) {
             inputDate.value = thisMonth.split("/").reverse().join("/");
             calendars.clndr3 = $('.calendar__container').clndr({
@@ -9881,9 +9885,42 @@ $(function () {
                 template: $('#calendar__teplate').html()
             });
         }
+        // календарь страницы booking
+        if (bookCalendar) {
+            calendars.clndr2 = $('.book-calendar').clndr({
+                lengthOfTime: {
+                    months: 1,
+                    interval: 1
+                },
+                default_date: true,
+                startWithMonth: thisMonth,
+                daysOfTheWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                trackSelectedDate: true,
+                selectedDate: "selected",
+                showAdjacentMonths: false,
+                adjacentDaysChangeMonth: true,
+                weekOffset: 1,
+
+                template: $('#book-calendar-1').html()
+            });
+
+        }
     }
 
     calendars();
+
+    // показ book-fillter
+    function bookFillterVisible() {
+        let bookFilterBtn = document.querySelector('.book-filter-btn');
+        let bookFillterPage = document.querySelector('.book-fillter-page');
+        if (bookFillterPage) {
+            bookFilterBtn.addEventListener('click', () => {
+                bookFillterPage.classList.toggle('active');
+            })
+        }
+    }
+    bookFillterVisible();
+
 
     // mask
     $(".phone").mask("+7 999 999 99 99");
@@ -10571,7 +10608,7 @@ $(function () {
     tabs("sidebar-btn", "sidebar-tab", "data-tab");
     tabs("message__box-row", "mess-tab", "data-message", 'message-box');
 
-    tabs("book-btn", "book-tab", "data-book");
+
     // активация кнопки регистарции  Create account
     function activeBtnCreateAccount() {
         let sample = document.querySelectorAll('.sample');

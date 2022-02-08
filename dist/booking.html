@@ -170,6 +170,7 @@
                         <div class="booking__opening-head">
                             <div id="map" class="booking-map"></div>
                         </div>
+                
                         <div class="booking__opening-body">
                             <div class="booking__opening-title">
                                 Opening hours
@@ -210,32 +211,177 @@
                 <div class="book-title">
                     Book time
                 </div>
-                <div class="book-head"></div>
+        
                 <div class="book__line">
-                    <button class="book-btn" data-book="#book__tab-1">
-                        Court 1
-                    </button>
-                    <button class="book-btn" data-book="#book__tab-2">
-                        Court 2
-                    </button>
-                    <button class="book-btn active" data-book="#book__tab-3">
-                        Padel Sant Marti
-                    </button>
-                    <button class="book-btn" data-book="#book__tab-4">
-                        Premium court
-                    </button>
-                    <button class="book-btn" data-book="#book__tab-5">
-                        Premium court 3
-                    </button>
-                    <button class="book-option">
-                        <img src="./assets/img/option.svg" alt="">
-                    </button>
+                    <label class="book__label">
+                        <input class="book__label-radio" name="book" type="radio">
+                        <span class="book__label-span">
+                            Court 1
+                        </span>
+                    </label>
+                    <label class="book__label">
+                        <input class="book__label-radio" name="book" type="radio">
+                        <span class="book__label-span">
+                            Court 2
+                        </span>
+                    </label>
+                    <label class="book__label">
+                        <input class="book__label-radio" name="book" type="radio" checked>
+                        <span class="book__label-span">
+                            Padel Sant Marti
+                        </span>
+                    </label>
+                    <label class="book__label">
+                        <input class="book__label-radio" name="book" type="radio">
+                        <span class="book__label-span">
+                            Premium court
+                        </span>
+                    </label>
+                    <label class="book__label">
+                        <input class="book__label-radio" name="book" type="radio">
+                        <span class="book__label-span">
+                            Premium court 3
+                        </span>
+                    </label>
+                    <div class="book__filter-box">
+                        <button class="book-filter-btn">
+                            <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.9676 9.5624C19.4259 9.5624 19.7926 9.19574 19.7926 8.7374V4.4749C19.7926 4.01657 19.4259 3.6499 18.9676 3.6499C18.5092 3.6499 18.1426 4.01657 18.1426 4.4749V8.7374C18.1426 9.18657 18.5184 9.5624 18.9676 9.5624Z"
+                                        fill="#1A1E25" />
+                                    <path
+                                        d="M12.9998 16.4375C12.5415 16.4375 12.1748 16.8042 12.1748 17.2625V21.525C12.1748 21.9833 12.5415 22.35 12.9998 22.35C13.4581 22.35 13.8248 21.9833 13.8248 21.525V17.2625C13.8248 16.8133 13.4581 16.4375 12.9998 16.4375Z"
+                                        fill="#1A1E25" />
+                                    <path
+                                        d="M7.03252 9.5624C7.49085 9.5624 7.85752 9.19574 7.85752 8.7374V4.4749C7.85752 4.01657 7.49085 3.6499 7.03252 3.6499C6.57419 3.6499 6.20752 4.01657 6.20752 4.4749V8.7374C6.20752 9.18657 6.57419 9.5624 7.03252 9.5624Z"
+                                        fill="#1A1E25" />
+                                    <path
+                                        d="M8.73744 11.3223H5.32744C4.86911 11.3223 4.50244 11.6889 4.50244 12.1473C4.50244 12.6056 4.86911 12.9723 5.32744 12.9723H6.20744V21.5248C6.20744 21.9831 6.57411 22.3498 7.03244 22.3498C7.49077 22.3498 7.85744 21.9831 7.85744 21.5248V12.9723H8.73744C9.19577 12.9723 9.56244 12.6056 9.56244 12.1473C9.56244 11.6889 9.18661 11.3223 8.73744 11.3223Z"
+                                        fill="#1A1E25" />
+                                    <path
+                                        d="M20.6725 11.3223H17.2625C16.8042 11.3223 16.4375 11.6889 16.4375 12.1473C16.4375 12.6056 16.8042 12.9723 17.2625 12.9723H18.1425V21.5248C18.1425 21.9831 18.5092 22.3498 18.9675 22.3498C19.4258 22.3498 19.7925 21.9831 19.7925 21.5248V12.9723H20.6725C21.1308 12.9723 21.4975 12.6056 21.4975 12.1473C21.4975 11.6889 21.1308 11.3223 20.6725 11.3223Z"
+                                        fill="#1A1E25" />
+                                    <path
+                                        d="M14.7052 13.0274H13.8252V4.4749C13.8252 4.01657 13.4585 3.6499 13.0002 3.6499C12.5419 3.6499 12.1752 4.01657 12.1752 4.4749V13.0274H11.2952C10.8369 13.0274 10.4702 13.3941 10.4702 13.8524C10.4702 14.3107 10.8369 14.6774 11.2952 14.6774H14.7052C15.1635 14.6774 15.5302 14.3107 15.5302 13.8524C15.5302 13.3941 15.1635 13.0274 14.7052 13.0274Z"
+                                        fill="#1A1E25" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="book-fillter-page">
+                            <div class="book-fillter-title">
+                                Type
+                            </div>
+                            <div class="book-fillter-line">
+                                <div class="book-fillter-wrapp">
+                                    <label class="book-fillter-label check__label">
+                                        <input class="check__input book-fillter-radio book-fillter-type" type="checkbox"
+                                            name="filter-book-type" value="Indoor">
+                                        <span class="check__span book-fillter-span">
+                                            Indoor
+                                        </span>
+                                    </label>
+                                    <label class="book-fillter-label  check__label">
+                                        <input class="check__input book-fillter-radio book-fillter-type" type="checkbox"
+                                            name="filter-book-type" value="Outdoor" checked>
+                                        <span class="check__span book-fillter-span">
+                                            Outdoor
+                                        </span>
+                                    </label>
+                                    <label class="book-fillter-label  check__label">
+                                        <input class="book-fillter-radio book-fillter-type check__input" type="checkbox"
+                                            name="filter-book-type" value="Roofed outdoor">
+                                        <span class="check__span book-fillter-span">
+                                            Roofed outdoor
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="book-fillter-title">
+                                Features
+                            </div>
+                            <div class="book-fillter-line">
+                                <div class="book-fillter-wrapp">
+                                    <label class="book-fillter-label  check__label">
+                                        <input class="book-fillter-radio book-fillter-features check__input" type="checkbox"
+                                            name="filter-book-features" value="Indoor">
+                                        <span class="check__span book-fillter-span">
+                                            Wall
+                                        </span>
+                                    </label>
+                                    <label class="book-fillter-label  check__label">
+                                        <input class="book-fillter-radio book-fillter-features check__input" type="checkbox"
+                                            name="filter-book-features" value="Indoor" checked>
+                                        <span class="check__span book-fillter-span">
+                                            Crystal
+                                        </span>
+                                    </label>
+                                    <label class="book-fillter-label  check__label">
+                                        <input class="book-fillter-radio book-fillter-features check__input" type="checkbox"
+                                            name="filter-book-features" value="Indoor">
+                                        <span class="check__span book-fillter-span">
+                                            Panoramic
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="book-fillter-title">
+                                Size
+                            </div>
+                            <div class="book-fillter-line">
+                                <div class="book-fillter-wrapp">
+                                    <label class="book-fillter-label  check__label">
+                                        <input class="book-fillter-radio book-fillter-size check__input" type="checkbox"
+                                            name="filter-book-size" value="Indoor">
+                                        <span class="check__span book-fillter-span">
+                                            Single
+                                        </span>
+                                    </label>
+                                    <label class="book-fillter-label  check__label">
+                                        <input class="book-fillter-radio book-fillter-size check__input" type="checkbox"
+                                            name="filter-book-size" value="Indoor" checked>
+                                        <span class="check__span book-fillter-span">
+                                            Double
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
         
-                <div id="book__tab-1" class="book-tab">
-                    <div class="book-body">
-                        <div class="book-left"></div>
-                        <div class="book-right">
+                <div class="book-body">
+                    <div class="book-left">
+                        <div class="book-control">
+                            <div class="">
+                                <button></button><button></button>
+                                <div class="">
+                    
+                                    <div class="">
+                    
+                                    </div>
+                    
+                                    <div class="">
+                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                11/21/2021 - 11/27/2021
+                            </div>
+                            <div class="">
+                                <button>DAY</button>
+                                <button>
+                                    Week
+                                </button>
+                            </div>
+                        </div>
+                        <div class="book-head"></div>
+                        <div class="book-body">
+                    
+                        </div>
+                    </div>    <div>
+                        <a href="#" class="book-right">
                             <div class="book-right-box-img">
                                 <img class="book-right-img" src="./assets/img/book-1.png" alt="">
                             </div>
@@ -255,110 +401,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>        </div>
-                <div id="book__tab-2" class="book-tab">
-                    <div class="book-body">
-                        <div class="book-left"></div>
-                        <div class="book-right">
-                            <div class="book-right-box-img">
-                                <img class="book-right-img" src="./assets/img/book-1.png" alt="">
-                            </div>
-                            <div class="book-right-wrapp">
-                                <div class="book-right-title">
-                                    Padel Sant Marti
-                                </div>
-                                <div class="book-right-row">
-                                    <div class="book-right-inner">
-                                        Out door
-                                    </div>
-                                    <div class="book-right-inner">
-                                        Wall
-                                    </div>
-                                    <div class="book-right-inner">
-                                        Double
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>        </div>
-                <div id="book__tab-3" class="book-tab active">
-                    <div class="book-body">
-                        <div class="book-left"></div>
-                        <div class="book-right">
-                            <div class="book-right-box-img">
-                                <img class="book-right-img" src="./assets/img/book-1.png" alt="">
-                            </div>
-                            <div class="book-right-wrapp">
-                                <div class="book-right-title">
-                                    Padel Sant Marti
-                                </div>
-                                <div class="book-right-row">
-                                    <div class="book-right-inner">
-                                        Out door
-                                    </div>
-                                    <div class="book-right-inner">
-                                        Wall
-                                    </div>
-                                    <div class="book-right-inner">
-                                        Double
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>        </div>
-                <div id="book__tab-4" class="book-tab">
-                    <div class="book-body">
-                        <div class="book-left"></div>
-                        <div class="book-right">
-                            <div class="book-right-box-img">
-                                <img class="book-right-img" src="./assets/img/book-1.png" alt="">
-                            </div>
-                            <div class="book-right-wrapp">
-                                <div class="book-right-title">
-                                    Padel Sant Marti
-                                </div>
-                                <div class="book-right-row">
-                                    <div class="book-right-inner">
-                                        Out door
-                                    </div>
-                                    <div class="book-right-inner">
-                                        Wall
-                                    </div>
-                                    <div class="book-right-inner">
-                                        Double
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>        </div>
-                <div id="book__tab-5" class="book-tab">
-                    <div class="book-body">
-                        <div class="book-left"></div>
-                        <div class="book-right">
-                            <div class="book-right-box-img">
-                                <img class="book-right-img" src="./assets/img/book-1.png" alt="">
-                            </div>
-                            <div class="book-right-wrapp">
-                                <div class="book-right-title">
-                                    Padel Sant Marti
-                                </div>
-                                <div class="book-right-row">
-                                    <div class="book-right-inner">
-                                        Out door
-                                    </div>
-                                    <div class="book-right-inner">
-                                        Wall
-                                    </div>
-                                    <div class="book-right-inner">
-                                        Double
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>        </div>
-        
-        
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>    <footer class="footer footer__two">
             <div class="container footer-wrapp">

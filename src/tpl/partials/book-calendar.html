@@ -1,0 +1,34 @@
+<div class="book-calendar">
+    <script class="book-call-num" type="text/template" id="book-calendar-1">
+        <div class="book__container-wrapp">
+            <div class="clndr-today-button book-calendar-btn">Today</div>
+            <div class="clndr-next-button book-calendar-btn">Tomorrow</div>
+            <div class="calendar__box">
+                <% _.each(months, function(cal) { %>
+                    <div class="calendar__box-coll">
+                        <div class="calendar__head">
+                            <button class="clndr-previous-button calendar-btn btn-prev"></button>
+                                <div class=" calendar__month">
+                                    <%= cal.month.format('MMMM YYYY') %>
+                                </div>
+                            <button class="clndr-next-button calendar-btn btn-next"></button>
+                        </div>
+                        <div class="calendar__body">
+                            <div class="calendar__box-week">
+                                <% _.each(daysOfTheWeek, function(day) { %>
+                                    <div class="calendar__week"><%= day %></div>
+                                <% }); %>
+                            </div>
+                            <div class="calendar__box-day">
+                                <% _.each(cal.days, function(day) { %>
+                                    <div class="calendar__day <%= day.classes %>"><%= day.day %></div>
+                                <% }); %>
+                            </div>                       
+                        </div>
+                    </div>
+                <% }); %>                
+            </div>            
+        </div>          
+    </script>
+</div>
+<div class="test-2"></div>
