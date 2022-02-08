@@ -1,0 +1,170 @@
+---
+layout: default
+title: Profile
+---
+<div class="page f0f3f8">
+    {{>header_white-2}}
+    <div class="profile">
+        <div class="container profile-container">
+            <div class="profile-wrapper">
+                <div class="sidebar__left">
+                    <div class="sidebar__left-head">
+                        <div class="sidebar-avatar">
+                            <img src="./assets/img/profile-user.png" alt="" class="sidebar-avatar-img">
+                        </div>
+                        <div class="sidebar__head-name">
+                            Welcome, Emilia!
+                        </div>
+                        <div class="sidebar__head-age">
+                            23 years old
+                        </div>
+                        <div class="sidebar__head-place">
+                            Barcelona
+                        </div>
+                    </div>
+                    <nav class="sidebar__left-nav">
+                        <ul class="sidebar__left-list">
+                            <li class="sidebar__list-inner">
+                                <button class="sidebar-btn active" data-tab="#tab__1">
+                                    <span class="sidebar-btn-box-svg">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path class="sidebar-btn-svg"
+                                                d="M12.0207 10.5532C14.1065 10.5532 15.7973 8.86233 15.7973 6.77658C15.7973 4.69083 14.1065 3 12.0207 3C9.93498 3 8.24414 4.69083 8.24414 6.77658C8.24414 8.86233 9.93498 10.5532 12.0207 10.5532Z"
+                                                fill="#A0A8B1" stroke="rgba(0,0,0,0)" stroke-width="1.29114"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path class="sidebar-btn-svg"
+                                                d="M18.9606 20.0001C19.6708 20.0001 20.2195 19.3115 19.9935 18.6229C18.9068 15.2551 15.7543 12.8127 12.0208 12.8127C8.28721 12.8127 5.13467 15.2551 4.04796 18.6229C3.83277 19.3007 4.37075 20.0001 5.08088 20.0001H18.9606Z"
+                                                fill="#A0A8B1" stroke="rgba(0,0,0,0)" stroke-width="1.29114"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Profile
+                                </button>
+                            </li>
+                            <li>
+                                <button class="sidebar-btn" data-tab="#tab__2">
+                                    <span class="sidebar-btn-box-svg">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path class="sidebar-btn-svg"
+                                                d="M19.1735 20H4.82648C3.82192 20 3 19.0994 3 17.9987V7.00133C3 5.9006 3.82192 5 4.82648 5H19.1735C20.1781 5 21 5.9006 21 7.00133V17.9987C21 19.0994 20.1872 20 19.1735 20Z"
+                                                fill="#A0A8B1" stroke="#A0A8B1" stroke-width="1.3"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path class="sidebar-btn-svg" d="M7.14062 7V3" stroke="#A0A8B1"
+                                                stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path class="sidebar-btn-svg" d="M16.5703 7V3" stroke="#A0A8B1"
+                                                stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <rect x="7.80078" y="12" width="1.3" height="1.3" fill="white" />
+                                            <rect x="11.8008" y="12" width="1.3" height="1.3" fill="white" />
+                                            <rect x="15.8008" y="12" width="1.3" height="1.3" fill="white" />
+                                            <rect x="7.80078" y="15" width="1.3" height="1.3" fill="white" />
+                                            <rect x="11.8008" y="15" width="1.3" height="1.3" fill="white" />
+                                            <rect x="15.8008" y="15" width="1.3" height="1.3" fill="white" />
+                                            <path class="sidebar-btn-svg" d="M2 9L22 9" stroke="white"
+                                                stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </span>
+                                    My Bookings
+                                </button>
+                            </li>
+                            <li>
+                                <button class="sidebar-btn" data-tab="#tab__3">
+                                    <span class="sidebar-btn-box-svg">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path class="sidebar-btn-svg"
+                                                d="M22 6H15C13.4087 6 11.8826 6.63214 10.7574 7.75736C9.63214 8.88258 9 10.4087 9 12C9 13.5913 9.63214 15.1174 10.7574 16.2426C11.8826 17.3679 13.4087 18 15 18H22V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3H21C21.2652 3 21.5196 3.10536 21.7071 3.29289C21.8946 3.48043 22 3.73478 22 4V6ZM15 8H23V16H15C13.9391 16 12.9217 15.5786 12.1716 14.8284C11.4214 14.0783 11 13.0609 11 12C11 10.9391 11.4214 9.92172 12.1716 9.17157C12.9217 8.42143 13.9391 8 15 8ZM15 11V13H18V11H15Z"
+                                                fill="#A0A8B1" />
+                                        </svg>
+
+                                    </span>
+                                    Payment Methods
+                                </button>
+                            </li>
+                            <li>
+                                <button class="sidebar-btn" data-tab="#tab__4">
+                                    <span class="sidebar-btn-box-svg">
+                                        <svg width="22" height="19" viewBox="0 0 22 19" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path class="sidebar-btn-svg"
+                                                d="M14.1828 12.8259V9.13846C14.1828 7.45612 12.8235 6.09231 11.1468 6.09231H4.22656V2.56518C4.22656 1.14847 5.37121 0 6.78319 0H18.7141C20.1261 0 21.2708 1.14847 21.2708 2.56518V10.2607L21.2877 15.0143C21.2886 15.2947 21.0629 15.5228 20.7835 15.5238C20.6486 15.5243 20.5192 15.4707 20.4239 15.3751L17.8832 12.8259H14.1828Z"
+                                                fill="#A0A8B1" />
+                                            <path class="sidebar-btn-svg" fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 15.2307V10.1538C0 9.03225 0.906176 8.12305 2.024 8.12305H10.12C11.2378 8.12305 12.144 9.03225 12.144 10.1538V15.2307C12.144 16.3523 11.2378 17.2615 10.12 17.2615H2.14112L0.882341 18.4704C0.680456 18.6642 0.360151 18.6572 0.16692 18.4546C0.0767801 18.3601 0.0264659 18.2344 0.0264659 18.1036V15.56C0.00905315 15.4528 0 15.3428 0 15.2307ZM4.56912 11.1692C4.28967 11.1692 4.06312 11.3965 4.06312 11.6769C4.06312 11.9573 4.28967 12.1846 4.56912 12.1846H9.62912C9.90858 12.1846 10.1351 11.9573 10.1351 11.6769C10.1351 11.3965 9.90858 11.1692 9.62912 11.1692H4.56912ZM7.09912 13.7077C7.09912 13.4273 7.32567 13.2 7.60512 13.2H9.62912C9.90858 13.2 10.1351 13.4273 10.1351 13.7077C10.1351 13.9881 9.90858 14.2154 9.62912 14.2154H7.60512C7.32567 14.2154 7.09912 13.9881 7.09912 13.7077Z"
+                                                fill="#A0A8B1" />
+                                        </svg>
+
+                                    </span>
+                                    My messages
+                                    <span class="sidebar-mess-sum">
+                                        2
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="sidebar__right">
+                    <div class="sidebar__right-head">
+                        <div class="sidebar__right-col">
+                            <div class="sidebar__right-title">
+                                Player finder
+                            </div>
+                            <div class="sidebar__right-row">
+                                <div class="sidebar__right-row-title">
+                                    1.3K
+                                    <span class="sidebar__right-row-span">
+                                        Players
+                                    </span>
+                                </div>
+                                <div class="finder__player-box">
+                                    <img class='finder__player-img' src="./assets/img/avatar-1.jpg" alt="">
+                                    <img class='finder__player-img' src="./assets/img/avatar-2.jpg" alt="">
+                                    <img class='finder__player-img' src="./assets/img/avatar-3.jpg" alt="">
+                                    <img class='finder__player-img' src="./assets/img/avatar-4.jpg" alt="">
+                                    <img class='finder__player-img' src="./assets/img/avatar-5.jpg" alt="">
+                                    <img class='finder__player-img' src="./assets/img/avatar-6.jpg" alt="">
+                                    <img class='finder__player-img' src="./assets/img/avatar-7.jpg" alt="">
+                                    <img class='finder__player-img' src="./assets/img/avatar-8.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="#" class="sidebar__right-link">
+                                Find player
+                            </a>
+                        </div>
+                        <div class="sidebar__right-col">
+                            <div class="sidebar-img-box">
+                                <img src="./assets/img/sidebar-img.svg" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sidebar-container">
+                        <div id="tab__1" class="sidebar-tab active">
+                            {{>info}}
+                            {{>quest}}
+                        </div>
+                        <div id="tab__2" class="sidebar-tab">
+                            {{>resent}}
+                        </div>
+                        <div id="tab__3" class="sidebar-tab">
+                            {{>payment}}
+                        </div>
+                        <div id="tab__4" class="sidebar-tab">
+                            {{>messages}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer__two}}
+    {{>menu}}
+    <div class="background-fon"></div>
+    {{>popup-sign}}
+</div>
