@@ -12,7 +12,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>Profile</title>
+    <title>Company</title>
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,9 +65,9 @@
                     </li>
                 </ul>
             </div>
-        </header>    <div class="profile">
+        </header>    <div class="profile company-profile">
             <div class="container profile-container">
-                <div class="profile-wrapper">
+                <div class="profile-wrapper company-wrapper">
                     <div class="sidebar__left">
                         <div class="sidebar__left-head">
                             <div class="sidebar-avatar">
@@ -170,129 +170,98 @@
                         </nav>
                     </div>
                     <div class="sidebar__right">
-                        <div class="sidebar__right-head">
-                            <div class="sidebar__right-col">
-                                <div class="sidebar__right-title">
-                                    Player finder
-                                </div>
-                                <div class="sidebar__right-row">
-                                    <div class="sidebar__right-row-title">
-                                        1.3K
-                                        <span class="sidebar__right-row-span">
-                                            Players
-                                        </span>
-                                    </div>
-                                    <div class="finder__player-box">
-                                        <img class='finder__player-img' src="./assets/img/avatar-1.jpg" alt="">
-                                        <img class='finder__player-img' src="./assets/img/avatar-2.jpg" alt="">
-                                        <img class='finder__player-img' src="./assets/img/avatar-3.jpg" alt="">
-                                        <img class='finder__player-img' src="./assets/img/avatar-4.jpg" alt="">
-                                        <img class='finder__player-img' src="./assets/img/avatar-5.jpg" alt="">
-                                        <img class='finder__player-img' src="./assets/img/avatar-6.jpg" alt="">
-                                        <img class='finder__player-img' src="./assets/img/avatar-7.jpg" alt="">
-                                        <img class='finder__player-img' src="./assets/img/avatar-8.jpg" alt="">
-                                    </div>
-                                </div>
-                                <a href="#" class="sidebar__right-link">
-                                    Find player
-                                </a>
-                            </div>
-                            <div class="sidebar__right-col">
-                                <div class="sidebar-img-box">
-                                    <img src="./assets/img/sidebar-img.svg" alt="">
-                                </div>
-    
-                            </div>
-                        </div>
                         <div class="sidebar-container">
-                            <div id="tab__1" class="sidebar-tab active">
-                                <div class="info">
-                                    <div class="info-title">
-                                        Profile
-                                    </div>
-                                    <div class="info-row">
-                                        <div class="info-row-col --one">
-                                            <div class="info_row-user">
-                                                <div class="info__user-foto">
-                                                    <img src="./assets/img/company.png" alt="">
-                                                </div>
-                                                <div class="info__user-name">
-                                                    Profile image
-                                                </div>
-                                            </div>
-                                            <label class="btn-add-file">
-                                                <input type="file" class="btn-add-file-input">
-                                                <span class="btn-add-file-span btn">Add photo</span>
-                                            </label>
+                            <div id="tab__1" class="sidebar-tab">
+                                <div class="info company-info">
+                                    <div class="company-info-wrapp">
+                                        <div class="info-title">
+                                            Profile
                                         </div>
+                                        <div class="info-row">
+                                            <div class="info-row-col --one">
+                                                <div class="info_row-user">
+                                                    <div class="info__user-foto">
+                                                        <img src="./assets/img/company.png" alt="">
+                                                    </div>
+                                                    <div class="info__user-name">
+                                                        Profile image
+                                                    </div>
+                                                </div>
+                                                <label class="btn-add-file">
+                                                    <input type="file" class="btn-add-file-input">
+                                                    <span class="btn-add-file-span btn">Add photo</span>
+                                                </label>
+                                            </div>
                                 
-                                    </div>
-                                    <div class="info-row">
-                                        <div class="info-row-col">
-                                            <div class="info__row-title">
-                                                Company name
-                                            </div>
-                                            <input type="text" class="popup-input info-input" placeholder="Enter you full name">
                                         </div>
-                                        <div class="info-row-col">
-                                            <div class="info__row-title">
-                                                Location
+                                        <div class="info-row">
+                                            <div class="info-row-col">
+                                                <div class="info__row-title">
+                                                    Company name
+                                                </div>
+                                                <input type="text" class="popup-input info-input" placeholder="Enter you full name">
                                             </div>
-                                            <input type="text" class="info-input popup-input" placeholder="Enter your city">
+                                            <div class="info-row-col">
+                                                <div class="info__row-title">
+                                                    Location
+                                                </div>
+                                                <input type="text" class="info-input popup-input" placeholder="Enter your city">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <div class="info-row-col">
-                                            <div class="info__row-title">
-                                                Email
-                                            </div>
-                                            <div class="email-box">
-                                                <input class="input-email" type="text" placeholder="Your working email">
-                                                <div class="error-text">
-                                                    Error message goes here
+                                        <div class="info-row">
+                                            <div class="info-row-col">
+                                                <div class="info__row-title">
+                                                    Email
+                                                </div>
+                                                <div class="email-box">
+                                                    <input class="input-email" type="text" placeholder="Your working email">
+                                                    <div class="error-text">
+                                                        Error message goes here
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="info-row-col">
-                                            <div class="info__row-title">
-                                                Phome number
-                                            </div>
-                                            <input type="text" class="info-phone-input popup-input" placeholder="">
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <div class="info-row-col">
-                                            <div class="info__row-title">
-                                                Password
-                                            </div>
-                                            <div class="password-box --two">
-                                                <input id="pwd-4" class="pwd-conf-one input-password" type="password">
-                                                <div class="error-text">
-                                                    Error message goes here
+                                            <div class="info-row-col">
+                                                <div class="info__row-title">
+                                                    Phome number
                                                 </div>
-                                                <button class="password-btn" data-password="#pwd-4">
-                                                    <img src="./assets/img/Eye.svg" alt="">
-                                                </button>
+                                                <input type="text" class="info-phone-input popup-input" placeholder="">
                                             </div>
                                         </div>
-                                        <div class="info-row-col">
-                                            <div class="info__row-title">
-                                                Confirm password
-                                            </div>
-                                            <div class="password-box --two">
-                                                <input id="pwd-5" class="pwd-conf-two input-password" type="password">
-                                                <div class="error-text">
-                                                    Error message goes here
+                                        <div class="info-row">
+                                            <div class="info-row-col">
+                                                <div class="info__row-title">
+                                                    Password
                                                 </div>
-                                                <button class="password-btn" data-password="#pwd-5">
-                                                    <img src="./assets/img/Eye.svg" alt="">
-                                                </button>
+                                                <div class="password-box --two">
+                                                    <input id="pwd-4" class="pwd-conf-one input-password" type="password">
+                                                    <div class="error-text">
+                                                        Error message goes here
+                                                    </div>
+                                                    <button class="password-btn" data-password="#pwd-4">
+                                                        <img src="./assets/img/Eye.svg" alt="">
+                                                    </button>
+                                                </div>
                                             </div>
+                                            <div class="info-row-col">
+                                                <div class="info__row-title">
+                                                    Confirm password
+                                                </div>
+                                                <div class="password-box --two">
+                                                    <input id="pwd-5" class="pwd-conf-two input-password" type="password">
+                                                    <div class="error-text">
+                                                        Error message goes here
+                                                    </div>
+                                                    <button class="password-btn" data-password="#pwd-5">
+                                                        <img src="./assets/img/Eye.svg" alt="">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                
                                         </div>
+                                        <button class="btn quest-btn">
+                                            Save
+                                        </button>
                                     </div>
-                                    <button class="btn quest-btn">
-                                        Save
-                                    </button>
                                 </div>
                             </div>
                             <div id="tab__2" class="sidebar-tab">
@@ -610,141 +579,137 @@
                                             <img class="show-btn-img" src="./assets/img/show-btn.svg" alt="">
                                         </button>
                                     </div></div>                        </div>
-                            <div id="tab__3" class="sidebar-tab">
-                                <div class="payment">
-                                    <div class="payment-wrapper">
-                                        <div class="payment-title">
-                                            Payment Methods
-                                        </div>
-                                
-                                        <div class="payment-box">
-                                            <div class="payment-box-head --active">
-                                                <label class="quest__label payment__label">
-                                                    <input class="quest__label-radio payment__label-radio" name="card" type="radio" checked>
-                                                    <span class="quest__label-span payment__label-span">
-                                                        Credit card
-                                                    </span>
-                                                </label>
-                                
-                                                <div class="payment-head-coll">
-                                                    <div class="payment-row-img">
-                                                        <img src="./assets/img/visa-logo.svg" alt="">
-                                                    </div>
-                                                    <div class="payment-row-img">
-                                                        <img src="./assets/img/Mastercard.svg" alt="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="payment-box-body">
-                                                <div class="payment__row-title">
-                                                    Card number
-                                                </div>
-                                                <input class="popup-input payment-input -one" type="text" maxlength="16"
-                                                    placeholder="0000 0000 0000 0000">
-                                                <div class="payment-row">
-                                                    <div class="payment-row-coll">
-                                                        <div class="payment__row-title">
-                                                            Expiry date
-                                                        </div>
-                                                        <input class="number-card popup-input payment-input" maxlength="4" type="text"
-                                                            placeholder="mm/yy">
-                                
-                                                    </div>
-                                                    <div class="payment-row-coll">
-                                                        <div class="payment__row-title">
-                                                            CVC
-                                                        </div>
-                                                        <input class="popup-input payment-input" type="text" maxlength="3" placeholder="000">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="payment-box">
-                                            <div class="payment-box-head">
-                                                <label class="quest__label payment__label">
-                                                    <input class="quest__label-radio payment__label-radio" name="card" type="radio">
-                                                    <span class="quest__label-span payment__label-span">
-                                                        PayPal
-                                                    </span>
-                                                </label>
-                                                <div class="payment-head-coll">
-                                                    <div class="payment-row-img">
-                                                        <img src="./assets/img/PayPal.svg" alt="">
-                                                    </div>
-                                
-                                                </div>
-                                            </div>
-                                            <div class="payment-box-body">
-                                                <div class="payment__row-title">
-                                                    Card number
-                                                </div>
-                                                <input class="popup-input payment-input -one" type="text" maxlength="16"
-                                                    placeholder="0000 0000 0000 0000">
-                                                <div class="payment-row">
-                                                    <div class="payment-row-coll">
-                                                        <div class="payment__row-title">
-                                                            Expiry date
-                                                        </div>
-                                                        <input class="number-card popup-input payment-input" maxlength="4" type="text"
-                                                            placeholder="mm/yy">
-                                
-                                                    </div>
-                                                    <div class="payment-row-coll">
-                                                        <div class="payment__row-title">
-                                                            CVC
-                                                        </div>
-                                                        <input class="popup-input payment-input" type="text" maxlength="3" placeholder="000">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                
-                                        <div class="payment-box">
-                                            <div class="payment-box-head">
-                                                <label class="quest__label payment__label">
-                                                    <input class="quest__label-radio payment__label-radio" name="card" type="radio">
-                                                    <span class="quest__label-span payment__label-span">
-                                                        Apple pay
-                                                    </span>
-                                                </label>
-                                                <div class="payment-head-coll ">
-                                                    <div class="payment-row-img">
-                                                        <img src="./assets/img/ApplePay.svg" alt="">
-                                                    </div>
-                                
-                                                </div>
-                                            </div>
-                                            <div class="payment-box-body">
-                                                <div class="payment__row-title">
-                                                    Card number
-                                                </div>
-                                                <input class="popup-input payment-input -one" type="text" maxlength="16"
-                                                    placeholder="0000 0000 0000 0000">
-                                                <div class="payment-row">
-                                                    <div class="payment-row-coll">
-                                                        <div class="payment__row-title">
-                                                            Expiry date
-                                                        </div>
-                                                        <input class="number-card popup-input payment-input" maxlength="4" type="text"
-                                                            placeholder="mm/yy">
-                                
-                                                    </div>
-                                                    <div class="payment-row-coll">
-                                                        <div class="payment__row-title">
-                                                            CVC
-                                                        </div>
-                                                        <input class="popup-input payment-input" type="text" maxlength="3" placeholder="000">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <button class="btn payment-btn">
-                                            Save
+                            <div id="tab__3" class="sidebar-tab active">
+                                <div class="courts">
+                                    <div class="courts-title">
+                                        My Courts
+                                        <button class="courts-btn-add btn" data-courts="#new-courts-add">
+                                            Add new court
                                         </button>
                                     </div>
+                                    <div class="courts-wrapper">
+                                        <a href="#" class="courts-box">
+                                            <div class="courts-box-wrapp">
+                                                <div class="courts-box-img">
+                                                    <img src="./assets/img/courts-1.png" alt="">
+                                                </div>
+                                                <div class="courts-box-name">
+                                                    Padel Sant Marti
+                                                </div>
+                                            </div>
+                                            <button class="courts-box-btn" data-edit="#open-edit">
+                                                Edit
+                                            </button>
+                                        </a>
+                                
+                                
+                                        <a href="#" class="courts-box">
+                                            <div class="courts-box-wrapp">
+                                                <div class="courts-box-img">
+                                                    <img src="./assets/img/courts-2.png" alt="">
+                                                </div>
+                                                <div class="courts-box-name">
+                                                    Padel Sant Marti
+                                                </div>
+                                            </div>
+                                            <button class="courts-box-btn" data-edit="#open-edit">
+                                                Edit
+                                            </button>
+                                        </a>
+                                
+                                        <a href="#" class="courts-box">
+                                            <div class="courts-box-wrapp">
+                                                <div class="courts-box-img">
+                                                    <img src="./assets/img/courts-3.png" alt="">
+                                                </div>
+                                                <div class="courts-box-name">
+                                                    Padel Sant Marti
+                                                </div>
+                                            </div>
+                                            <button class="courts-box-btn" data-edit="#open-edit">
+                                                Edit
+                                            </button>
+                                        </a>
+                                
+                                        <a href="#" class="courts-box">
+                                            <div class="courts-box-wrapp">
+                                                <div class="courts-box-img">
+                                                    <img src="./assets/img/courts-4.png" alt="">
+                                                </div>
+                                                <div class="courts-box-name">
+                                                    Padel Sant Marti
+                                                </div>
+                                            </div>
+                                            <button class="courts-box-btn" data-edit="#open-edit">
+                                                Edit
+                                            </button>
+                                        </a>
+                                
+                                        <a href="#" class="courts-box">
+                                            <div class="courts-box-wrapp">
+                                                <div class="courts-box-img">
+                                                    <img src="./assets/img/courts-5.png" alt="">
+                                                </div>
+                                                <div class="courts-box-name">
+                                                    Padel Sant Marti
+                                                </div>
+                                            </div>
+                                            <button class="courts-box-btn" data-edit="#open-edit">
+                                                Edit
+                                            </button>
+                                        </a>
+                                
+                                        <a href="#" class="courts-box">
+                                            <div class="courts-box-wrapp">
+                                                <div class="courts-box-img">
+                                                    <img src="./assets/img/courts-6.png" alt="">
+                                                </div>
+                                                <div class="courts-box-name">
+                                                    Padel Sant Marti
+                                                </div>
+                                            </div>
+                                            <button class="courts-box-btn" data-edit="#open-edit">
+                                                Edit
+                                            </button>
+                                        </a>
+                                
+                                        <a href="#" class="courts-box">
+                                            <div class="courts-box-wrapp">
+                                                <div class="courts-box-img">
+                                                    <img src="./assets/img/courts-7.png" alt="">
+                                                </div>
+                                                <div class="courts-box-name">
+                                                    Padel Sant Marti
+                                                </div>
+                                            </div>
+                                            <button class="courts-box-btn" data-edit="#open-edit">
+                                                Edit
+                                            </button>
+                                        </a>
+                                
+                                        <a href="#" class="courts-box">
+                                            <div class="courts-box-wrapp">
+                                                <div class="courts-box-img">
+                                                    <img src="./assets/img/courts-8.png" alt="">
+                                                </div>
+                                                <div class="courts-box-name">
+                                                    Padel Sant Marti
+                                                </div>
+                                            </div>
+                                            <button class="courts-box-btn" data-edit="#open-edit">
+                                                Edit
+                                            </button>
+                                        </a>
+                                
+                                
+                                
+                                
+                                
+                                    </div>
+                                </div>
+                                <div id="new-courts-add" class="courts-tab">
+                                    sdfsdf</div>
+                                <div id="open-edit" class="courts-tab">
                                 </div>                        </div>
                             <div id="tab__4" class="sidebar-tab">
                                 <div class="message">

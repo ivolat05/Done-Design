@@ -1,0 +1,105 @@
+.courts {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 50px 63px 54px 51px;
+    height: 100%;
+    display: block;
+}
+.courts.no-active {
+    display: none;
+}
+.courts-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.167;
+    color: #2e2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.courts-btn-add {
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    color: #0d0808;
+    padding: 12px 16px 12px 35px;
+    border: none;
+    outline: none;
+    position: relative;
+    &::before {
+        content: url("../../assets/img/line.svg");
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 13px;
+    }
+}
+
+.courts-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 1px solid #eaf0f8;
+    border-radius: 16px;
+    padding: 11px 10px;
+    margin-bottom: 5px;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+        box-shadow: 0px 18px 40px rgba(109, 141, 172, 0.17);
+    }
+}
+
+.courts-box-btn {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.1875;
+    color: #a0a8b1;
+    padding-left: 30px;
+    position: relative;
+    &::before {
+        content: url("../../assets/img/edit.svg");
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.courts-box-wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.courts-box-name {
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.167;
+    color: #2e2d2d;
+}
+
+.courts-box-img {
+    width: 119px;
+    height: 77px;
+    img {
+        width: 119px;
+        height: 77px;
+        object-fit: cover;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+}
+
+.courts-tab {
+    display: none;
+}
+.courts-tab.active {
+    display: block;
+}

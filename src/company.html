@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Profile
+title: Company
 ---
 <div class="page f0f3f8">
     {{>header_white-2}}
-    <div class="profile">
+    <div class="profile company-profile">
         <div class="container profile-container">
-            <div class="profile-wrapper">
+            <div class="profile-wrapper company-wrapper">
                 <div class="sidebar__left">
                     <div class="sidebar__left-head">
                         <div class="sidebar-avatar">
@@ -109,50 +109,16 @@ title: Profile
                     </nav>
                 </div>
                 <div class="sidebar__right">
-                    <div class="sidebar__right-head">
-                        <div class="sidebar__right-col">
-                            <div class="sidebar__right-title">
-                                Player finder
-                            </div>
-                            <div class="sidebar__right-row">
-                                <div class="sidebar__right-row-title">
-                                    1.3K
-                                    <span class="sidebar__right-row-span">
-                                        Players
-                                    </span>
-                                </div>
-                                <div class="finder__player-box">
-                                    <img class='finder__player-img' src="./assets/img/avatar-1.jpg" alt="">
-                                    <img class='finder__player-img' src="./assets/img/avatar-2.jpg" alt="">
-                                    <img class='finder__player-img' src="./assets/img/avatar-3.jpg" alt="">
-                                    <img class='finder__player-img' src="./assets/img/avatar-4.jpg" alt="">
-                                    <img class='finder__player-img' src="./assets/img/avatar-5.jpg" alt="">
-                                    <img class='finder__player-img' src="./assets/img/avatar-6.jpg" alt="">
-                                    <img class='finder__player-img' src="./assets/img/avatar-7.jpg" alt="">
-                                    <img class='finder__player-img' src="./assets/img/avatar-8.jpg" alt="">
-                                </div>
-                            </div>
-                            <a href="#" class="sidebar__right-link">
-                                Find player
-                            </a>
-                        </div>
-                        <div class="sidebar__right-col">
-                            <div class="sidebar-img-box">
-                                <img src="./assets/img/sidebar-img.svg" alt="">
-                            </div>
-
-                        </div>
-                    </div>
                     <div class="sidebar-container">
-                        <div id="tab__1" class="sidebar-tab active">
+                        <div id="tab__1" class="sidebar-tab">
                             {{>info-company}}
 
                         </div>
                         <div id="tab__2" class="sidebar-tab">
                             {{>resent}}
                         </div>
-                        <div id="tab__3" class="sidebar-tab">
-                            {{>payment}}
+                        <div id="tab__3" class="sidebar-tab active">
+                            {{>courts}}
                         </div>
                         <div id="tab__4" class="sidebar-tab">
                             {{>messages}}
