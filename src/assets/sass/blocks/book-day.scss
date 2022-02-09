@@ -54,6 +54,10 @@
     text-align: right;
     color: #a0a8b1;
     z-index: 0;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+        background: #a1d98f;
+    }
 }
 
 .book__line-box.active {

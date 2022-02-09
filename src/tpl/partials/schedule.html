@@ -10,4 +10,71 @@
             </div>
         </div>
     </div>
+
+    <div class="schedule-wrapp">
+
+
+
+        <div class="book-left">
+            <div class="book-control">
+                <div class="book-control-coll">
+                    <button class="book-control-btn">
+                        <span>
+                            <svg width="7" height="10" viewBox="0 0 7 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.84199 8.825L3.02533 5L6.84199 1.175L5.66699 0L0.666992 5L5.66699 10L6.84199 8.825Z"
+                                    fill="white" />
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="book-control-btn book-control-btn-next">
+                        <span>
+                            <svg width="7" height="10" viewBox="0 0 7 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.158203 8.825L3.97487 5L0.158203 1.175L1.3332 0L6.3332 5L1.3332 10L0.158203 8.825Z"
+                                    fill="white" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="book-calen-box">
+                        <div class="book-calen-box-title">
+                            TODAY
+                        </div>
+                        <div class="book__box-calendar">
+                            {{>book-calendar}}
+                        </div>
+                    </div>
+                </div>
+                <div class="book-control-date">
+
+                    <span class="book-conrtol-date-week active">
+                        11/21/2021 - 11/27/2021
+                    </span>
+                    <span class="book-conrtol-date-day">
+                        11/09/2021
+                    </span>
+                </div>
+                <div class="book-control-coll">
+                    <button class="book-btn-day bk-btn" data-bookday="#book-day">DAY</button>
+                    <button class="book-btn-week bk-btn" data-bookday="#book-week">
+                        WEEK
+                    </button>
+                </div>
+            </div>
+            <div class="book-box-body">
+                <div id="book-week" class="book-left-body active">
+                    {{>book-week-schedule}}
+
+                </div>
+                <div id="book-day" class="book-left-body">
+                    {{>book-day}}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 </div>

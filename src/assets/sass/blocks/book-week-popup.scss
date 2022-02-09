@@ -1,0 +1,118 @@
+.book-week {
+    position: relative;
+}
+.book-week-popup {
+    width: 337px;
+    background: #ffffff;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.1), 0px 30px 40px rgba(20, 37, 63, 0.08);
+    border-radius: 8px;
+    padding: 32px 25px 26px 26px;
+    position: fixed;
+    top: 36%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s all ease-in-out;
+    opacity: 0;
+    z-index: -3;
+}
+.book-week-popup.active {
+    opacity: 1;
+    z-index: 3;
+}
+.book-week-popup-close {
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: 19px;
+    right: 15px;
+}
+
+.book-popup-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 45px;
+}
+
+.book-popup-box {
+    width: 97px;
+    height: 64px;
+    img {
+        width: 97px;
+        height: 64px;
+        border-radius: 7px;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    margin-right: 25px;
+}
+
+.book-popup-title {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.1875;
+    color: #3a3f43;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.book-popup-time {
+    padding: 7px 15px 7px 35px;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.333;
+    color: #3a3f43;
+    background: #f8f8f9;
+    border-radius: 14px;
+    position: relative;
+    &::before {
+        content: url("../../assets/img/clock.svg");
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+    }
+}
+.book-popup-row-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book-popup-btn {
+    min-width: 140px;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(251, 212, 204, 0.37);
+    border: 1px solid #ff6746;
+    border-radius: 4px;
+    transition: 0.3s all ease-in-out;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 1.2;
+    color: #ff6746;
+    cursor: pointer;
+    &:hover {
+        background: #ff6746;
+        color: #fff;
+    }
+}
+
+.book-popup-btn-2 {
+    min-width: 140px;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 1.2;
+    color: #000000;
+}

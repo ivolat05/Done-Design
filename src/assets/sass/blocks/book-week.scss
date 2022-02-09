@@ -28,7 +28,10 @@
     border-bottom: 1px solid #eaf0f8;
     height: 28px;
 }
-
+.book-week-box.--green {
+    background: #e4fbdc;
+    border: 1px solid rgba(96, 229, 49, 0.16);
+}
 .book-week-box {
     height: 20px;
     background: #f0f3f5;
@@ -40,12 +43,11 @@
     border: 1px solid #eaf0f8;
     overflow: hidden;
     border-radius: 3px;
+    transition: 0.3s all ease-in-out;
     cursor: pointer;
-}
-
-.book-week-box.--green {
-    background: #e4fbdc;
-    border: 1px solid rgba(96, 229, 49, 0.16);
+    &:hover {
+        background: #a1d98f;
+    }
 }
 
 .book-week-inner.--two .active,
@@ -64,4 +66,8 @@
     color: #3a3f43;
     margin-top: 7px;
     margin-right: 18px;
+}
+
+.book-week-box.background-A1D98F {
+    background: #a1d98f;
 }

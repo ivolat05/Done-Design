@@ -9919,7 +9919,7 @@ $(function () {
     function bookBtnHidden() {
         let bookBtnHidden = document.querySelector('.book-btn-hidden');
         let bookBoxBody = document.querySelector('.book-box-body');
-        if (bookBoxBody) {
+        if (bookBoxBody && bookBtnHidden) {
             bookBtnHidden.addEventListener('click', () => {
                 bookBoxBody.style.height = '100%';
                 bookBtnHidden.style.display = 'none';
@@ -10819,4 +10819,29 @@ $(function () {
 
     deactiveCourseAdd('new-close', 'courts');
     deactiveCourseAdd('schedule-close', 'approve');
+
+    // book-week-popup active deactive
+    function bookWeekPopupActive() {
+        let bookWeekBox = document.querySelectorAll('.book-week-box');
+        let bookWeekPopup = document.querySelector('.book-week-popup');
+        if (bookWeekBox && bookWeekPopup) {
+            bookWeekBox.forEach((item) => {
+                item.addEventListener('click', () => {
+                    if (bookWeekPopup.classList.contains('active')) {
+                        bookWeekPopup.classList.remove('active');
+                    }
+                    bookWeekPopup.classList.add('active');
+                })
+            })
+            let weekPopupClose = document.querySelectorAll('.week-popup-close');
+            weekPopupClose.forEach((item) => {
+                item.addEventListener('click', () => {
+                    if (bookWeekPopup.classList.contains('active')) {
+                        bookWeekPopup.classList.remove('active');
+                    }
+                })
+            })
+        }
+    }
+    bookWeekPopupActive();
 })
