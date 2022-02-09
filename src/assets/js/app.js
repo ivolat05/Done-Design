@@ -406,7 +406,11 @@ $(function () {
 
     $(".time__box").mCustomScrollbar();
 
-
+    $(".new-foto-row").mCustomScrollbar({
+        axis: "x",
+        moveDragger: true,
+        scrollButtons: { enable: true }
+    });
 
 
 
@@ -957,5 +961,26 @@ $(function () {
         }
     }
     bookingPopupBtnText();
+    // deactive couseAdd
+    function deactiveCourseAdd() {
+        let NewClose = document.querySelectorAll('.new-close');
+        let courts = document.querySelectorAll('.courts');
+
+        if (courts) {
+            NewClose.forEach((item) => {
+                item.addEventListener('click', () => {
+                    item.parentElement.parentElement.parentElement.classList.remove('active');
+                    item.parentElement.parentElement.classList.remove('active');
+                    courts.forEach((item) => {
+                        if (item.classList.contains('no-active')) {
+                            item.classList.remove('no-active');
+                        }
+                    })
+                })
+            })
+        }
+    }
+
+    deactiveCourseAdd();
 })
 
