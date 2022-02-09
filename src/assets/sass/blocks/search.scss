@@ -23,16 +23,18 @@
 
         border-radius: 0;
         margin-right: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0);
         &:hover {
             border-radius: 16px;
-            border-right: 1px solid #c2e631;
+            border: 1px solid #c2e631;
         }
         &:nth-child(2) {
             width: 230px;
             padding-left: 10px;
+            border-top: 1px solid rgba(0, 0, 0, 0);
             &:hover {
                 border-radius: 16px;
-                border-right: 1px solid #c2e631;
+                border: 1px solid #c2e631;
             }
         }
     }
@@ -42,18 +44,20 @@
         border-right: 1px solid #f3f4f7;
         border-radius: 0;
         margin-right: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0);
         &:hover {
             border-radius: 16px;
-            border-right: 1px solid #c2e631;
+            border: 1px solid #c2e631;
         }
         &:nth-child(2) {
             width: 168px;
             border-right: none;
             padding-left: 11px;
             margin-right: 5px;
+            border-top: 1px solid rgba(0, 0, 0, 0);
             &:hover {
                 border-radius: 16px;
-                border-right: 1px solid #c2e631;
+                border: 1px solid #c2e631;
             }
         }
     }
@@ -65,10 +69,13 @@
         font-size: 0.875rem;
         line-height: 150%;
     }
-    .main__box-inner.place {
+    .main__box-inner.place,
+    .main__box-inner.time {
         border-bottom: 1px solid rgba(0, 0, 0, 0);
+        border-top: 1px solid rgba(0, 0, 0, 0);
+        border-right: 1px solid rgba(0, 0, 0, 0);
         &:hover {
-            border-bottom: 1px solid #c2e631;
+            border: 1px solid #c2e631;
         }
     }
 }

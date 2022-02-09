@@ -89,6 +89,11 @@ input:active {
     outline: 1px solid #404040;
 }
 
+.main-form-input:focus,
+.main-form-input:active {
+    outline: none;
+}
+
 .password-box {
     position: relative;
 }
