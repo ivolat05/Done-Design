@@ -1010,5 +1010,7 @@ $(function () {
         }
     }
     bookWeekPopupActive();
+
+
 })
 
