@@ -10327,7 +10327,7 @@ $(function () {
     $(".related-wrapp-slaider").slick({
         slidesToShow: 4,
         slidesToScroll: 1,
-
+        speed: 0,
         arrows: true,
         prevArrow: $(".related-prev"),
         nextArrow: $(".related-next"),
