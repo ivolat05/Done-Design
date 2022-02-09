@@ -10657,6 +10657,8 @@ $(function () {
     tabs("bk-btn", "book-left-body", "data-bookday");
     tabs("courts-btn-add", "courts-tab", "data-courts", "courts");
     tabs("courts-box-btn", "courts-tab", "data-edit", "courts");
+    tabs("approve-button", "approved-tab", "data-schedule", "approve");
+
     // активация кнопки регистарции  Create account
     function activeBtnCreateAccount() {
         let sample = document.querySelectorAll('.sample');
@@ -10795,17 +10797,17 @@ $(function () {
         }
     }
     bookingPopupBtnText();
-    // deactive couseAdd
-    function deactiveCourseAdd() {
-        let NewClose = document.querySelectorAll('.new-close');
-        let courts = document.querySelectorAll('.courts');
+    // deactive couseAdd 
+    function deactiveCourseAdd(buttonClose, blockActive) {
+        let btnClose = document.querySelectorAll(`.${buttonClose}`);
+        let block = document.querySelectorAll(`.${blockActive}`);
 
-        if (courts) {
-            NewClose.forEach((item) => {
+        if (block) {
+            btnClose.forEach((item) => {
                 item.addEventListener('click', () => {
                     item.parentElement.parentElement.parentElement.classList.remove('active');
                     item.parentElement.parentElement.classList.remove('active');
-                    courts.forEach((item) => {
+                    block.forEach((item) => {
                         if (item.classList.contains('no-active')) {
                             item.classList.remove('no-active');
                         }
@@ -10815,5 +10817,6 @@ $(function () {
         }
     }
 
-    deactiveCourseAdd();
+    deactiveCourseAdd('new-close', 'courts');
+    deactiveCourseAdd('schedule-close', 'approve');
 })
