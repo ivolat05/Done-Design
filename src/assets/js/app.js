@@ -16,15 +16,21 @@ $(function () {
         let boxBtn = document.querySelectorAll(`.${mobilBloxActive}`);
         let menuBox = document.querySelector(`.${menuBoxs}`);
         let body = document.querySelector('body');
+        let backgroundFon = document.querySelector('.background-fon');
         if (menuBox) {
             boxBtn.forEach((item) => {
                 item.addEventListener('click', () => {
                     if (window.getComputedStyle(menuBox).display == 'block') {
                         body.classList.add('stop')
                         menuBox.classList.add('active')
+                        if (!backgroundFon.classList.contains('active')) {
+                            backgroundFon.classList.add('active');
+                        }
                     }
+
                 })
             })
+
 
             let btnClose = document.querySelectorAll('.menu-close--btn')
             btnClose.forEach((item) => {
@@ -32,10 +38,19 @@ $(function () {
                     if (body.classList.contains('stop')) {
                         body.classList.remove('stop')
                     }
+                    if (backgroundFon.classList.contains('active')) {
+                        backgroundFon.classList.remove('active');
+                    }
 
                     item.parentElement.parentElement.classList.remove('active')
                 })
             })
+
+            backgroundFon.addEventListener('click', () => {
+                body.classList.remove('stop');
+                backgroundFon.classList.remove('active');
+                menuBox.classList.remove('active');
+            });
 
         }
 
@@ -499,26 +514,47 @@ $(function () {
 
         responsive: [
             {
-                breakpoint: 1600,
+                breakpoint: 1400,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 6,
                     slidesToScroll: 1,
 
                 }
             },
             {
-                breakpoint: 820,
+                breakpoint: 1200,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 5,
                     slidesToScroll: 1,
 
                 }
             },
 
             {
-                breakpoint: 640,
+                breakpoint: 992,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+
+                }
+            }
+            ,
+
+            {
+                breakpoint: 772,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+
+                }
+            }
+            ,
+
+            {
+                breakpoint: 465,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
 
                 }
             }
