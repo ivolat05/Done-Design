@@ -2,7 +2,16 @@
     background: #ffffff;
     border-bottom: 1px solid #f3f4f7;
 }
-
+.search-mobil-btn {
+    display: none;
+}
+.search-place-filter {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
 .search-form {
     box-shadow: none;
     .main__box-inner {

@@ -1,5 +1,6 @@
 .menu-calendar,
-.menu-date {
+.menu-date,
+.menu-filter {
     position: fixed;
     right: 0;
     display: none;
@@ -14,7 +15,8 @@
         display: none;
     }
     .menu-calendar-wrapper,
-    .menu-date-wrapper {
+    .menu-date-wrapper,
+    .menu-filter-wrapper {
         top: 0;
         position: absolute;
     }
@@ -40,7 +42,8 @@
     overflow: hidden;
 }
 .menu-calendar-footer,
-.menu-date-footer {
+.menu-date-footer,
+.menu-filter-footer {
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -55,7 +58,8 @@
     box-shadow: 3px -8px 8px rgba(93, 110, 126, 0.08);
 }
 .menu-calendar-header,
-.menu-date-header {
+.menu-date-header,
+.menu-filter-header {
     background: #ffffff;
     display: flex;
     align-items: center;
@@ -72,7 +76,8 @@
 }
 
 .menu-calendar.active,
-.menu-date.active {
+.menu-date.active,
+.menu-filter.active {
     transform: translateX(0);
 }
 .menu-calendar-close {
@@ -132,9 +137,26 @@
     width: 0;
     height: 0;
 }
+
+.menu-filter-result {
+    width: 339px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #1b1919;
+}
 @media (max-width: 380px) {
     .menu-calendar,
-    .menu-date {
+    .menu-date,
+    .menu-filter {
         width: 100%;
     }
     .calendar__box-coll {
@@ -153,5 +175,16 @@
         justify-content: space-evenly;
         padding-left: 20px;
         padding-right: 20px;
+    }
+}
+
+.menu-filter-header {
+    padding-left: 45px;
+    &::before {
+        content: url("../../assets/img/Filter-Icon.svg");
+        position: absolute;
+        top: 55%;
+        left: 15px;
+        transform: translateY(-50%);
     }
 }

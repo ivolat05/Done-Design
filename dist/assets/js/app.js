@@ -9892,6 +9892,7 @@ $(function () {
 
     menuBoxActive('mobil-block-active', 'menu-calendar');
     menuBoxActive('mobil-block-active-time', 'menu-date');
+    menuBoxActive('search-place-filter', 'menu-filter');
     // calendar 
     function calendars() {
         let calendars = {};
