@@ -9845,13 +9845,45 @@ and dependencies (minified).
 
 
 $(function () {
+    // active mobil calendar
+    function menuBoxActive(mobilBloxActive, menuBoxs) {
+        let boxBtn = document.querySelectorAll(`.${mobilBloxActive}`);
+        let menuBox = document.querySelector(`.${menuBoxs}`);
+        let body = document.querySelector('body');
+        if (menuBox) {
+            boxBtn.forEach((item) => {
+                item.addEventListener('click', () => {
+                    if (window.getComputedStyle(menuBox).display == 'block') {
+                        body.classList.add('stop')
+                        menuBox.classList.add('active')
+                    }
+                })
+            })
 
+            let btnClose = document.querySelectorAll('.menu-close--btn')
+            btnClose.forEach((item) => {
+                item.addEventListener('click', () => {
+                    if (body.classList.contains('stop')) {
+                        body.classList.remove('stop')
+                    }
+
+                    item.parentElement.parentElement.classList.remove('active')
+                })
+            })
+
+        }
+
+    }
+
+    menuBoxActive('mobil-block-active', 'menu-calendar');
+    menuBoxActive('mobil-block-active-time', 'menu-date');
     // calendar 
     function calendars() {
         let calendars = {};
         let thisMonth = moment().format('YYYY/MM/DD');
         let inputDate = document.querySelector('.input-date');
         let bookCalendar = document.querySelector('.book-calendar');
+        let menuCalendar = document.querySelector('.menu-calendar');
         if (inputDate) {
             inputDate.value = thisMonth.split("/").reverse().join("/");
             calendars.clndr3 = $('.calendar__container').clndr({
@@ -9900,14 +9932,43 @@ $(function () {
                 showAdjacentMonths: false,
                 adjacentDaysChangeMonth: true,
                 weekOffset: 1,
+                template: $('#book-calendar-1').html()
+            });
+
+        }
+        if (menuCalendar) {
+            inputDate.value = thisMonth.split("/").reverse().join("/");
+            calendars.clndrMenu = $('.menu-calendar-wrapper').clndr({
+                lengthOfTime: {
+                    months: 12,
+                    interval: 1
+                },
+                default_date: true,
+                startWithMonth: thisMonth,
+                daysOfTheWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                trackSelectedDate: true,
+                selectedDate: "selected",
+                showAdjacentMonths: false,
+                adjacentDaysChangeMonth: true,
+                weekOffset: 1,
                 clickEvents: {
                     click: function (target) {
-
-
+                        let x = '';
+                        let y = target.date._i
+                        inputDate.value = target.date._i;
+                        for (let i = 0; i < y.length; i++) {
+                            if (y[i] == '-') {
+                                x += '/';
+                            } else {
+                                x += y[i];
+                            }
+                        }
+                        inputDate.value = x.split("/").reverse().join("/");
 
                     }
+
                 },
-                template: $('#book-calendar-1').html()
+                template: $('#menu-calendar__teplate').html()
             });
 
         }
@@ -10193,32 +10254,6 @@ $(function () {
     }
 
 
-    // генерация списка времени
-    // timeBoxName -имя контейнера для времени
-    // minHour - начальное время
-    // maxHour- конечное время
-    // intervalМinutes - интервал между минутами
-
-    function timeList(timeBoxName, minHour, maxHour, intervalМinutes) {
-        let timeBox = document.querySelector(`.${timeBoxName}`);
-        let listBox = '';
-        if (timeBox) {
-            for (let i = minHour; i < maxHour + 1; i++) {
-                for (let y = 0; y < 60; y += intervalМinutes) {
-                    if (y >= 10) {
-                        listBox += ` <div class="time__box-btn">${i} : ${y}</div>`
-                    } else {
-                        listBox += ` <div class="time__box-btn">${i} : 0${y}</div>`
-                    }
-
-                }
-
-            }
-            timeBox.innerHTML = listBox;
-        }
-    }
-
-    timeList("time__box", 6, 21, 30);
 
     // добовления времени в input
 

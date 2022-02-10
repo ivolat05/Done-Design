@@ -61,88 +61,120 @@
                 </ul>
             </div>
         </header>
-        <!--<main class="main">
-        <div class="container main__container">
-            <div class="main__wrapp">
-                <h1 class="main-title">
-                    Let’s book your best tennis court
-                </h1>
-                <div class="main-text">
-                    Book your court in over 100 clubs
+        <main class="main">
+            <div class="container main__container">
+                <div class="main__wrapp">
+                    <h1 class="main-title">
+                        Let’s book your best tennis court
+                    </h1>
+                    <div class="main-text">
+                        Book your court in over 100 clubs
+                    </div>
                 </div>
-            </div>
-            <form action="/" class="main-form">
-                <div class="main-form-inner">
-                    <div class="main__form-box autocomplete-box">
-                        <h3 class="main__form-title">
-                            Address, name...
-                        </h3>
-                        <input class="main-form-input address" type="text" placeholder="Padel Sant Marti">
-                    </div>
-                    <div class="main__form-box box-two autocomplete-box">
-                        <h3 class="main__form-title">
-                            Location
-                        </h3>
-                        <input class="main-form-input location" type="text" placeholder="Barcelona">
-                    </div>
-                    <div class="main__form-box --flex ">
-                        <div class="main__box-inner calendar">
+                <form action="/" class="main-form">
+                    <div class="main-form-inner">
+                        <div class="main__form-box autocomplete-box">
                             <h3 class="main__form-title">
-                                Date
+                                Address, name...
                             </h3>
-                            <input class="main-form-input input-date " type="text" value="10/11/2022">
-                            <div class="calendar__container">
-                                <script type="text/template" id="calendar__teplate">
-                                    <div class="calendar__container-wrapp">
-                                        <div class="calendar__box">
-                                            <% _.each(months, function(cal) { %>
-                                                <div class="calendar__box-coll">
-                                                    <div class="calendar__head">
-                                                        <button class="clndr-previous-button calendar-btn btn-prev"></button>
-                                                            <div class=" calendar__month">
-                                                                <%= cal.month.format('MMMM YYYY') %>
-                                                            </div>
-                                                        <button class="clndr-next-button calendar-btn btn-next"></button>
-                                                    </div>
-                                                    <div class="calendar__body">
-                                                        <div class="calendar__box-week">
-                                                            <% _.each(daysOfTheWeek, function(day) { %>
-                                                                <div class="calendar__week"><%= day %></div>
-                                                            <% }); %>
+                            <input class="main-form-input address" type="text" placeholder="Padel Sant Marti">
+                        </div>
+                        <div class="main__form-box box-two autocomplete-box">
+                            <h3 class="main__form-title">
+                                Location
+                            </h3>
+                            <input class="main-form-input location" type="text" placeholder="Barcelona">
+                        </div>
+                        <div class="main__form-box --flex ">
+                            <div class="main__box-inner calendar mobil-block-active">
+                                <h3 class="main__form-title">
+                                    Date
+                                </h3>
+                                <input class="main-form-input input-date " type="text" value="10/11/2022">
+                                <div class="calendar__container">
+                                    <script type="text/template" id="calendar__teplate">
+                                        <div class="calendar__container-wrapp">
+                                            <div class="calendar__box">
+                                                <% _.each(months, function(cal) { %>
+                                                    <div class="calendar__box-coll">
+                                                        <div class="calendar__head">
+                                                            <button class="clndr-previous-button calendar-btn btn-prev"></button>
+                                                                <div class=" calendar__month">
+                                                                    <%= cal.month.format('MMMM YYYY') %>
+                                                                </div>
+                                                            <button class="clndr-next-button calendar-btn btn-next"></button>
                                                         </div>
-                                                        <div class="calendar__box-day">
-                                                            <% _.each(cal.days, function(day) { %>
-                                                                <div class="calendar__day <%= day.classes %>"><%= day.day %></div>
-                                                            <% }); %>
-                                                        </div>                       
+                                                        <div class="calendar__body">
+                                                            <div class="calendar__box-week">
+                                                                <% _.each(daysOfTheWeek, function(day) { %>
+                                                                    <div class="calendar__week"><%= day %></div>
+                                                                <% }); %>
+                                                            </div>
+                                                            <div class="calendar__box-day">
+                                                                <% _.each(cal.days, function(day) { %>
+                                                                    <div class="calendar__day <%= day.classes %>"><%= day.day %></div>
+                                                                <% }); %>
+                                                            </div>                       
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            <% }); %>                
-                                        </div>            
-                                    </div>          
-                                </script>
-                            </div>                    </div>
-                        <div class="main__box-inner time">
-                            <h3 class="main__form-title">
-                                Time
-                            </h3>
-                            <input class="main-form-input input-time" type="text" value="17:30">
-                            <div class="time__container">
-                                <div class="time__container-wrapp">
-                                    <div class="time__box"></div>
+                                                <% }); %>                
+                                            </div>            
+                                        </div>          
+                                    </script>
+                                </div>                    </div>
+                            <div class="main__box-inner time mobil-block-active-time">
+                                <h3 class="main__form-title">
+                                    Time
+                                </h3>
+                                <input class="main-form-input input-time" type="text" value="17:30">
+                                <div class="time__container">
+                                    <div class="time__container-wrapp">
+                                        <div class="time__box">
+                                            <div class="time__box-btn">6 : 00</div>
+                                            <div class="time__box-btn">6 : 30</div>
+                                            <div class="time__box-btn">7 : 00</div>
+                                            <div class="time__box-btn">7 : 30</div>
+                                            <div class="time__box-btn">8 : 00</div>
+                                            <div class="time__box-btn">8 : 30</div>
+                                            <div class="time__box-btn">9 : 00</div>
+                                            <div class="time__box-btn">9 : 30</div>
+                                            <div class="time__box-btn">10 : 00</div>
+                                            <div class="time__box-btn">10 : 30</div>
+                                            <div class="time__box-btn">11 : 00</div>
+                                            <div class="time__box-btn">11 : 30</div>
+                                            <div class="time__box-btn">12 : 00</div>
+                                            <div class="time__box-btn">12 : 30</div>
+                                            <div class="time__box-btn">13 : 00</div>
+                                            <div class="time__box-btn">13 : 30</div>
+                                            <div class="time__box-btn">14 : 00</div>
+                                            <div class="time__box-btn">14 : 30</div>
+                                            <div class="time__box-btn">15 : 00</div>
+                                            <div class="time__box-btn">15 : 30</div>
+                                            <div class="time__box-btn">16 : 00</div>
+                                            <div class="time__box-btn">16 : 30</div>
+                                            <div class="time__box-btn">17 : 00</div>
+                                            <div class="time__box-btn">17 : 30</div>
+                                            <div class="time__box-btn">18 : 00</div>
+                                            <div class="time__box-btn">18 : 30</div>
+                                            <div class="time__box-btn">19 : 00</div>
+                                            <div class="time__box-btn">19 : 30</div>
+                                            <div class="time__box-btn">20 : 00</div>
+                                            <div class="time__box-btn">20 : 30</div>
+                                            <div class="time__box-btn">21 : 00</div>
+                                            <div class="time__box-btn">21 : 30</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <a href="#" class="btn main-btn">
-                    Search
-                </a>
-            </form>
-    
-        </div>
-    </main>
+                    <a href="#" class="btn main-btn">
+                        Search
+                    </a>
+                </form>
         
+            </div>
+        </main>    <!--
         <div class="company">
             <div class="company__wrapp container">
                 <div class="company__slick">
@@ -1093,6 +1125,116 @@
                     </button>
                 </div>
             </div>
+        </div>    <div class="menu-calendar">
+            <div class="menu-calendar-header">
+                Choose date
+                <button class="menu-calendar-close menu-close--btn">
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.99999 6.58578L14.2929 0.292893C14.6834 -0.0976313 15.3166 -0.0976307 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L9.41421 7.99999L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L7.99999 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292894 15.7071C-0.0976307 15.3166 -0.0976313 14.6834 0.292893 14.2929L6.58578 7.99999L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+                                fill="#787A80" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="menu-calendar-wrapper">
+                <script type="text/template" id="menu-calendar__teplate">
+                    <div class="calendar__container-wrapp calendar__container-wrapp-no-scroll">
+                        <div class="calendar__box">
+                            <% _.each(months, function(cal) { %>
+                                <div class="calendar__box-coll">
+                                    <div class="calendar__head">
+                                        <button class="clndr-previous-button calendar-btn btn-prev"></button>
+                                            <div class=" calendar__month">
+                                                <%= cal.month.format('MMMM YYYY') %>
+                                            </div>
+                                        <button class="clndr-next-button calendar-btn btn-next"></button>
+                                    </div>
+                                    <div class="calendar__body">
+                                        <div class="calendar__box-week">
+                                            <% _.each(daysOfTheWeek, function(day) { %>
+                                                <div class="calendar__week"><%= day %></div>
+                                            <% }); %>
+                                        </div>
+                                        <div class="calendar__box-day">
+                                            <% _.each(cal.days, function(day) { %>
+                                                <div class="calendar__day <%= day.classes %>"><%= day.day %></div>
+                                            <% }); %>
+                                        </div>                       
+                                    </div>
+                                </div>
+                            <% }); %>                
+                        </div>            
+                    </div> 
+                    
+                     </script>
+            </div>
+            <div class="menu-calendar-footer">
+                <button class="menu-calendar-clear clndr-today-button">
+                    Clear
+                </button><button class="menu-close--btn btn menu-calendar-done">
+                    Done
+                </button>
+            </div>
+        
+        </div>    <div class="menu-date">
+            <div class="menu-date-header">
+                Choose date
+                <button class="menu-calendar-close menu-close--btn">
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.99999 6.58578L14.2929 0.292893C14.6834 -0.0976313 15.3166 -0.0976307 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L9.41421 7.99999L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L7.99999 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292894 15.7071C-0.0976307 15.3166 -0.0976313 14.6834 0.292893 14.2929L6.58578 7.99999L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+                                fill="#787A80" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="menu-date-wrapper">
+                <div class="menu-date__box">
+                    <div class="time__box-btn">6 : 00</div>
+                    <div class="time__box-btn">6 : 30</div>
+                    <div class="time__box-btn">7 : 00</div>
+                    <div class="time__box-btn">7 : 30</div>
+                    <div class="time__box-btn">8 : 00</div>
+                    <div class="time__box-btn">8 : 30</div>
+                    <div class="time__box-btn">9 : 00</div>
+                    <div class="time__box-btn">9 : 30</div>
+                    <div class="time__box-btn">10 : 00</div>
+                    <div class="time__box-btn">10 : 30</div>
+                    <div class="time__box-btn">11 : 00</div>
+                    <div class="time__box-btn">11 : 30</div>
+                    <div class="time__box-btn">12 : 00</div>
+                    <div class="time__box-btn">12 : 30</div>
+                    <div class="time__box-btn">13 : 00</div>
+                    <div class="time__box-btn">13 : 30</div>
+                    <div class="time__box-btn">14 : 00</div>
+                    <div class="time__box-btn">14 : 30</div>
+                    <div class="time__box-btn">15 : 00</div>
+                    <div class="time__box-btn">15 : 30</div>
+                    <div class="time__box-btn">16 : 00</div>
+                    <div class="time__box-btn">16 : 30</div>
+                    <div class="time__box-btn">17 : 00</div>
+                    <div class="time__box-btn">17 : 30</div>
+                    <div class="time__box-btn">18 : 00</div>
+                    <div class="time__box-btn">18 : 30</div>
+                    <div class="time__box-btn">19 : 00</div>
+                    <div class="time__box-btn">19 : 30</div>
+                    <div class="time__box-btn">20 : 00</div>
+                    <div class="time__box-btn">20 : 30</div>
+                    <div class="time__box-btn">21 : 00</div>
+                    <div class="time__box-btn">21 : 30</div>
+                </div>
+            </div>
+            <div class="menu-date-footer">
+                <button class="menu-date-clear">
+                    Clear
+                </button><button class="menu-close--btn btn menu-date-done">
+                    Done
+                </button>
+            </div>
+        
         </div></div>
 
     <script src="assets/js/app.min.js"></script>
