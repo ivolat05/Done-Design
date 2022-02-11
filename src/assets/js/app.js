@@ -583,25 +583,28 @@ $(function () {
         nextArrow: $(".related-next"),
         responsive: [
             {
-                breakpoint: 1600,
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+
+                }
+            },
+            {
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
 
                 }
             },
-            {
-                breakpoint: 820,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-
-                }
-            },
 
             {
-                breakpoint: 640,
+                breakpoint: 572,
                 settings: {
+                    arrows: false,
+                    doots: true,
+                    dots: true,
                     slidesToShow: 1
 
                 }
