@@ -11,6 +11,14 @@
 
 
 $(function () {
+
+    $(function () {
+        if (navigator.userAgent.indexOf('Safari') != -1 &&
+            navigator.userAgent.indexOf('Chrome') == -1) {
+            $("body").addClass("safari");
+        }
+    });
+
     // active mobil calendar
     function menuBoxActive(mobilBloxActive, menuBoxs) {
         let boxBtn = document.querySelectorAll(`.${mobilBloxActive}`);

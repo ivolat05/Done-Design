@@ -54,6 +54,10 @@ ul {
 .page.fff {
     background: #fff;
 }
+.safari input,
+.safari textarea {
+    box-shadow: none !important;
+}
 p {
     text-align: left;
     font-family: "Roboto";
@@ -69,7 +73,7 @@ p {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    transition: 0.3s all ease-in-out;
+    transition: 0.8s all ease-in-out;
     position: absolute;
     left: 0;
     top: 0;
@@ -338,6 +342,7 @@ input[type="number"] {
 @import "../sass/blocks/approve.scss";
 @import "../sass/blocks/schedule.scss";
 @import "../sass/blocks/book-week-popup.scss";
-@import "../sass/blocks/menu-calendar.scss";
+
 @import "../sass/blocks/menu-filter.scss";
+@import "../sass/blocks/menu-calendar.scss";
 @import "../sass/blocks/adaptive.scss";

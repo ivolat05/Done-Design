@@ -8,9 +8,10 @@
     width: 370px;
     height: 100vh;
     background: #fff;
-    transition: 0.3s all ease-in-out;
-    z-index: 4;
-    transform: translateX(300%);
+    transition: 0.8s all ease-in-out;
+    z-index: -4;
+    opacity: 0;
+    transform: translateY(300%);
     .calendar-btn {
         display: none;
     }
@@ -76,6 +77,8 @@
 .menu-calendar.active,
 .menu-date.active {
     transform: translateX(0);
+    z-index: 4;
+    opacity: 1;
 }
 .menu-calendar-close {
     border: none;
@@ -134,12 +137,31 @@
     width: 0;
     height: 0;
 }
+@media (max-width: 570px) {
+    .menu-calendar,
+    .menu-date,
+    .menu-filter {
+        .menu-date__box {
+            padding-left: 20px;
+        }
+        width: 100%;
+        .calendar__box {
+            align-items: center;
+        }
+        .calendar__container-wrapp {
+            width: 100vw;
+        }
+    }
+}
 
 @media (max-width: 380px) {
     .menu-calendar,
     .menu-date,
     .menu-filter {
         width: 100%;
+        .calendar__container-wrapp {
+            width: 100%;
+        }
     }
     .calendar__box-coll {
         width: 100%;
