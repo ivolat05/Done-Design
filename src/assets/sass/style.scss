@@ -91,9 +91,15 @@ p {
 input:focus,
 input:active {
     outline: 1px solid #404040;
-    box-shadow: none !important;
 }
-
+/* убираем тени safari */
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 .main-form-input:focus,
 .main-form-input:active {
     outline: none;

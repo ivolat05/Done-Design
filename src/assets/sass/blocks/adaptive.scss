@@ -480,6 +480,11 @@
         }
     }
 }
+@media (max-width: 710px) {
+    .popup-player {
+        width: 95%;
+    }
+}
 @media (max-width: 778px) {
     .result {
         .map__container {
@@ -1122,12 +1127,15 @@
         margin-bottom: 15px;
     }
 }
+
 @media (max-width: 400px) {
-    .player-avatar {
-        position: absolute;
-        top: 25px;
-        left: 10px;
-        padding-left: 0;
+    .player-card {
+        .player-avatar {
+            position: absolute;
+            top: 25px;
+            left: 10px;
+            padding-left: 0;
+        }
     }
     .player-box,
     .player-card {
