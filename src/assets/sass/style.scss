@@ -54,8 +54,8 @@ ul {
 .page.fff {
     background: #fff;
 }
-.safari input,
-.safari textarea {
+input,
+textarea {
     box-shadow: none !important;
 }
 p {
@@ -91,6 +91,7 @@ p {
 input:focus,
 input:active {
     outline: 1px solid #404040;
+    box-shadow: none !important;
 }
 
 .main-form-input:focus,

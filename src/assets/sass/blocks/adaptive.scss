@@ -274,9 +274,9 @@
         .player__filter-box-title {
             display: none;
         }
-        .player_filte-container {
-            position: relative;
+        .player_filter-wrapp {
             padding-top: 80px;
+            position: relative;
         }
         .player_filter-box.one {
             margin-right: 0;
@@ -1009,6 +1009,7 @@
     .player-card {
         width: 100%;
         padding-left: 10px;
+        padding-right: 10px;
     }
 }
 @media (max-width: 465px) {
