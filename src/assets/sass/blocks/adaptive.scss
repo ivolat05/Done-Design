@@ -1,3 +1,10 @@
+@media (max-width: 1550px) {
+    .result {
+        #map {
+            width: 42vw;
+        }
+    }
+}
 @media (max-width: 1490px) {
     .top__slaider-box {
         width: 350px;
@@ -11,6 +18,17 @@
     }
 }
 @media (max-width: 1400px) {
+    .result__box.active {
+        width: 643px;
+    }
+    .result__box.active .result__box-head {
+        margin-right: 10px;
+    }
+    .result {
+        #map {
+            width: 40vw;
+        }
+    }
     .footer-menu {
         width: 390px;
     }
@@ -56,6 +74,17 @@
     }
 }
 @media (max-width: 1200px) {
+    .result__box.active {
+        max-width: 543px;
+    }
+    .result__box.active .result__box-head {
+        margin-right: 15px;
+        width: 206px;
+        img {
+            margin-right: 15px;
+            width: 206px;
+        }
+    }
     .search-form {
         .main__box-inner:nth-child(2) {
             width: 90px;
@@ -150,6 +179,17 @@
     }
 }
 @media (max-width: 998px) {
+    .result__box.active {
+        display: block;
+        max-width: 320px;
+        .result__box-head img {
+            margin-right: 0;
+            width: 290px;
+        }
+    }
+    .result #map {
+        width: 50vw;
+    }
     .who__wrapp {
         flex-direction: column;
     }
@@ -290,6 +330,11 @@
     }
 }
 @media (max-width: 778px) {
+    .result {
+        .map__container {
+            display: none;
+        }
+    }
     .menu-filter {
         display: block;
     }
@@ -630,6 +675,20 @@
     }
 }
 @media (max-width: 570px) {
+    .result__box {
+        max-width: 358px;
+        .result__box-head {
+            width: 344px;
+            height: 273px;
+            img {
+                width: 344px;
+                height: 273px;
+            }
+        }
+        .result__box-title {
+            top: 240px;
+        }
+    }
     .footer-logo {
         width: 89px;
         height: 23px;
@@ -878,7 +937,28 @@
         width: 48%;
     }
 }
+@media (max-width: 410px) {
+    .result__box {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+}
 @media (max-width: 400px) {
+    .result__box {
+        width: 290px;
+        .result__box-head {
+            width: 268px;
+            height: 213px;
+
+            img {
+                width: 268px;
+                height: 213px;
+            }
+        }
+        .result__box-title {
+            top: 178px;
+        }
+    }
     .who__bnt-img {
         width: 115px;
         height: 40px;

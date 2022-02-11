@@ -7,6 +7,14 @@
     display: flex;
     justify-content: space-between;
 }
+.result__row-box {
+    flex-wrap: wrap;
+}
+
+.result__box-time {
+    margin-bottom: 5px;
+}
+
 .result-info {
     font-weight: normal;
     font-size: 0.875rem;
@@ -83,7 +91,7 @@
     position: relative;
     font-size: 1.0625rem;
     text-align: left;
-    line-height: 39px;
+    line-height: 19px;
     color: #a0a8b1;
     margin-bottom: 22px;
 

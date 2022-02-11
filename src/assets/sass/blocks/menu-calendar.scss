@@ -42,8 +42,7 @@
     overflow: hidden;
 }
 .menu-calendar-footer,
-.menu-date-footer,
-.menu-filter-footer {
+.menu-date-footer {
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -58,8 +57,7 @@
     box-shadow: 3px -8px 8px rgba(93, 110, 126, 0.08);
 }
 .menu-calendar-header,
-.menu-date-header,
-.menu-filter-header {
+.menu-date-header {
     background: #ffffff;
     display: flex;
     align-items: center;
@@ -76,8 +74,7 @@
 }
 
 .menu-calendar.active,
-.menu-date.active,
-.menu-filter.active {
+.menu-date.active {
     transform: translateX(0);
 }
 .menu-calendar-close {
@@ -138,21 +135,6 @@
     height: 0;
 }
 
-.menu-filter-result {
-    width: 339px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    margin: 0 auto;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    color: #1b1919;
-}
 @media (max-width: 380px) {
     .menu-calendar,
     .menu-date,
@@ -175,16 +157,5 @@
         justify-content: space-evenly;
         padding-left: 20px;
         padding-right: 20px;
-    }
-}
-
-.menu-filter-header {
-    padding-left: 45px;
-    &::before {
-        content: url("../../assets/img/Filter-Icon.svg");
-        position: absolute;
-        top: 55%;
-        left: 15px;
-        transform: translateY(-50%);
     }
 }
