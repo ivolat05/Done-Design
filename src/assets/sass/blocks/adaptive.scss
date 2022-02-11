@@ -287,6 +287,13 @@
             left: 0;
             z-index: 0;
             width: 100% !important;
+            &::before {
+                content: url("../../assets/img/search.svg ");
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 11px;
+            }
             .main-form-input {
                 height: 52px;
                 width: 100%;
