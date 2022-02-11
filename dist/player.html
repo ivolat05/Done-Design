@@ -72,11 +72,22 @@
         <div class="player_filter">
             <div class="container player_filte-container">
                 <div class="player_filter-wrapp">
+        
                     <div class="player_filter-box one autocomplete-box">
                         <div class="player__filter-box-title">
                             Location
                         </div>
                         <input class="main-form-input location" type="text" placeholder="Barcelona">
+                        <button class="search-mobil-btn">
+                            <span>
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.5 9.37489V8.62489C1.5 8.41778 1.66789 8.24989 1.875 8.24989H14.0025L10.665 4.91989C10.594 4.84948 10.5541 4.75363 10.5541 4.65364C10.5541 4.55365 10.594 4.4578 10.665 4.38739L11.1975 3.86239C11.2679 3.7914 11.3638 3.75146 11.4637 3.75146C11.5637 3.75146 11.6596 3.7914 11.73 3.86239L16.335 8.45989C16.4405 8.56528 16.4999 8.70826 16.5 8.85739V9.14239C16.4983 9.2912 16.4392 9.4336 16.335 9.53989L11.73 14.1374C11.6596 14.2084 11.5637 14.2483 11.4637 14.2483C11.3638 14.2483 11.2679 14.2084 11.1975 14.1374L10.665 13.6049C10.5945 13.5358 10.5547 13.4412 10.5547 13.3424C10.5547 13.2436 10.5945 13.149 10.665 13.0799L14.0025 9.74989H1.875C1.66789 9.74989 1.5 9.582 1.5 9.37489Z"
+                                        fill="#3A3F43" />
+                                </svg>
+        
+                            </span>
+                        </button>
                     </div>
                     <div class="player_filter-box two">
                         <div class="player__filter-box-title">
@@ -171,9 +182,48 @@
                         </div>
         
                     </div>
+                    <div class="player_filter-mob">
+                        <div class="player_filter-mob--container">
+                            <div class="player_filter-mob-info">
+                                Any Gender
+                            </div>
+                            <div class="player_filter-mob-info">
+                                18-50 years
+                            </div>
+                            <div class="player_filter-mob-info">
+                                advanced
+                            </div>
+                        </div>
+                        <div class="search-place-filter">
+                            <span>
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.9676 7.5624C17.4259 7.5624 17.7926 7.19574 17.7926 6.7374V2.4749C17.7926 2.01657 17.4259 1.6499 16.9676 1.6499C16.5092 1.6499 16.1426 2.01657 16.1426 2.4749V6.7374C16.1426 7.18657 16.5184 7.5624 16.9676 7.5624Z"
+                                        fill="#1A1E25" />
+                                    <path
+                                        d="M11 14.4375C10.5417 14.4375 10.175 14.8042 10.175 15.2625V19.525C10.175 19.9833 10.5417 20.35 11 20.35C11.4584 20.35 11.825 19.9833 11.825 19.525V15.2625C11.825 14.8133 11.4584 14.4375 11 14.4375Z"
+                                        fill="#1A1E25" />
+                                    <path
+                                        d="M5.03252 7.5624C5.49085 7.5624 5.85752 7.19574 5.85752 6.7374V2.4749C5.85752 2.01657 5.49085 1.6499 5.03252 1.6499C4.57419 1.6499 4.20752 2.01657 4.20752 2.4749V6.7374C4.20752 7.18657 4.57419 7.5624 5.03252 7.5624Z"
+                                        fill="#1A1E25" />
+                                    <path
+                                        d="M6.73744 9.32251H3.32744C2.86911 9.32251 2.50244 9.68918 2.50244 10.1475C2.50244 10.6058 2.86911 10.9725 3.32744 10.9725H4.20744V19.525C4.20744 19.9833 4.57411 20.35 5.03244 20.35C5.49077 20.35 5.85744 19.9833 5.85744 19.525V10.9725H6.73744C7.19577 10.9725 7.56244 10.6058 7.56244 10.1475C7.56244 9.68918 7.18661 9.32251 6.73744 9.32251Z"
+                                        fill="#1A1E25" />
+                                    <path
+                                        d="M18.6725 9.32251H15.2625C14.8042 9.32251 14.4375 9.68918 14.4375 10.1475C14.4375 10.6058 14.8042 10.9725 15.2625 10.9725H16.1425V19.525C16.1425 19.9833 16.5092 20.35 16.9675 20.35C17.4258 20.35 17.7925 19.9833 17.7925 19.525V10.9725H18.6725C19.1308 10.9725 19.4975 10.6058 19.4975 10.1475C19.4975 9.68918 19.1308 9.32251 18.6725 9.32251Z"
+                                        fill="#1A1E25" />
+                                    <path
+                                        d="M12.705 11.0274H11.825V2.4749C11.825 2.01657 11.4583 1.6499 11 1.6499C10.5416 1.6499 10.175 2.01657 10.175 2.4749V11.0274H9.29497C8.83664 11.0274 8.46997 11.3941 8.46997 11.8524C8.46997 12.3107 8.83664 12.6774 9.29497 12.6774H12.705C13.1633 12.6774 13.53 12.3107 13.53 11.8524C13.53 11.3941 13.1633 11.0274 12.705 11.0274Z"
+                                        fill="#1A1E25" />
+                                </svg>
+                            </span>
+                        </div>
+        
+                    </div>
                     <button class="player__filter-btn btn">
                         Search partner
                     </button>
+        
                     <button class="fillter-btn player__reset-btn">
                         Reset filters
                     </button>
@@ -1245,6 +1295,127 @@
                     </button>
                 </div>
             </div>
+        </div>    <div class="menu-filter-two">
+            <div class="menu-filter-header">
+                Filter
+                <button class="menu-calendar-close menu-close--btn">
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.99999 6.58578L14.2929 0.292893C14.6834 -0.0976313 15.3166 -0.0976307 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L9.41421 7.99999L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L7.99999 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292894 15.7071C-0.0976307 15.3166 -0.0976313 14.6834 0.292893 14.2929L6.58578 7.99999L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+                                fill="#787A80" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="menu-filter-wrapper">
+                <div class="menu-filler-inner">
+                    <div class="menu-filter-wrapper-title">
+                        Skill level
+                    </div>
+                    <div class="menu-filter-box">
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                begginer
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox" checked>
+                            <span class="menu-fiter-span">
+                                intermidiate
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                advanced
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                semi-professional
+                            </span>
+                        </label>
+                    </div>
+                    <div class="menu-filter-wrapper-title">
+                        What age should players be?
+                    </div>
+                    <div class="menu-filter-box">
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                don’t mind
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox" checked>
+                            <span class="menu-fiter-span">
+                                18-50
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                50+
+                            </span>
+                        </label>
+                    </div>
+                    <div class="menu-filter-wrapper-title">
+                        Availability
+                    </div>
+                    <div class="menu-filter-box">
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Weekends only
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                anytime
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Weekends only
+                            </span>
+                        </label>
+                    </div>
+                    <div class="menu-filter-wrapper-title">
+                        Gender
+                    </div>
+                    <div class="menu-filter-box">
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                male
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                female
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                don’t mind
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-filter-footer">
+                <button class="menu-close--btn btn menu-filter-result">
+                    See 10 results
+                </button>
+            </div>
+        
         </div></div>
 
     <script src="assets/js/app.min.js"></script>
