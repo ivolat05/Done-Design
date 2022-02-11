@@ -338,6 +338,7 @@
     .menu-filter {
         display: block;
     }
+
     .search-form {
         padding-bottom: 15px;
         justify-content: space-between;
@@ -592,6 +593,15 @@
     .main-text {
         margin-bottom: 20px;
     }
+    .main-block-fix-mob {
+        background: rgba(0, 0, 0, 0);
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
     .main {
         .main__form-box.--flex {
             border-bottom: 1px solid rgba(0, 0, 0, 0);
@@ -633,9 +643,16 @@
                 border-radius: 14px;
             }
         }
+
         .main__form-box.--flex {
             justify-content: space-between;
+            padding-left: 0;
+
+            .main__box-inner {
+                border-radius: 14px;
+            }
         }
+
         .main__box-inner {
             width: 49%;
             padding-left: 10px;
