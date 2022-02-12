@@ -605,6 +605,54 @@
     }
 }
 @media (max-width: 992px) {
+    .mess-tab-title {
+        display: none;
+    }
+    .mess-tab {
+        display: none;
+        background: #35362e;
+        border-radius: 0;
+        padding: 0;
+        top: 0;
+        .chat__wrapper {
+            box-shadow: none;
+        }
+        .mess-chat-body {
+            background: #fff;
+            border-radius: 40px 40px 0 0;
+            margin-top: -1;
+        }
+        .mess-chat-head {
+            padding-top: 15px;
+            padding-bottom: 5px;
+            .mess__chat-name {
+                color: #fff;
+            }
+        }
+        .mess-btn-svg {
+            fill: #fff;
+        }
+        textarea:focus,
+        textarea:active {
+            outline: none;
+        }
+    }
+
+    .message-box {
+        height: 660px;
+    }
+    .message-box-title-mob {
+        display: block;
+        padding-left: 18px;
+    }
+    .message__box-row.active {
+        background: rgba(183, 183, 183, 0.1);
+        border-radius: 8px;
+    }
+
+    .payment-label {
+        display: block;
+    }
     .resent .show {
         width: 100%;
     }
@@ -618,6 +666,9 @@
             width: 121px;
             height: 97px;
         }
+    }
+    .payment-btn {
+        width: 100%;
     }
     .resent-name {
         margin-top: 13px;
@@ -650,11 +701,21 @@
         padding-right: 0;
     }
     .info,
-    .resent {
+    .resent,
+    .payment,
+    .message {
         margin-bottom: 0;
         border-radius: 40px 40px 0 0;
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .message {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+    .payment {
+        padding-top: 30px;
+        min-height: 700px;
     }
     .resent__box-title-dectop {
         display: none;
@@ -682,7 +743,9 @@
         display: block;
     }
     .sidebar-close-btn.info-title,
-    .sidebar-close-btn.resent-title {
+    .sidebar-close-btn.resent-title,
+    .sidebar-close-btn.payment-title,
+    .sidebar-close-btn.message-title {
         background: none;
         color: #fff;
         text-align: center;
@@ -1570,6 +1633,13 @@
     }
 }
 @media (max-width: 570px) {
+    .window__chat {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .payment-box {
+        border: none;
+    }
     .brands-title {
         font-size: 30px;
         line-height: 130%;

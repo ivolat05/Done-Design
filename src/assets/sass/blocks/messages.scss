@@ -4,6 +4,16 @@
     padding: 0 50px 1px 50px;
 }
 
+.message-box-title-mob {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    color: #2e2d2d;
+    padding-top: 44px;
+    padding-bottom: 28px;
+    display: none;
+}
 .sidebar-close-btn.message-title {
     padding-top: 58px;
     padding-left: 50px;
@@ -23,7 +33,7 @@
     overflow-y: auto;
 }
 
-.message-box.no-active {
+.message-hidden.no-active {
     display: none;
 }
 .message__box-row {
@@ -79,8 +89,10 @@
     font-size: 0.75rem;
     line-height: 1.116;
     background: #ff5c5c;
-    border-radius: 50%;
+    border-radius: 12px;
     color: #ffffff;
+    height: 22px;
+    flex-shrink: 0;
 }
 
 .message-user.-grey {
@@ -106,9 +118,27 @@
 
 .mess-tab {
     display: none;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 57px 50px 15px 50px;
 }
 
 .mess-tab.active {
     display: block;
-    margin-top: -14px;
+}
+
+.mess-tab-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #2e2d2d;
+    padding-bottom: 32px;
+}
+
+.mess__chat-status {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #848383;
+    margin-top: 2px;
 }

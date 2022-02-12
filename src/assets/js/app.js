@@ -907,7 +907,7 @@ $(function () {
 
     }
     tabs("sidebar-btn", "sidebar-tab", "data-tab");
-    tabs("message__box-row", "mess-tab", "data-message", 'message-box');
+    tabs("message__box-row", "mess-tab", "data-message", 'message-hidden');
     tabs("bk-btn", "book-left-body", "data-bookday");
     tabs("courts-btn-add", "courts-tab", "data-courts", "courts");
     tabs("courts-box-btn", "courts-tab", "data-edit", "courts");
@@ -989,7 +989,7 @@ $(function () {
     function chatDeactive() {
         let messBtn = document.querySelectorAll('.mess-chat-head');
         let messTab = document.querySelectorAll('.mess-tab');
-        let messageBox = document.querySelectorAll('.message-box');
+        let messageBox = document.querySelectorAll('.message-hidden');
         if (messTab) {
             messBtn.forEach((item) => {
                 item.addEventListener('click', () => {

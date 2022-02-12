@@ -113,3 +113,46 @@
     height: 0;
     overflow: hidden;
 }
+
+.payment-label {
+    margin-top: 15px;
+    display: none;
+    cursor: pointer;
+    position: relative;
+}
+.payment-label-checkbox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -3;
+    opacity: 0;
+}
+.payment-label-span {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    padding-left: 20px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border: 2px solid #c2e631;
+        border-radius: 2px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.payment-label-checkbox:checked + .payment-label-span {
+    &::before {
+        content: url("../../assets/img/Stroke.svg");
+
+        background: #c2e631;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
