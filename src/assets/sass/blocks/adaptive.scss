@@ -38,6 +38,9 @@
 }
 
 @media (max-width: 1400px) {
+    .booking__slaider-wrapp {
+        max-width: 760px;
+    }
     .resent {
         padding-left: 25px;
         padding-right: 25px;
@@ -140,6 +143,9 @@
     }
 }
 @media (max-width: 1200px) {
+    .booking__slaider-wrapp {
+        max-width: 580px;
+    }
     .resent-card {
         width: 380px;
     }
@@ -605,6 +611,32 @@
     }
 }
 @media (max-width: 992px) {
+    .book {
+        display: none;
+    }
+    .booking-btn-mob {
+        display: block;
+    }
+    .booking-box-choice {
+        display: flex;
+    }
+    .booking__opening-title-mobil {
+        display: block;
+    }
+    .booking__slaider-img {
+        height: 443px;
+    }
+    .booking__slaider-wrapp {
+        max-width: 100%;
+    }
+    .booking__opening,
+    .booking__opening-head {
+        width: 100%;
+    }
+    .bookinkg__head {
+        flex-direction: column;
+        gap: 0;
+    }
     .mess-tab-title {
         display: none;
     }
@@ -1160,6 +1192,13 @@
     }
 }
 @media (max-width: 778px) {
+    .booking__slaider-btn {
+        display: none;
+    }
+    .booking__slaider-img {
+        width: 100%;
+        height: 335px;
+    }
     .resent {
         width: 100%;
     }
@@ -1633,6 +1672,23 @@
     }
 }
 @media (max-width: 570px) {
+    .booking-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .booking-subtitle {
+        font-size: 14px;
+        line-height: 16px;
+        padding-left: 20px;
+        &::before {
+            transform: scale(0.6);
+            top: -30%;
+        }
+    }
+    .booking__slaider-img {
+        width: 100%;
+        height: 227px;
+    }
     .window__chat {
         padding-left: 20px;
         padding-right: 20px;

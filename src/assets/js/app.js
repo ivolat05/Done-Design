@@ -508,7 +508,17 @@ $(function () {
         infinite: true,
         arrows: true,
         prevArrow: $(".booking-prev"),
-        nextArrow: $(".booking-next")
+        nextArrow: $(".booking-next"),
+        responsive: [
+            {
+                breakpoint: 772,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
     });
 
 

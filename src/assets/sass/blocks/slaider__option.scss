@@ -56,3 +56,29 @@
         }
     }
 }
+
+.booking__slaider {
+    .slick-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 16px;
+        button {
+            width: 8px;
+            height: 8px;
+            line-height: 0;
+            font-size: 0;
+            padding: 0;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            background: #eaf0f8;
+            margin: 0 5px;
+        }
+        .slick-active {
+            button {
+                background: #a0a8b1;
+            }
+        }
+    }
+}

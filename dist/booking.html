@@ -257,6 +257,23 @@
                         </div>
                     </div>
                     <div class="booking__opening">
+                        <div class="booking-box-choice">
+                            <div class="booking-choice">
+                                Out door
+                            </div>
+                            <div class="booking-choice">
+                                Wall
+                            </div>
+                            <div class="booking-choice">
+                                Double
+                            </div>
+                            <div class="booking-choice">
+                                Crystal
+                            </div>
+                        </div>
+                        <div class="booking__opening-title-mobil">
+                            Location
+                        </div>
                         <div class="booking__opening-head">
                             <div id="map" class="booking-map"></div>
                         </div>
@@ -295,8 +312,12 @@
                             </div>
                         </div>
                     </div>
+                    <button class="booking-btn-mob btn">
+                        Choose time
+                    </button>
                 </div>    </div>
-        </div>    <div class="book">
+        </div>
+        <div class="book">
             <div class="container booking-container ">
                 <div class="book-title">
                     Book time
@@ -1992,7 +2013,36 @@
                                     
                                     
                                         </div>
-                                    </div>
+                                        <div class="book-week-popup">
+                                            <button class="book-week-popup-close week-popup-close">
+                                                <span>
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.99999 6.58578L14.2929 0.292893C14.6834 -0.0976313 15.3166 -0.0976307 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L9.41421 7.99999L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L7.99999 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292894 15.7071C-0.0976307 15.3166 -0.0976313 14.6834 0.292893 14.2929L6.58578 7.99999L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+                                                            fill="#787A80" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <div class="book-popup-row">
+                                                <div class="book-popup-box">
+                                                    <img src="./assets/img/book-slaid-1.png" alt="">
+                                                </div>
+                                                <div class="book-popup-coll">
+                                                    <div class="book-popup-title">Padel Sant Marti</div>
+                                                    <div class="book-popup-time">
+                                                        09:00-10:00
+                                                    </div>
+                                        
+                                                </div>
+                                            </div>
+                                            <div class="book-popup-row-2">
+                                                <button class="book-popup-btn week-popup-close">
+                                                    Reject
+                                                </button><button class="book-popup-btn-2 btn week-popup-close">
+                                                    Approve
+                                                </button>
+                                            </div>
+                                        </div></div>
                                 </div>
                                 <div id="book-day" class="book-left-body">
                                     <div class="book-day">
@@ -2440,8 +2490,203 @@
             </div>
         
         </div>    <div class="background-fon"></div>
-    
-    </div>
+        <div class="menu-calendar">
+            <div class="menu-calendar-header">
+                Choose date
+                <button class="menu-calendar-close menu-close--btn">
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.99999 6.58578L14.2929 0.292893C14.6834 -0.0976313 15.3166 -0.0976307 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L9.41421 7.99999L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L7.99999 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292894 15.7071C-0.0976307 15.3166 -0.0976313 14.6834 0.292893 14.2929L6.58578 7.99999L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+                                fill="#787A80" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="menu-calendar-wrapper">
+                <script type="text/template" id="menu-calendar__teplate">
+                    <div class="calendar__container-wrapp calendar__container-wrapp-no-scroll">
+                        <div class="calendar__box">
+                            <% _.each(months, function(cal) { %>
+                                <div class="calendar__box-coll">
+                                    <div class="calendar__head">
+                                        <button class="clndr-previous-button calendar-btn btn-prev"></button>
+                                            <div class=" calendar__month">
+                                                <%= cal.month.format('MMMM YYYY') %>
+                                            </div>
+                                        <button class="clndr-next-button calendar-btn btn-next"></button>
+                                    </div>
+                                    <div class="calendar__body">
+                                        <div class="calendar__box-week">
+                                            <% _.each(daysOfTheWeek, function(day) { %>
+                                                <div class="calendar__week"><%= day %></div>
+                                            <% }); %>
+                                        </div>
+                                        <div class="calendar__box-day">
+                                            <% _.each(cal.days, function(day) { %>
+                                                <div class="calendar__day <%= day.classes %>"><%= day.day %></div>
+                                            <% }); %>
+                                        </div>                       
+                                    </div>
+                                </div>
+                            <% }); %>                
+                        </div>            
+                    </div> 
+                    
+                     </script>
+            </div>
+            <div class="menu-calendar-footer">
+                <button class="menu-calendar-clear clndr-today-button">
+                    Clear
+                </button><button class="menu-close--btn btn menu-calendar-done">
+                    Done
+                </button>
+            </div>
+        
+        </div>    <div class="menu-date">
+            <div class="menu-date-header">
+                Choose date
+                <button class="menu-calendar-close menu-close--btn">
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.99999 6.58578L14.2929 0.292893C14.6834 -0.0976313 15.3166 -0.0976307 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L9.41421 7.99999L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L7.99999 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292894 15.7071C-0.0976307 15.3166 -0.0976313 14.6834 0.292893 14.2929L6.58578 7.99999L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+                                fill="#787A80" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="menu-date-wrapper">
+                <div class="menu-date__box">
+                    <div class="time__box-btn">6 : 00</div>
+                    <div class="time__box-btn">6 : 30</div>
+                    <div class="time__box-btn">7 : 00</div>
+                    <div class="time__box-btn">7 : 30</div>
+                    <div class="time__box-btn">8 : 00</div>
+                    <div class="time__box-btn">8 : 30</div>
+                    <div class="time__box-btn">9 : 00</div>
+                    <div class="time__box-btn">9 : 30</div>
+                    <div class="time__box-btn">10 : 00</div>
+                    <div class="time__box-btn">10 : 30</div>
+                    <div class="time__box-btn">11 : 00</div>
+                    <div class="time__box-btn">11 : 30</div>
+                    <div class="time__box-btn">12 : 00</div>
+                    <div class="time__box-btn">12 : 30</div>
+                    <div class="time__box-btn">13 : 00</div>
+                    <div class="time__box-btn">13 : 30</div>
+                    <div class="time__box-btn">14 : 00</div>
+                    <div class="time__box-btn">14 : 30</div>
+                    <div class="time__box-btn">15 : 00</div>
+                    <div class="time__box-btn">15 : 30</div>
+                    <div class="time__box-btn">16 : 00</div>
+                    <div class="time__box-btn">16 : 30</div>
+                    <div class="time__box-btn">17 : 00</div>
+                    <div class="time__box-btn">17 : 30</div>
+                    <div class="time__box-btn">18 : 00</div>
+                    <div class="time__box-btn">18 : 30</div>
+                    <div class="time__box-btn">19 : 00</div>
+                    <div class="time__box-btn">19 : 30</div>
+                    <div class="time__box-btn">20 : 00</div>
+                    <div class="time__box-btn">20 : 30</div>
+                    <div class="time__box-btn">21 : 00</div>
+                    <div class="time__box-btn">21 : 30</div>
+                </div>
+            </div>
+            <div class="menu-date-footer">
+                <button class="menu-date-clear">
+                    Clear
+                </button><button class="menu-close--btn btn menu-date-done">
+                    Done
+                </button>
+            </div>
+        
+        </div>    <div class="menu-filter">
+            <div class="menu-filter-header">
+                Filter
+                <button class="menu-calendar-close menu-close--btn">
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.99999 6.58578L14.2929 0.292893C14.6834 -0.0976313 15.3166 -0.0976307 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L9.41421 7.99999L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L7.99999 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292894 15.7071C-0.0976307 15.3166 -0.0976313 14.6834 0.292893 14.2929L6.58578 7.99999L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+                                fill="#787A80" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="menu-filter-wrapper">
+                <div class="menu-filler-inner">
+                    <div class="menu-filter-wrapper-title">
+                        Type
+                    </div>
+                    <div class="menu-filter-box">
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Indoor
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox" checked>
+                            <span class="menu-fiter-span">
+                                Outdoor
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Roofed outdoor
+                            </span>
+                        </label>
+                    </div>
+                    <div class="menu-filter-wrapper-title">
+                        Features
+                    </div>
+                    <div class="menu-filter-box">
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Wall
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox" checked>
+                            <span class="menu-fiter-span">
+                                Crystal
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Panoramic
+                            </span>
+                        </label>
+                    </div>
+                    <div class="menu-filter-wrapper-title">
+                        Size
+                    </div>
+                    <div class="menu-filter-box">
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Single
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Double
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-filter-footer">
+                <button class="menu-close--btn btn menu-filter-result">
+                    See 10 results
+                </button>
+            </div>
+        
+        </div></div>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
     </script>
     <script type="text/javascript">
