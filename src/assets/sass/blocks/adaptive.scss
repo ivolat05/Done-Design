@@ -38,6 +38,10 @@
 }
 
 @media (max-width: 1400px) {
+    .resent {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
     .sidebar__right-head {
         background: url("../../assets/img/sidebar__right-head.svg") no-repeat left 0 top,
             url("../../assets/img/sidebar__right-head.svg") no-repeat right 5% top, #5eaf8c;
@@ -136,6 +140,33 @@
     }
 }
 @media (max-width: 1200px) {
+    .resent-card {
+        width: 380px;
+    }
+    .resent-head {
+        width: 72px;
+        height: 63px;
+        img {
+            width: 72px;
+            height: 63px;
+        }
+    }
+    .resent-name {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    .resent-coll:nth-child(1) {
+        margin-bottom: 20px;
+    }
+    .resent-coll-2 {
+        .resent-row:nth-child(1) {
+            margin-bottom: 10px;
+        }
+    }
+    .resent-body {
+        flex-direction: column;
+        align-items: baseline;
+    }
     .sidebar__right-row {
         flex-direction: column;
         align-items: baseline;
@@ -574,6 +605,37 @@
     }
 }
 @media (max-width: 992px) {
+    .resent .show {
+        width: 100%;
+    }
+    .resent-card {
+        width: 100%;
+    }
+    .resent-head {
+        width: 121px;
+        height: 97px;
+        img {
+            width: 121px;
+            height: 97px;
+        }
+    }
+    .resent-name {
+        margin-top: 13px;
+        margin-bottom: 17px;
+    }
+    .resent-coll:nth-child(1) {
+        margin-bottom: 20px;
+    }
+    .resent-coll-2 {
+        .resent-row:nth-child(1) {
+            margin-bottom: 10px;
+        }
+    }
+    .resent-body {
+        flex-direction: row;
+        align-items: baseline;
+    }
+
     .info-change-wrapp {
         border-radius: 40px 40px 0 0;
     }
@@ -587,11 +649,21 @@
         padding-left: 0;
         padding-right: 0;
     }
-    .info {
+    .info,
+    .resent {
         margin-bottom: 0;
         border-radius: 40px 40px 0 0;
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .resent__box-title-dectop {
+        display: none;
+    }
+    .resent__box-title-mobil {
+        display: block;
+    }
+    .resent {
+        padding-top: 35px;
     }
     .quest {
         margin-top: -1px;
@@ -609,7 +681,8 @@
     .quest-btn-mob {
         display: block;
     }
-    .sidebar-close-btn.info-title {
+    .sidebar-close-btn.info-title,
+    .sidebar-close-btn.resent-title {
         background: none;
         color: #fff;
         text-align: center;
@@ -1024,6 +1097,44 @@
     }
 }
 @media (max-width: 778px) {
+    .resent {
+        width: 100%;
+    }
+    .resent-card {
+        width: 380px;
+    }
+    .resent-head {
+        width: 72px;
+        height: 63px;
+        img {
+            width: 72px;
+            height: 63px;
+        }
+    }
+    .resent-name {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .resent-coll:nth-child(1) {
+        margin-bottom: 20px;
+    }
+    .resent-coll-2 {
+        .resent-row:nth-child(1) {
+            margin-bottom: 10px;
+        }
+        .resent-row:nth-child(2) {
+            flex-direction: row;
+        }
+    }
+    .resent-row {
+        flex-direction: row-reverse;
+    }
+    .resent-body {
+        flex-direction: column;
+        align-items: baseline;
+    }
     .best__list-inner {
         font-size: 50px;
         line-height: 53px;
@@ -1851,6 +1962,13 @@
     }
 }
 @media (max-width: 450px) {
+    .resent-card {
+        width: 99%;
+    }
+    .resent {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
     .quest-row.--quest-flex .quest-row-coll {
         width: 130px;
     }
@@ -1877,6 +1995,10 @@
 }
 
 @media (max-width: 400px) {
+    .resent-card {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
     .best__list {
         padding-left: 0;
     }
@@ -1990,6 +2112,16 @@
 }
 
 @media (max-width: 360px) {
+    .resent-card {
+        gap: 5px;
+    }
+    .resent-time {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+    .resent-row {
+        gap: 5px;
+    }
     .quest-row.--quest-flex .quest-row-coll:nth-child(1) {
         width: 90px;
         margin-right: 10px;
