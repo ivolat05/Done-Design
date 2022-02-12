@@ -1,7 +1,7 @@
 .info {
     background: #ffffff;
-    border-radius: 24px;
-    padding: 40px 51px 14px 51px;
+    border-radius: 0 0 24px 24px;
+    padding: 0 51px 14px 51px;
     margin-bottom: 31px;
 }
 
@@ -34,7 +34,14 @@
     font-size: 1.5rem;
     line-height: 1.17;
     color: #2e2d2d;
-    margin-bottom: 14px;
+    padding-bottom: 14px;
+}
+
+.sidebar-close-btn.info-title {
+    background: #ffffff;
+    border-radius: 24px 24px 0 0;
+    padding-left: 51px;
+    padding-top: 41px;
 }
 .info_row-user {
     display: flex;
@@ -158,4 +165,19 @@
     line-height: 150%;
     color: #424551;
     margin-bottom: 7px;
+}
+
+.info-change-password {
+    display: none;
+    font-size: 14px;
+    line-height: 24px;
+    color: #6c757d;
+    padding: 0;
+    margin-right: 0;
+    margin-left: auto;
+    border: none;
+    outline: none;
+    background: none;
+
+    cursor: pointer;
 }

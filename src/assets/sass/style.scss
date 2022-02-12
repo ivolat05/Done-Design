@@ -89,7 +89,9 @@ p {
 }
 
 input:focus,
-input:active {
+input:active,
+textarea:focus,
+textarea:active {
     outline: 1px solid #404040;
 }
 /* убираем тени safari */

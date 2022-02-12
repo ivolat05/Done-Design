@@ -2,6 +2,7 @@
     width: 100%;
     position: relative;
 }
+
 .sidebar-tab {
     transition: 0.3s all ease-in-out;
     display: none;
@@ -29,6 +30,19 @@
     width: 111px;
     height: 86px;
     margin: 0 auto 11px;
+    position: relative;
+    &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border: 2px solid #fff;
+        border-radius: 15px;
+        position: absolute;
+        right: 3px;
+        bottom: 3px;
+
+        background: #4ce417;
+    }
     img {
         width: 86px;
         height: 86px;
@@ -129,4 +143,22 @@
     top: 50%;
     transform: translateY(-30%);
     right: 7px;
+}
+
+.sidebar-head-btn {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 24px;
+    color: #1b1d21;
+    background: #ffffff;
+    border: 1.5px solid #c2e631;
+    border-radius: 22px;
+    display: inline-block;
+    padding: 7px 27px;
+
+    transition: 0.8s all ease-in-out;
+    display: none;
+    &:hover {
+        background: #c2e631;
+    }
 }

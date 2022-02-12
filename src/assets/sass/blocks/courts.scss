@@ -1,9 +1,20 @@
 .courts {
     background: #ffffff;
-    border-radius: 24px;
-    padding: 50px 63px 54px 51px;
+    border-radius: 0 0 24px 24px;
+    padding: 0 63px 54px 51px;
     height: 100%;
     display: block;
+}
+.courts-header-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.sidebar-close-btn.courts-title {
+    padding-top: 58px;
+
+    background: #ffffff;
+    border-radius: 24px 24px 0 0;
 }
 .courts.no-active {
     display: none;
@@ -16,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 32px;
+    padding-bottom: 32px;
 }
 
 .courts-btn-add {

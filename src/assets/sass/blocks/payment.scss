@@ -1,16 +1,21 @@
 .payment {
     background: #ffffff;
-    border-radius: 24px;
-    padding: 57px 50px 50px 50px;
+    border-radius: 0 0 24px 24px;
+    padding: 0px 50px 50px 50px;
     min-height: 1143px;
 }
-
+.sidebar-close-btn.payment-title {
+    background: #ffffff;
+    padding-top: 57px;
+    padding-left: 50px;
+    border-radius: 24px 24px 0 0;
+}
 .payment-title {
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 1.2;
     color: #2e2d2d;
-    margin-bottom: 33px;
+    padding-bottom: 33px;
 }
 
 .payment__label-span {

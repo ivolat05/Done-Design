@@ -1,6 +1,10 @@
 .approve {
-    padding: 45px 26px 51px 51px;
+    padding: 0 26px 51px 51px;
     display: block;
+    .sidebar-close-btn.resent-title {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 .approve-search-box {
     width: 536px;

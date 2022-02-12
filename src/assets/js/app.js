@@ -12,12 +12,6 @@
 
 $(function () {
 
-    $(function () {
-        if (navigator.userAgent.indexOf('Safari') != -1 &&
-            navigator.userAgent.indexOf('Chrome') == -1) {
-            $("body").addClass("safari");
-        }
-    });
 
     // active mobil calendar
     function menuBoxActive(mobilBloxActive, menuBoxs) {
@@ -881,7 +875,7 @@ $(function () {
                 item.addEventListener('click', function () {
                     let tabId = item.getAttribute(tabAttr);
                     let currentTab = document.querySelector(tabId);
-
+                    let sidebarRight = document.querySelector('.sidebar__right');
                     tabBtn.forEach(function (item) {
                         item.classList.remove('active')
                     })
@@ -897,6 +891,13 @@ $(function () {
                             boxHide.classList.add('no-active');
                         }
 
+                    }
+                    if (sidebarRight) {
+                        sidebarRight.classList.add('active');
+                        let sidebarLeft = document.querySelector('.sidebar__left');
+                        if (sidebarLeft) {
+                            sidebarLeft.classList.add('active');
+                        }
                     }
                 });
             });
@@ -1098,6 +1099,23 @@ $(function () {
     }
     bookWeekPopupActive();
 
-
+    function sidebarCloseBtn() {
+        let sidebarCloseBtn = document.querySelectorAll('.sidebar-close-btn');
+        let sidebarRight = document.querySelector('.sidebar__right');
+        let sidebarLeft = document.querySelector('.sidebar__left');
+        if (sidebarCloseBtn && sidebarRight && sidebarLeft) {
+            sidebarCloseBtn.forEach((item) => {
+                item.addEventListener('click', () => {
+                    if (sidebarRight.classList.contains('active')) {
+                        sidebarRight.classList.remove('active')
+                    }
+                    if (sidebarLeft.classList.contains('active')) {
+                        sidebarLeft.classList.remove('active')
+                    }
+                })
+            })
+        }
+    }
+    sidebarCloseBtn();
 })
 

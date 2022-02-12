@@ -15,6 +15,7 @@
 .quest-row {
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 25px;
     padding-left: 4px;
     margin-bottom: 50px;
@@ -110,4 +111,8 @@
     font-size: 1rem;
     line-height: 1.2;
     color: #0d0808;
+}
+
+.quest-btn-mob {
+    display: none;
 }

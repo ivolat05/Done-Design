@@ -7,3 +7,20 @@
     display: flex;
     gap: 20px;
 }
+.logout-profile-btn {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 154.3%;
+    color: #6c757d;
+    position: relative;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    margin-left: 10px;
+    span {
+        position: relative;
+        top: 3px;
+        padding-right: 8px;
+    }
+}
