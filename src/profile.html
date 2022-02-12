@@ -200,8 +200,12 @@ title: Profile
                     </div>
                     <div class="sidebar-container">
                         <div id="tab__1" class="sidebar-tab active">
-                            {{>info}}
-                            {{>quest}}
+                            <div class="info-hidden">
+                                {{>info}}
+                                {{>quest}}</div>
+                            <div id="change-password" class="info-tab">
+                                {{>info-change}}
+                            </div>
                         </div>
                         <div id="tab__2" class="sidebar-tab">
                             {{>resent}}

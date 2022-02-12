@@ -10746,7 +10746,7 @@ $(function () {
     tabs("courts-btn-add", "courts-tab", "data-courts", "courts");
     tabs("courts-box-btn", "courts-tab", "data-edit", "courts");
     tabs("approve-button", "approved-tab", "data-schedule", "approve");
-
+    tabs("info-change-password", "info-tab", "data-infochange", "info-hidden");
     // активация кнопки регистарции  Create account
     function activeBtnCreateAccount() {
         let sample = document.querySelectorAll('.sample');
@@ -10796,6 +10796,7 @@ $(function () {
     }
     confPwd('pwd-conf-1', 'pwd-conf-2');
     confPwd('pwd-conf-one', 'pwd-conf-two');
+    confPwd('info-change-one', 'info-change-two');
 
     // активация форм ввода данных карт
     function paymentCard() {
@@ -10908,6 +10909,7 @@ $(function () {
     deactiveCourseAdd('new-close', 'courts');
     deactiveCourseAdd('schedule-close', 'approve');
 
+    deactiveCourseAdd('info-change-title', 'info-hidden');
     // book-week-popup active deactive
     function bookWeekPopupActive() {
         let bookWeekBox = document.querySelectorAll('.book-week-box');

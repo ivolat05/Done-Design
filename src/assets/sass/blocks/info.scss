@@ -173,11 +173,14 @@
     line-height: 24px;
     color: #6c757d;
     padding: 0;
-    margin-right: 0;
-    margin-left: auto;
+    text-align: right;
     border: none;
     outline: none;
     background: none;
 
     cursor: pointer;
+}
+
+.info-hidden.no-active {
+    display: none;
 }

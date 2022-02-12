@@ -574,6 +574,15 @@
     }
 }
 @media (max-width: 992px) {
+    .info-change-wrapp {
+        border-radius: 40px 40px 0 0;
+    }
+    .info-change-btn {
+        width: 100%;
+    }
+    .info-change-title {
+        display: block;
+    }
     .container.profile-container {
         padding-left: 0;
         padding-right: 0;
@@ -725,6 +734,7 @@
         background: none;
         padding-left: 0;
         padding-right: 0;
+        padding-bottom: 47px;
         margin-right: 310px;
         margin-left: 15px;
     }
@@ -797,6 +807,8 @@
     }
     .profile {
         padding-top: 3px;
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
     .sidebar__right-head.--mobile {
         display: flex;
