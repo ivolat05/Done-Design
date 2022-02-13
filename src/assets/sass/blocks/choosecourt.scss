@@ -1,0 +1,63 @@
+.choosecourt {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 3;
+    padding: 11px 16px;
+    display: none;
+    flex-direction: column;
+}
+.choosecourt.active {
+    display: flex;
+}
+.choosecourt-head {
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 170%;
+    color: #2e2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.choosecourt-close {
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.choosecourt__wrapp-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #1b1919;
+    border: none;
+    outline: none;
+    min-width: 340px;
+    padding: 15px;
+    margin: 0 auto;
+    margin-top: 70px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.choosecourt-wrapp {
+    display: flex;
+    flex-direction: column;
+    .book__label {
+        margin-bottom: 9px;
+    }
+}
+
+@media (max-width: 572px) {
+    .choosetime__wrapp-btn {
+        min-width: 100%;
+    }
+}

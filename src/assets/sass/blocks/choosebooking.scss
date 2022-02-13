@@ -1,0 +1,169 @@
+.choosebooking {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 3;
+    padding: 11px 16px;
+    display: flex;
+    flex-direction: column;
+}
+.choosebooking.active {
+    display: flex;
+}
+.choosebooking-head {
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 170%;
+    color: #2e2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 21px;
+}
+
+.choosecourt-close {
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.choosecourt__wrapp-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #1b1919;
+    border: none;
+    outline: none;
+    min-width: 340px;
+    padding: 15px;
+    margin: 0 auto;
+    margin-top: 70px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.choosebooking-wrapp {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.choosebooking-wrapp::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.choosebooking-wrapp {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-bottom: 90px;
+    .resent-card {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .resent-head {
+        width: 72px;
+        height: 63px;
+        img {
+            width: 72px;
+            height: 63px;
+        }
+    }
+
+    .book-right-title {
+        padding-top: 14px;
+    }
+    .book-right-row {
+        margin-bottom: 15px;
+    }
+    .resent-name {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .resent-coll:nth-child(1) {
+        margin-bottom: 20px;
+    }
+    .resent-coll-2 {
+        .resent-row:nth-child(1) {
+            margin-bottom: 10px;
+        }
+        .resent-row:nth-child(2) {
+            flex-direction: row;
+        }
+    }
+    .resent-row {
+        flex-direction: row-reverse;
+    }
+    .resent-body {
+        width: 250px;
+        flex-shrink: 0;
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .booking-popup-span {
+        padding-left: 40px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 11px;
+            top: 50%;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid #b3b7bc;
+            transform: translateY(-50%);
+        }
+    }
+
+    .booking-popup-radio:checked + .booking-popup-span {
+        &::before {
+            background: #fff;
+            border: 1px solid #222220;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #222220;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15px;
+        }
+    }
+    .book-right-inner {
+        margin-bottom: 10px;
+    }
+}
+.choosebooking__wrapp-btn {
+    margin-top: 20px;
+}
+.choosebooking-label-title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 170%;
+    color: #2e2d2d;
+    margin-bottom: 9px;
+}
+
+@media (max-width: 380px) {
+    .choosecourt-head {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .choosebooking {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
