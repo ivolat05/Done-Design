@@ -4,9 +4,12 @@
             My Courts
 
         </div>
-        <button class="courts-btn-add btn" data-courts="#new-courts-add">
-            Add new court
-        </button>
+        <div class="courts-btn-add-box">
+            <button class="courts-btn-add btn" data-courts="#new-courts-add">
+
+                Add new court
+            </button>
+        </div>
     </div>
 
     <div class="courts-wrapper">
@@ -122,7 +125,11 @@
                 Edit
             </button>
         </a>
+        <div class="courts-mob-box">
+            {{>show_more}}
+        </div>
     </div>
+
 </div>
 <div id="new-courts-add" class="courts-tab">
     {{>new}}

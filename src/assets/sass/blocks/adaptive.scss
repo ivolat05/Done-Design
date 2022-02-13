@@ -1,4 +1,6 @@
 @media (max-width: 1550px) {
+    .company-profile {
+    }
     .result {
         #map {
             width: 42vw;
@@ -6,6 +8,8 @@
     }
 }
 @media (max-width: 1490px) {
+    .company-profile {
+    }
     .top__slaider-box {
         width: 350px;
         img {
@@ -38,6 +42,18 @@
 }
 
 @media (max-width: 1400px) {
+    .company-profile {
+        .info-row-col {
+            width: 314px;
+        }
+        .schedule {
+            padding-right: 50px;
+        }
+    }
+    .approve-search-box {
+        width: 400px;
+        position: relative;
+    }
     .booking__slaider-wrapp {
         max-width: 760px;
     }
@@ -143,6 +159,41 @@
     }
 }
 @media (max-width: 1200px) {
+    .company-profile {
+        .courts {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .schedule {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .info {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .sidebar-close-btn.info-title {
+            padding-left: 25px;
+        }
+        .info-row-col {
+            width: 267px;
+        }
+    }
+    .approve-search-box {
+        width: 270px;
+        position: relative;
+    }
+    .approve-box {
+        flex-direction: column;
+    }
+    .approve-box-coll-2 {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 15px;
+    }
+    .approve-head {
+        justify-content: space-between;
+    }
     .booking__slaider-wrapp {
         max-width: 580px;
     }
@@ -365,6 +416,11 @@
 }
 
 @media (max-width: 1080px) {
+    .company-profile {
+        .info-row-col {
+            width: 240px;
+        }
+    }
     .sidebar__right-head {
         padding-left: 15px;
     }
@@ -381,6 +437,206 @@
     }
 }
 @media (max-width: 998px) {
+    .new__wrapp {
+        width: 100%;
+        background: #fff;
+        padding: 47px 20px 120px 20px;
+        border-radius: 40px 40px 0 0;
+    }
+    .new-title {
+        margin-bottom: 0;
+        padding-bottom: 29px;
+        justify-content: center;
+        padding-top: 21px;
+    }
+    .new-close-two {
+        width: 100%;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        font-size: 16px;
+        line-height: 19px;
+        position: relative;
+        &::before {
+            content: url("../../assets/img/head-arrow.svg");
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .new {
+        padding: 0;
+        position: relative;
+    }
+    .new-close {
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        bottom: 40px;
+        transform: translateX(-50%);
+    }
+    .company-profile {
+        .courts-mob-box {
+            display: block;
+        }
+        .courts {
+            background: #35362e;
+            padding: 0;
+            position: relative;
+        }
+        .courts-wrapper {
+            background: #ffffff;
+            border-radius: 40px 40px 0 0;
+            padding: 110px 19px 34px 19px;
+        }
+        .sidebar-close-btn.courts-title {
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+        .courts-btn-add-box {
+            position: absolute;
+            top: 110px;
+            width: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #c2e631;
+            border-radius: 4px;
+        }
+        .courts-btn-add {
+            margin: 0 auto;
+        }
+        .info-row-col {
+            width: 100%;
+        }
+        .sidebar-container {
+            background: #35362e;
+        }
+        .info__user-foto {
+            width: 107px;
+            height: 107px;
+            position: relative;
+            img {
+                width: 107px;
+                height: 107px;
+            }
+        }
+
+        .schedule {
+            padding: 0;
+        }
+        .info-row-col.--one {
+            margin: 0 auto;
+            position: relative;
+            width: 107px;
+            height: 107px;
+        }
+        .btn-add-file {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(17%, 17%);
+            width: 100%;
+            border-radius: 50%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.37)),
+                url("../../assets/img/camera-1.svg") no-repeat center center;
+        }
+        .btn-add-file-span {
+            display: none;
+        }
+        .company-info-wrapp {
+            padding-top: 12px;
+        }
+        .info-row {
+            margin-bottom: 66px;
+        }
+        .info-row-col {
+            margin-bottom: 10px;
+        }
+        .info-change-password {
+            position: relative;
+            top: -23px;
+        }
+        .quest-btn {
+            margin-top: 33px;
+            margin-bottom: 33px;
+        }
+        .company-info-wrapp {
+            min-height: 1000px;
+        }
+        .sidebar-close-btn.info-title {
+            padding-left: 0;
+        }
+        .book-left {
+            border-radius: 0;
+        }
+        .schedule-title {
+            display: none;
+        }
+        .schedule-close-mob {
+            display: block;
+        }
+
+        .schedule-mob-head {
+            padding: 41px 22px 20px 22px;
+            background: #ffffff;
+            border-radius: 40px 40px 0 0;
+            .schedule-close {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #eaf0f8;
+                border-radius: 12px;
+            }
+        }
+    }
+
+    .book-week-popup {
+        left: 50%;
+    }
+
+    .booking-popup {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .approve {
+        padding: 0;
+    }
+    .approve-inner {
+        background: #fff;
+        padding: 48px 20px 48px 20px;
+        border-radius: 40px 40px 0 0;
+    }
+    .approve-search-box {
+        width: 60%;
+    }
+    .approve-box-coll-2 {
+        margin-top: 0;
+        flex-direction: column;
+    }
+    .approve-box {
+        flex-direction: row;
+    }
+    .sidebar-close-btn.resent-title,
+    .sidebar-close-btn.courts-title {
+        background: none;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        font-size: 16px;
+        line-height: 19px;
+        padding-left: 0;
+        &::before {
+            content: url("../../assets/img/head-arrow.svg");
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
     .profile-wrapper {
         position: relative;
     }
@@ -611,6 +867,40 @@
     }
 }
 @media (max-width: 992px) {
+    .company-profile {
+        .sidebar__left {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            padding-top: 5px;
+        }
+        .sidebar-avatar {
+            width: 68px;
+            height: 68px;
+            margin-right: 17px;
+
+            img {
+                width: 68px;
+                height: 68px;
+            }
+        }
+        .sidebar__left-head {
+            padding-top: 29px;
+            padding-bottom: 29px;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+        .sidebar-btn {
+            padding-left: 18px;
+        }
+        .logout-profile-btn {
+            margin-left: 0px;
+            margin-top: 7px;
+        }
+        .company-wrapper {
+            min-height: 525px;
+        }
+    }
     .book {
         display: none;
     }
@@ -1192,6 +1482,121 @@
     }
 }
 @media (max-width: 778px) {
+    .new-row {
+        flex-direction: column;
+        margin-bottom: 5px;
+    }
+    .new-row-coll {
+        margin-bottom: 22px;
+    }
+    .new__wrapp-title-2 {
+        margin-bottom: 20px;
+    }
+    .new-row-2 {
+        flex-direction: column;
+        align-items: baseline;
+        .new-row-wrapper {
+            &:nth-child(1) {
+                margin-bottom: 27px;
+            }
+        }
+    }
+    .new-close {
+        bottom: 25px;
+    }
+    .new-input-text {
+        margin-bottom: 13px;
+    }
+
+    .new-foto-row {
+        margin-bottom: 40px;
+    }
+    .company-profile {
+        .schedule-wrapp {
+            display: none;
+        }
+        .schedule-mob-body {
+            display: block;
+        }
+    }
+    .approve-search-line {
+        flex-direction: column;
+    }
+    .approve-box {
+        margin-bottom: 3px;
+    }
+    .approve-search-box {
+        width: 100%;
+    }
+    .approve-search-coll {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .select.approve-select-month {
+        width: 150px;
+    }
+    .approve-head-wrapp {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .approve-btn.btn {
+        width: 100%;
+    }
+    .approve-status {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 4px 8px;
+    }
+    .approve-date {
+        text-align: right;
+        margin-right: 0;
+        font-size: 14px;
+        line-height: 120%;
+        margin-bottom: 3px;
+    }
+    .approve-time {
+        font-size: 14px;
+        line-height: 120%;
+        padding-left: 0;
+        &::before {
+            width: 0;
+        }
+    }
+    .approve-box-name {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .approve-box-img {
+        width: 100px;
+        height: 72px;
+        margin-right: 14px;
+        img {
+            width: 100px;
+            height: 72px;
+        }
+    }
+    .approve-head {
+        align-items: flex-start;
+        margin-bottom: 2px;
+    }
+    .approve-body {
+        margin-bottom: 30px;
+    }
+    .approve-search-line {
+        margin-bottom: 22px;
+    }
+    .approve-button {
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 7px;
+    }
+    .approve-btn {
+        font-size: 14px;
+    }
+    .approve-box {
+        flex-direction: column;
+    }
+
     .booking__slaider-btn {
         display: none;
     }
@@ -1661,6 +2066,8 @@
     }
 }
 @media (max-width: 600px) {
+    .company-profile {
+    }
     .player-box.active {
         width: 100%;
     }
@@ -1672,6 +2079,34 @@
     }
 }
 @media (max-width: 570px) {
+    .company-profile {
+        .courts-box-name {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            margin-top: 5px;
+        }
+        .courts-box-btn {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            margin-top: 5px;
+        }
+        .courts-box-img {
+            width: 83px;
+            height: 77px;
+            img {
+                width: 83px;
+                height: 77px;
+            }
+        }
+        .courts-box-wrapp {
+            align-items: flex-start;
+        }
+        .courts-box {
+            align-items: flex-start;
+        }
+    }
     .booking-title {
         font-size: 24px;
         line-height: 28px;
@@ -1967,6 +2402,12 @@
     }
 }
 @media (max-width: 520px) {
+    .company-profile {
+        .info-change-wrapp {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
     .blog__wrapp {
         justify-content: center;
         .blog__box:nth-child(1),
@@ -2207,6 +2648,15 @@
     .footer__form-inner {
         max-width: 287px;
     }
+    .schedule-mob-wrapper-box {
+        width: 320px;
+    }
+    .schedule-mob-wrapper-box .book-week-box {
+        width: 60px;
+    }
+    .schedule-mob-wrapper-box .book-week-box.--combined {
+        width: 135px;
+    }
     .benefit-box-text.--two {
         left: 118px;
     }
@@ -2233,6 +2683,18 @@
         }
         .related-next {
             display: none;
+        }
+    }
+    .book-week-popup {
+        width: 290px;
+        padding-left: 15px;
+        padding-right: 15px;
+        .book-popup-box {
+            margin-right: 10px;
+        }
+        .book-popup-btn,
+        .book-popup-btn-2 {
+            min-width: 120px;
         }
     }
 }

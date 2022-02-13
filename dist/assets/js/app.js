@@ -11017,8 +11017,9 @@ $(function () {
     }
 
     deactiveCourseAdd('new-close', 'courts');
+    deactiveCourseAdd('new-close-two', 'courts');
     deactiveCourseAdd('schedule-close', 'approve');
-
+    deactiveCourseAdd('schedule-close-mob', 'approve');
     deactiveCourseAdd('info-change-title', 'info-hidden');
     // book-week-popup active deactive
     function bookWeekPopupActive() {

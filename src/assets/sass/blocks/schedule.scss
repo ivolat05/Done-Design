@@ -12,6 +12,25 @@
     color: #2e2d2d;
     margin-bottom: 20px;
 }
+.schedule-close-mob {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 21px;
+    padding-bottom: 29px;
+    position: relative;
+    &::before {
+        content: url("../../assets/img/head-arrow.svg");
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    display: none;
+}
 
 .schedule-close {
     display: flex;
@@ -53,4 +72,102 @@
     .book-box-body {
         height: 100%;
     }
+}
+
+.schedule-mob-body {
+    background: #fff;
+    margin-top: -1px;
+    padding-bottom: 40px;
+    position: relative;
+    display: none;
+}
+
+.schedule-mob-btn {
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.schedule-mob-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 7px;
+    background: #ffffff;
+    box-shadow: 0px 1px 8px rgba(20, 46, 110, 0.1);
+    border-radius: 8px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 21px;
+}
+
+.schedule-mob-date {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #2e2d2d;
+}
+
+.schedule-mob-wrapper-box {
+    width: 390px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px;
+    padding-bottom: 84px;
+    .book-week-box {
+        margin: 0;
+        width: 79px;
+        height: 47px;
+        display: flex;
+        align-items: center;
+        background: rgba(96, 229, 49, 0.17);
+        border: 1px solid rgba(96, 229, 49, 0.16);
+        border-radius: 8px;
+        outline: none;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 16px;
+        text-align: center;
+        color: #23262f;
+        transition: all 0.3s ease-in-out;
+        position: static;
+        margin: 4px;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+    .book-week-box.--combined {
+        width: 160px;
+        background: rgba(96, 229, 49, 0.17);
+        border: 2px solid #60e531;
+        border-radius: 8px;
+    }
+    .book-week-box.background-F0F3F5 {
+        background: #f0f3f5;
+        border: 1px solid #eaf0f8;
+        border-radius: 8px;
+    }
+}
+
+.schedule-mob-btn-2 {
+    border: none;
+    outline: none;
+    width: 90%;
+
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 44px;
+    color: #0d0808;
+    padding: 2px;
+
+    margin: 0 auto;
 }
