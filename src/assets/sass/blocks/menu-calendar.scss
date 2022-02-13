@@ -1,6 +1,8 @@
 .menu-calendar,
 .menu-date,
-.menu-filter {
+.menu-filter,
+.bookingpay-date,
+.bookingpay-calendar {
     position: fixed;
     right: 0;
     display: none;
@@ -17,7 +19,8 @@
     }
     .menu-calendar-wrapper,
     .menu-date-wrapper,
-    .menu-filter-wrapper {
+    .menu-filter-wrapper,
+    .bookingpay-calendar-wrapper {
         top: 0;
         position: absolute;
     }
@@ -42,6 +45,7 @@
     }
     overflow: hidden;
 }
+
 .menu-calendar-footer,
 .menu-date-footer {
     width: 100%;
@@ -75,7 +79,9 @@
 }
 
 .menu-calendar.active,
-.menu-date.active {
+.menu-date.active,
+.bookingpay-calendar.active,
+.bookingpay-date.active {
     transform: translateX(0);
     z-index: 4;
     opacity: 1;
@@ -141,7 +147,8 @@
     .menu-calendar,
     .menu-date,
     .menu-filter,
-    .menu-filter-two {
+    .menu-filter-two,
+    .bookingpay-date {
         .menu-date__box {
             padding-left: 20px;
         }
@@ -157,8 +164,10 @@
 
 @media (max-width: 380px) {
     .menu-calendar,
+    .bookingpay-calendar,
     .menu-date,
-    .menu-filter {
+    .menu-filter,
+    .bookingpay-date {
         width: 100%;
         .calendar__container-wrapp {
             width: 100%;

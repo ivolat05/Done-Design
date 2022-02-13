@@ -1,17 +1,22 @@
 .choosebooking {
-    width: 100%;
+    width: 375px;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     background: #fff;
-    z-index: 3;
+    z-index: -3;
+    transform: translateY(300%);
+    opacity: 0;
     padding: 11px 16px;
     display: flex;
     flex-direction: column;
+    transition: 0.8s all ease-in-out;
 }
 .choosebooking.active {
-    display: flex;
+    z-index: 3;
+    opacity: 1;
+    transform: translateY(0);
 }
 .choosebooking-head {
     font-family: "Oswald";
@@ -155,6 +160,11 @@
     line-height: 170%;
     color: #2e2d2d;
     margin-bottom: 9px;
+}
+@media (max-width: 572px) {
+    .choosebooking {
+        width: 100%;
+    }
 }
 
 @media (max-width: 380px) {

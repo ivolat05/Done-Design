@@ -1,17 +1,7 @@
-.choosecourt {
-    width: 100%;
-    min-height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #fff;
-    z-index: 3;
-    padding: 11px 16px;
-    display: none;
-    flex-direction: column;
-}
 .choosecourt.active {
-    display: flex;
+    transform: translateY(0);
+    z-index: 3;
+    opacity: 1;
 }
 .choosecourt-head {
     font-family: "Oswald";

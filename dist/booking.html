@@ -312,7 +312,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="booking-btn-mob btn">
+                    <button class="booking-btn-mob btn" data-choosetime="#choosetime">
                         Choose time
                     </button>
                 </div>    </div>
@@ -2686,10 +2686,10 @@
                 </button>
             </div>
         
-        </div>    <div class="choosetime">
+        </div>    <div id="choosetime" class="choosetime">
             <div class="choosetime-head">
                 Padel Sant Marti
-                <button class="choosetime-close">
+                <button class="choosetime-close close-btn-chooset">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L12 10.5858L18.2929 4.29289C18.6834 3.90237 19.3166 3.90237 19.7071 4.29289C20.0976 4.68342 20.0976 5.31658 19.7071 5.70711L13.4142 12L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L12 13.4142L5.70711 19.7071C5.31658 20.0976 4.68342 20.0976 4.29289 19.7071C3.90237 19.3166 3.90237 18.6834 4.29289 18.2929L10.5858 12L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z"
@@ -2718,13 +2718,15 @@
                     12:00
                 </div>
             </div>
-            <button class="choosetime__wrapp-btn btn">
-                Continue
-            </button>
-        </div>    <div class="choosecourt">
+            <div>
+                <button class="choosetime__wrapp-btn btn " data-choosecourt="#choosecourt">
+                    Continue
+                </button>
+            </div>
+        </div>    <div id="choosecourt" class="choosecourt">
             <div class="choosecourt-head">
                 Padel Sant Marti
-                <button class="choosetime-close">
+                <button class="choosetime-close close-btn-chooset">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L12 10.5858L18.2929 4.29289C18.6834 3.90237 19.3166 3.90237 19.7071 4.29289C20.0976 4.68342 20.0976 5.31658 19.7071 5.70711L13.4142 12L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L12 13.4142L5.70711 19.7071C5.31658 20.0976 4.68342 20.0976 4.29289 19.7071C3.90237 19.3166 3.90237 18.6834 4.29289 18.2929L10.5858 12L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z"
@@ -2764,10 +2766,12 @@
                     </span>
                 </label>
             </div>
-            <button class="choosetime__wrapp-btn btn">
-                Continue
-            </button>
-        </div>    <div class="choosebooking">
+            <div>
+                <button class="choosetime__wrapp-btn  btn" data-choosefilter="#choose_filter">
+                    Continue
+                </button>
+            </div>
+        </div>    <div id="choosebooking" class="choosebooking">
             <div class="choosebooking-head">
                 Booking
                 <button class="choosetime-close">
@@ -2878,8 +2882,482 @@
         
             </div>
             <button class="choosetime__wrapp-btn choosebooking__wrapp-btn btn">
-                Continue to payment - 8 $
+                Continue to payment - <span class="booking-popup-summ"> 8 $ </span>
             </button>
+        </div>    <div id="choose_filter" class="menu-filter choose_filter">
+            <div class="menu-filter-header">
+                Filter
+                <button class="menu-calendar-close close-btn-chooset menu-close--btn">
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.99999 6.58578L14.2929 0.292893C14.6834 -0.0976313 15.3166 -0.0976307 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L9.41421 7.99999L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L7.99999 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292894 15.7071C-0.0976307 15.3166 -0.0976313 14.6834 0.292893 14.2929L6.58578 7.99999L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+                                fill="#787A80" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="menu-filter-wrapper">
+                <div class="menu-filler-inner">
+                    <div class="menu-filter-wrapper-title">
+                        Type
+                    </div>
+                    <div class="menu-filter-box">
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Indoor
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox" checked>
+                            <span class="menu-fiter-span">
+                                Outdoor
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Roofed outdoor
+                            </span>
+                        </label>
+                    </div>
+                    <div class="menu-filter-wrapper-title">
+                        Features
+                    </div>
+                    <div class="menu-filter-box">
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Wall
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox" checked>
+                            <span class="menu-fiter-span">
+                                Crystal
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Panoramic
+                            </span>
+                        </label>
+                    </div>
+                    <div class="menu-filter-wrapper-title">
+                        Size
+                    </div>
+                    <div class="menu-filter-box">
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Single
+                            </span>
+                        </label>
+                        <label class="menu-filter-label">
+                            <input class="menu-filter-input" type="checkbox">
+                            <span class="menu-fiter-span">
+                                Double
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-filter-footer">
+                <button class="btn choosetime__wrapp-btn" data-bookingpayCalendar="#bookingpay-calendar">
+                    See 10 results
+                </button>
+            </div>
+        
+        </div>    <div id="bookingpay-date" class="bookingpay-date">
+            <div class="menu-date-header">
+                Choose date
+                <button class="menu-calendar-close menu-close--btn ">
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.99999 6.58578L14.2929 0.292893C14.6834 -0.0976313 15.3166 -0.0976307 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L9.41421 7.99999L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L7.99999 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292894 15.7071C-0.0976307 15.3166 -0.0976313 14.6834 0.292893 14.2929L6.58578 7.99999L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+                                fill="#787A80" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="menu-date-wrapper">
+                <div class="menu-date__box">
+                    <div class="time__box-btn  background-F0F3F5">6 : 00</div>
+                    <div class="time__box-btn">6 : 30</div>
+                    <div class="time__box-btn">7 : 00</div>
+                    <div class="time__box-btn">7 : 30</div>
+                    <div class="time__box-btn">8 : 00</div>
+                    <div class="time__box-btn background-F0F3F5">8 : 30</div>
+                    <div class="time__box-btn">9 : 00</div>
+                    <div class="time__box-btn">9 : 30</div>
+                    <div class="time__box-btn background-F0F3F5">10 : 00</div>
+                    <div class="time__box-btn">10 : 30</div>
+                    <div class="time__box-btn background-F0F3F5">11 : 00</div>
+                    <div class="time__box-btn background-F0F3F5">11 : 30</div>
+                    <div class="time__box-btn">12 : 00</div>
+                    <div class="time__box-btn">12 : 30</div>
+                    <div class="time__box-btn">13 : 00</div>
+                    <div class="time__box-btn background-F0F3F5">13 : 30</div>
+                    <div class="time__box-btn">14 : 00</div>
+                    <div class="time__box-btn">14 : 30</div>
+                    <div class="time__box-btn">15 : 00</div>
+                    <div class="time__box-btn">15 : 30</div>
+                    <div class="time__box-btn background-F0F3F5">16 : 00</div>
+                    <div class="time__box-btn">16 : 30</div>
+                    <div class="time__box-btn">17 : 00</div>
+                    <div class="time__box-btn">17 : 30</div>
+                    <div class="time__box-btn background-F0F3F5">18 : 00</div>
+                    <div class="time__box-btn">18 : 30</div>
+                    <div class="time__box-btn">19 : 00</div>
+                    <div class="time__box-btn">19 : 30</div>
+                    <div class="time__box-btn">20 : 00</div>
+                    <div class="time__box-btn">20 : 30</div>
+                    <div class="time__box-btn">21 : 00</div>
+                    <div class="time__box-btn">21 : 30</div>
+                </div>
+            </div>
+            <div class="menu-date-footer">
+                <button class="menu-date-clear">
+                    Clear
+                </button><button class="btn menu-date-done" data-bookingpay="#bookingpay">
+                    Done
+                </button>
+            </div>
+        
+        </div>    <div id="bookingpay-calendar" class="bookingpay-calendar">
+            <div class="menu-calendar-header">
+                Choose date
+                <button class="menu-calendar-close menu-close--btn">
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.99999 6.58578L14.2929 0.292893C14.6834 -0.0976313 15.3166 -0.0976307 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L9.41421 7.99999L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L7.99999 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292894 15.7071C-0.0976307 15.3166 -0.0976313 14.6834 0.292893 14.2929L6.58578 7.99999L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+                                fill="#787A80" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="bookingpay-calendar-wrapper">
+                <script type="text/template" id="bookingpay-calendar__teplate">
+                    <div class="calendar__container-wrapp calendar__container-wrapp-no-scroll">
+                        <div class="calendar__box">
+                            <% _.each(months, function(cal) { %>
+                                <div class="calendar__box-coll">
+                                    <div class="calendar__head">
+                                        <button class="clndr-previous-button calendar-btn btn-prev"></button>
+                                            <div class=" calendar__month">
+                                                <%= cal.month.format('MMMM YYYY') %>
+                                            </div>
+                                        <button class="clndr-next-button calendar-btn btn-next"></button>
+                                    </div>
+                                    <div class="calendar__body">
+                                        <div class="calendar__box-week">
+                                            <% _.each(daysOfTheWeek, function(day) { %>
+                                                <div class="calendar__week"><%= day %></div>
+                                            <% }); %>
+                                        </div>
+                                        <div class="calendar__box-day">
+                                            <% _.each(cal.days, function(day) { %>
+                                                <div class="calendar__day <%= day.classes %>"><%= day.day %></div>
+                                            <% }); %>
+                                        </div>                       
+                                    </div>
+                                </div>
+                            <% }); %>                
+                        </div>            
+                    </div> 
+                    
+                     </script>
+            </div>
+            <div class="menu-calendar-footer">
+                <button class=" btn menu-calendar-done" data-bookingpayDate="#bookingpay-date">
+                    Done
+                </button>
+            </div>
+        
+        </div>    <div id="bookingpay-noactive" class="bookingpay-noactive">
+            <div class="bookingpay-head">
+                Booking details
+                <button class="choosetime-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L12 10.5858L18.2929 4.29289C18.6834 3.90237 19.3166 3.90237 19.7071 4.29289C20.0976 4.68342 20.0976 5.31658 19.7071 5.70711L13.4142 12L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L12 13.4142L5.70711 19.7071C5.31658 20.0976 4.68342 20.0976 4.29289 19.7071C3.90237 19.3166 3.90237 18.6834 4.29289 18.2929L10.5858 12L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z"
+                            fill="#787A80" />
+                    </svg>
+                </button>
+            </div>
+            <div class="bookingpay-noactive-wrapp">
+                <div class="resent-card">
+                    <div class="resent-head">
+                        <img src="./assets/img/blog-13.png" alt="">
+                    </div>
+                    <div class="resent-body">
+                        <div class="resent-coll">
+                            <div class="resent-name">
+                                Padel Sant Marti
+                            </div>
+                            <div class="resent-place">
+                                W. Gray St. Utica, Pennsylvania
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bookingpay-row">
+                    <div class="bookingpay__row-name">
+                        Type
+                    </div>
+                    <div class="bookingpay__row-status">
+                        Indoor
+                    </div>
+                </div>
+                <div class="bookingpay-row">
+                    <div class="bookingpay__row-name">
+                        Size
+                    </div>
+                    <div class="bookingpay__row-status">
+                        Double
+                    </div>
+                </div>
+                <div class="bookingpay-row">
+                    <div class="bookingpay__row-name">
+                        Features
+                    </div>
+                    <div class="bookingpay__row-status">
+                        Wall
+                    </div>
+                </div>
+                <div class="bookingpay-row">
+                    <div class="bookingpay__row-name">
+                        Date
+                    </div>
+                    <div class="bookingpay__row-status">
+                        <span>
+                            14 June,
+                        </span> We
+                    </div>
+                </div>
+                <div class="bookingpay-row">
+                    <div class="bookingpay__row-name">
+                        Time
+                    </div>
+                    <div class="bookingpay__row-status --time">
+                        18:00 - 19:00
+                    </div>
+                </div>
+                <div class="bookingpay-row">
+                    <div class="bookingpay__row-name">
+                        Duration
+                    </div>
+                    <div class="bookingpay__row-status">
+                        1 h 00 min
+                    </div>
+                </div>
+        
+            </div>
+        
+            <div class="bookingpay-noactive-account">
+        
+                <div class="bookingpay-account-title">
+                    Please log in to proseed with the booking
+                </div>
+                <div class="popup-subtitle">
+                    Continue with
+                </div>
+                <div class="popup-wrapp">
+                    <a href="#" class="popup-input-btn">
+                        With Google
+                    </a>
+                    <a href="#" class="popup-input-btn facebook">
+                        Facebook
+                    </a>
+                </div>
+                <div class="popup-subtitle --two">
+                    or login in
+                </div>
+        
+                <div id="tab-11" class="popup-login active">
+                    <div class="popup-form-title">
+                        Email
+                    </div>
+                    <div class="email-box">
+                        <input class="input-email" type="text" placeholder="Your working email">
+                        <div class="error-text">
+                            Error message goes here
+                        </div>
+                    </div>
+                    <div class="popup-form-title">
+                        Password
+                    </div>
+                    <div class="password-box">
+                        <input id="pwd-145" class="input-password" type="password">
+                        <button class="password-btn" data-password="#pwd-145">
+                            <img src="./assets/img/Eye.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="popup-row">
+                        <label class="popup-label">
+                            <input class="popup-label-check" type="checkbox">
+                            <span class="label-popup-span">
+                                Keep me signed in
+                            </span>
+                        </label>
+                        <a href="#" class="popup-btn-link">
+                            Forgot password?
+                        </a>
+                    </div>
+                    <button class="popup-link btn" type="submit" data-choosebooking="#choosebooking">
+                        log in
+                    </button>
+                    <div class="popup-row-2 ">
+                        Don't have an account?
+                        <button class="popup-btn login-in" data-popup="#tab-12">
+                            Sign up
+                        </button>
+                    </div>
+                </div>
+        
+                <div id="tab-12" class="popup-login">
+                    <div class="popup-form-title ">
+                        Your name
+                    </div>
+                    <input class="popup-input fill-name fill-name-2 sample-2" type="text" placeholder="Enter your full name">
+                    <div class="popup-form-title">
+                        Email
+                    </div>
+                    <div class="email-box">
+                        <input class="input-email --email --email-2 sample-2" type="text" placeholder="Your working email">
+                        <div class="error-text">
+                            Error message goes here
+                        </div>
+                    </div>
+                    <div class="popup-form-title">
+                        Phone number
+                    </div>
+                    <input class="popup-input phone-2  phone sample-2" type="text">
+                    <div class="popup-form-title">
+                        Password
+                    </div>
+                    <div class="password-box --two">
+                        <input id="pwd-24" class="pwd-conf-new-1 input-password sample-2" type="password">
+                        <div class="error-text">
+                            Error message goes here
+                        </div>
+                        <button class="password-btn" data-password="#pwd-24">
+                            <img src="./assets/img/Eye.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="popup-form-title">
+                        Confirm password
+                    </div>
+                    <div class="password-box --two">
+                        <input id="pwd-34" class="pwd-conf-new-2 input-password sample-2" type="password">
+                        <div class="error-text">
+                            Error message goes here
+                        </div>
+                        <button class="password-btn" data-password="#pwd-34">
+                            <img src="./assets/img/Eye.svg" alt="">
+                        </button>
+                    </div>
+        
+                    <button class="popup-link popup-link-two popup-link-two-2 btn --deactive" type="submit">
+                        Create account
+                    </button>
+                    <div class="popup-row-2 --two ">
+                        Don't have an account?
+                        <button class="popup-btn sign-up" data-popup="#tab-11">
+                            Log in
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+        </div>    <div id="bookingpay" class="bookingpay">
+            <div class="bookingpay-head">
+                Booking details
+                <button class="choosetime-close close-btn-chooset">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L12 10.5858L18.2929 4.29289C18.6834 3.90237 19.3166 3.90237 19.7071 4.29289C20.0976 4.68342 20.0976 5.31658 19.7071 5.70711L13.4142 12L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L12 13.4142L5.70711 19.7071C5.31658 20.0976 4.68342 20.0976 4.29289 19.7071C3.90237 19.3166 3.90237 18.6834 4.29289 18.2929L10.5858 12L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z"
+                            fill="#787A80" />
+                    </svg>
+                </button>
+            </div>
+            <div class="bookingpay-wrapp">
+                <div class="resent-card">
+                    <div class="resent-head">
+                        <img src="./assets/img/blog-13.png" alt="">
+                    </div>
+                    <div class="resent-body">
+                        <div class="resent-coll">
+                            <div class="resent-name">
+                                Padel Sant Marti
+                            </div>
+                            <div class="resent-place">
+                                W. Gray St. Utica, Pennsylvania
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bookingpay-row">
+                    <div class="bookingpay__row-name">
+                        Type
+                    </div>
+                    <div class="bookingpay__row-status">
+                        Indoor
+                    </div>
+                </div>
+                <div class="bookingpay-row">
+                    <div class="bookingpay__row-name">
+                        Size
+                    </div>
+                    <div class="bookingpay__row-status">
+                        Double
+                    </div>
+                </div>
+                <div class="bookingpay-row">
+                    <div class="bookingpay__row-name">
+                        Features
+                    </div>
+                    <div class="bookingpay__row-status">
+                        Wall
+                    </div>
+                </div>
+                <div class="bookingpay-row">
+                    <div class="bookingpay__row-name">
+                        Date
+                    </div>
+                    <div class="bookingpay__row-status">
+                        <span>
+                            14 June,
+                        </span> We
+                    </div>
+                </div>
+                <div class="bookingpay-row">
+                    <div class="bookingpay__row-name">
+                        Time
+                    </div>
+                    <div class="bookingpay__row-status --time">
+                        18:00 - 19:00
+                    </div>
+                </div>
+                <div class="bookingpay-row">
+                    <div class="bookingpay__row-name">
+                        Duration
+                    </div>
+                    <div class="bookingpay__row-status">
+                        1 h 00 min
+                    </div>
+                </div>
+        
+            </div>
+            <div class="bookingpay-footer">
+                <button class="choosetime__wrapp-btn btn" data-noactive="#bookingpay-noactive">
+                    Continue to payment - <span class="booking-popup-summ"> 8 $ </span>
+                </button>
+            </div>
         </div></div>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
     </script>

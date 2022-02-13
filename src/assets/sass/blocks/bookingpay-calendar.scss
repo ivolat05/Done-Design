@@ -1,0 +1,22 @@
+.bookingpay-calendar {
+    display: block;
+    .menu-calendar-footer {
+        justify-content: flex-end;
+    }
+}
+@media (max-width: 572px) {
+    .bookingpay-calendar {
+        padding-left: 0;
+        padding-right: 0;
+        .menu-date__box {
+            padding-left: 20px;
+        }
+        width: 100%;
+        .calendar__box {
+            align-items: center;
+        }
+        .calendar__container-wrapp {
+            width: 100vw;
+        }
+    }
+}

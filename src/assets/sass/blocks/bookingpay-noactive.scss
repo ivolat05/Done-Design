@@ -1,0 +1,120 @@
+.bookingpay-noactive {
+    width: 475px;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #f5f5f5;
+    z-index: -3;
+    opacity: 0;
+    transform: translateY(300%);
+    padding-top: 11px;
+    transition: 0.8s all ease-in-out;
+    display: flex;
+    flex-direction: column;
+    .bookingpay-head {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.bookingpay-noactive {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.bookingpay-noactive::-webkit-scrollbar,
+.bookingpay-noactive::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.bookingpay-noactive.active {
+    z-index: 3;
+    opacity: 1;
+    transform: translateY(0);
+}
+.bookingpay-account-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+
+    color: #2e2d2d;
+}
+.bookingpay-noactive-wrapp {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.bookingpay-noactive-account {
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 380px) {
+    .bookingpay-row {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+@media (max-width: 572px) {
+    .bookingpay-noactive {
+        width: 100%;
+    }
+}
+
+@media (max-width: 772px) {
+    .bookingpay-noactive-wrapp {
+        .resent-card {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .bookingpay-noactive-account {
+        .popup-link.btn {
+            margin-bottom: 130px;
+        }
+        .popup-link-two.btn {
+            margin-bottom: 30px;
+        }
+
+        .popup-input-btn {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            padding: 20px 30px 20px 55px;
+            &::before {
+                left: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .bookingpay-noactive-wrapp {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .bookingpay-noactive-account {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 340px) {
+    .bookingpay-noactive-account {
+        .popup-input-btn {
+            padding: 20px 25px 20px 50px;
+            &::before {
+                left: 15px;
+            }
+        }
+    }
+}

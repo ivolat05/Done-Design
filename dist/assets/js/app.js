@@ -9903,6 +9903,7 @@ $(function () {
         let inputDate = document.querySelector('.input-date');
         let bookCalendar = document.querySelector('.book-calendar');
         let menuCalendar = document.querySelector('.menu-calendar');
+        let bookingpayCalendar = document.querySelector('.bookingpay-calendar');
         if (inputDate) {
             inputDate.value = thisMonth.split("/").reverse().join("/");
             calendars.clndr3 = $('.calendar__container').clndr({
@@ -9988,6 +9989,41 @@ $(function () {
 
                 },
                 template: $('#menu-calendar__teplate').html()
+            });
+
+        } if (bookingpayCalendar) {
+            inputDate.value = thisMonth.split("/").reverse().join("/");
+            calendars.clndrMenu = $('.bookingpay-calendar-wrapper').clndr({
+                lengthOfTime: {
+                    months: 12,
+                    interval: 1
+                },
+                default_date: true,
+                startWithMonth: thisMonth,
+                daysOfTheWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                trackSelectedDate: true,
+                selectedDate: "selected",
+                showAdjacentMonths: false,
+                adjacentDaysChangeMonth: true,
+                weekOffset: 1,
+                clickEvents: {
+                    click: function (target) {
+                        let x = '';
+                        let y = target.date._i
+                        inputDate.value = target.date._i;
+                        for (let i = 0; i < y.length; i++) {
+                            if (y[i] == '-') {
+                                x += '/';
+                            } else {
+                                x += y[i];
+                            }
+                        }
+                        inputDate.value = x.split("/").reverse().join("/");
+
+                    }
+
+                },
+                template: $('#bookingpay-calendar__teplate').html()
             });
 
         }
@@ -10757,15 +10793,76 @@ $(function () {
     tabs("courts-box-btn", "courts-tab", "data-edit", "courts");
     tabs("approve-button", "approved-tab", "data-schedule", "approve");
     tabs("info-change-password", "info-tab", "data-infochange", "info-hidden");
+
+    // активация и закрыте мобильных окон booking
+    function bookingTabs(btnOpen, openWindow, dataAtt, closeBtn) {
+        const tabBtn = document.querySelectorAll(`.${btnOpen}`);
+        const tabItem = document.querySelectorAll(`.${openWindow}`);
+        let backgroundFon = document.querySelector('.background-fon');
+        let body = document.querySelector('body');
+        let closeWindowBtn = document.querySelectorAll(`.${closeBtn}`);
+
+        if (tabItem) {
+            tabBtn.forEach((item) => {
+                item.addEventListener('click', function () {
+                    let tabId = item.getAttribute(dataAtt);
+                    let currentTab = document.querySelector(tabId);
+                    backgroundFon.classList.add('active')
+                    item.parentElement.parentElement.classList.remove('active')
+                    item.parentElement.parentElement.parentElement.classList.remove('active')
+                    body.classList.add('stop')
+                    tabItem.forEach((item) => {
+                        if (item.classList.contains('active')) {
+                            item.classList.remove('active');
+                        }
+                    })
+                    currentTab.classList.add('active');
+                });
+            });
+
+        }
+        if (closeWindowBtn) {
+            closeWindowBtn.forEach((item) => {
+                item.addEventListener('click', () => {
+                    tabItem.forEach((item) => {
+                        if (item.classList.contains('active')) {
+                            item.classList.remove('active');
+                        }
+                    })
+                    backgroundFon.classList.remove('active');
+                    body.classList.remove('stop')
+
+                })
+            })
+        }
+        backgroundFon.addEventListener('click', () => {
+            tabItem.forEach((item) => {
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                }
+            })
+            backgroundFon.classList.remove('active');
+            body.classList.remove('stop')
+        })
+    }
+    bookingTabs('booking-btn-mob', 'choosetime', 'data-choosetime', 'close-btn-chooset');
+    bookingTabs('choosetime__wrapp-btn', 'choosecourt', 'data-choosecourt', 'close-btn-chooset');
+    bookingTabs('choosetime__wrapp-btn', 'choose_filter', 'data-choosefilter', 'close-btn-chooset');
+    bookingTabs('choosetime__wrapp-btn', 'bookingpay-calendar', 'data-bookingpayCalendar', 'close-btn-chooset');
+    bookingTabs('menu-calendar-done', 'bookingpay-date', 'data-bookingpayDate', 'close-btn-chooset');
+    bookingTabs('menu-date-done', 'bookingpay', 'data-bookingpay', 'close-btn-chooset');
+    bookingTabs('choosetime__wrapp-btn', 'bookingpay-noactive', 'data-noactive', 'choosetime-close');
+    bookingTabs('popup-link', 'choosebooking', 'data-choosebooking', 'choosetime-close');
     // активация кнопки регистарции  Create account
-    function activeBtnCreateAccount() {
-        let sample = document.querySelectorAll('.sample');
-        let fillName = document.querySelector('.fill-name');
-        let email = document.querySelector('.--email');
-        let phone = document.querySelector('.phone');
-        let pwd = document.querySelector('.pwd-conf-1');
-        let pwdTwo = document.querySelector('.pwd-conf-2');
-        let popupLinkTwo = document.querySelector('.popup-link-two');
+
+    function activeBtnCreateAccount(saMple, fillNames, emAil, phOne, pwdConf, pwdConfTwo, poPupLinkTwo) {
+        let sample = document.querySelectorAll(`.${saMple}`);
+        let fillName = document.querySelector(`.${fillNames}`);
+        let email = document.querySelector(`.${emAil}`);
+        let phone = document.querySelector(`.${phOne}`);
+        let pwd = document.querySelector(`.${pwdConf}`);
+        let pwdTwo = document.querySelector(`.${pwdConfTwo}`);
+        let popupLinkTwo = document.querySelector(`.${poPupLinkTwo}`);
         let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (popupLinkTwo) {
             sample.forEach((item) => {
@@ -10786,7 +10883,9 @@ $(function () {
             })
         }
     }
-    activeBtnCreateAccount();
+    activeBtnCreateAccount("sample-2", 'fill-name-2', '--email-2', 'phone-2', 'pwd-conf-new-1', 'pwd-conf-new-2', 'popup-link-two-2');
+    activeBtnCreateAccount("sample", 'fill-name', '--email', 'phone', 'pwd-conf-1', 'pwd-conf-2', 'popup-link-two');
+
     // проверка ввода одинаковых паролей
     function confPwd(inpPwd, inpPwdTwo) {
         let pwd = document.querySelector(`.${inpPwd}`);
@@ -10807,6 +10906,7 @@ $(function () {
     confPwd('pwd-conf-1', 'pwd-conf-2');
     confPwd('pwd-conf-one', 'pwd-conf-two');
     confPwd('info-change-one', 'info-change-two');
+    confPwd('pwd-conf-new-1', 'pwd-conf-new-2');
 
     // активация форм ввода данных карт
     function paymentCard() {
